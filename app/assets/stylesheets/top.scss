@@ -1,0 +1,66 @@
+// Place all the styles related to the Top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*top*/
+.top-main{
+	background-color: red;
+	height: 500px;
+	background-image: url('/images/top.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.tm-cover{
+	background-color: rgba(0,0,0,0.8);
+	height: 500px;
+	width: 100%;
+}
+.tm-top{
+	text-align: center;
+	height:300px;
+	color: white;
+}
+.tm-p{
+	padding:150px 0 10px;
+	margin: 0;
+	font-size: 14px;
+}
+.tm-h1{
+	font-family:'Trebuchet';
+	font-size: 80px;
+	font-weight: 900;
+	letter-spacing: 2px;
+	color:#FF5917;
+	margin: 0;
+	padding-right: 55px;
+}
+.tm-bottom{
+	height: 200px;
+	width: 100%;
+}
+.tm-catch{
+	color:white;
+	margin-top: -5px;
+	font-size: 18px;
+	font-family: 'ヒラギノ丸ゴ Pro W4';
+}
+.top-content{
+	height:500px;
+}
+.tm-link{
+	text-align: center;
+	padding-top: 100px;
+}
+.tm-up{
+	margin-right: 40px;
+	padding: 10px 30px !important;
+}
+.tm-in{
+	margin-left: 40px;
+	padding: 10px 30px !important;
+
+}
+
+
+

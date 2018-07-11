@@ -9,6 +9,32 @@
   </head>
 
   <body>
+  	<header>
+  		<div class="container header clearfix">
+  			<div class="h_left">
+  				<h1 class="h_logo">＊Cinemall</h1>
+  				<span class="h_sub">-シネモール-</span>
+  			</div>
+  			<div class="h_right">
+  				<div class="h_link">
+  					<ul class="h_list clearfix">
+  						<li class="h_list_item1">映画を探す</li>
+  						<li class="h_list_item1">ログイン</li>
+  						<li class="h_list_item2">新規登録</li>
+  					</ul>
+  				</div>
+  				<div class="h_form clearfix">
+  					<div class="h_input">
+  						<input type="text" size="35" placeholder="作品名・俳優・監督で検索！" style="padding: 5px 0;">
+  						<input type="submit" value="Search" class="btn btn-outline-light" style="margin-bottom: 3px;">
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</header>
     <%= yield %>
+    <footer>
+    	<div class="footer container-fulid"></div>
+    </footer>
   </body>
 </html>
