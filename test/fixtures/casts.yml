@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  director: false
+  scenario: false
+  movie_id: 1
+  person_id: 1
+
+two:
+  director: false
+  scenario: false
+  movie_id: 1
+  person_id: 1

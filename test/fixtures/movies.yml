@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  j_title: MyString
+  e_title: MyString
+  release: 2018-07-11
+  time: 1
+  summary: MyText
+  movie_image_id: MyText
+  trailer_id: MyString
+  score_average: 9.99
+  genre_id: 1
+  country_id: 1
+  company_id: 1
+
+two:
+  j_title: MyString
+  e_title: MyString
+  release: 2018-07-11
+  time: 1
+  summary: MyText
+  movie_image_id: MyText
+  trailer_id: MyString
+  score_average: 9.99
+  genre_id: 1
+  country_id: 1
+  company_id: 1
