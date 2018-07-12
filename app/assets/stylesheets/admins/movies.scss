@@ -1,3 +1,36 @@
 // Place all the styles related to the admins/Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*Movie/new*/
+.mn_main{
+	width: 70%;
+	margin: 50px auto;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.mn_title{
+	text-align: center;
+	background-color: #2D2D2D;
+	color: white;
+	border-radius: 3px 3px 0 0;
+	padding: 15px 0;
+	font-weight: 900;
+
+}
+.mn_label{
+	text-align: center;
+}
+.mn_form{
+	margin-top: 30px;
+}
+.mn_form_ex{
+	margin-top: 15px;
+}
+
+.mn_attachment{
+	margin-top: 5px;
+}
+.input-group-text{
+	border-radius: 0 5px 5px 0;
+}

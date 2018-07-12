@@ -29,7 +29,9 @@
 li{
 	list-style: none;
 }
-
+img{
+   box-shadow: 0 0 1px gray;
+ }
 /*ヘッダー*/
 header{
 	background-color: #2D2D2D;
@@ -102,7 +104,9 @@ background-color: #2D2D2D;
 	text-align: center;
 	background-color: #2D2D2D;
 	color: white;
-	 border-radius: 3px 3px 0 0;
+	padding: 5px 0;
+	border-radius: 3px 3px 0 0;
+	font-weight: 900;
 }
 .login-form{
 	padding: 30px;

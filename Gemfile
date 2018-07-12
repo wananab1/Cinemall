@@ -39,6 +39,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -54,5 +57,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+# Bootstrap
 gem 'bootstrap', '~>4.1.1'
 gem 'jquery-rails'
+# Rifile
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"

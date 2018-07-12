@@ -1,2 +1,28 @@
-<h1>Admins::Movies#index</h1>
-<p>Find me in app/views/admins/movies/index.html.erb</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>ポスター</th>
+			<th>邦題</th>
+			<th>原題</th>
+			<th>ジャンル</th>
+			<th>配給会社</th>
+			<th>製作国</th>
+			<th>上映時間</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @movies.each do |m| %>
+			<tr>
+				<td><%= m.id %></td>
+				<td><%= attachment_image_tag m, :movie_image, format: 'jpeg', :size => '150x200' %></td>
+				<td><%= m.j_title %></td>
+				<td><%= m.e_title %></td>
+				<td><%= m.genre.genre_name %></td>
+				<td><%= m.company.company_name %></td>
+				<td><%= m.country.country_name %></td>
+				<td><%= m.time %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
