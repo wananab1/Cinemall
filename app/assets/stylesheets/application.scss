@@ -74,10 +74,15 @@ header{
 	margin-right: 6px;
 	padding-top: 5px;
 }
+
 .h_input{
 	display: inline-block;
 	float: right;
 }
+.h_link_item{
+	color: white;
+}
+
 /*footer*/
 footer{
 background-color: #2D2D2D;
@@ -85,3 +90,46 @@ background-color: #2D2D2D;
 .footer{
 	height: 50px;
 }
+
+/*Userログイン*/
+.login-main{
+	width: 50%;
+	margin: 120px auto 100px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.login-title{
+	text-align: center;
+	background-color: #2D2D2D;
+	color: white;
+	 border-radius: 3px 3px 0 0;
+}
+.login-form{
+	padding: 30px;
+}
+.lf-group1{
+	margin-top: 30px;
+}
+.lf-group2{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.lf-btn{
+	padding: 0 60px;
+	margin-bottom: 40px;
+}
+/*userサインアップ*/
+.signup-main{
+	width: 50%;
+	margin: 80px auto 60px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.sf-btn{
+	padding: 0 60px;
+	margin: 30px 0 10px;
+}
+.signup-form{
+	padding: 30px;
+}
+
