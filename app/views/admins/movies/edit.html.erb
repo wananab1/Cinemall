@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="mn_main">
-		<h2 class="mn_title">作品登録</h2>
+		<h2 class="mn_title">作品編集</h2>
 		<%= form_for([:admins, @movie], html: {class: 'form-horizontal'}) do |f| %>
 			<div class="form-group row mn_form">
 				<%= f.label :j_title, '邦題', class: "col-sm-2 col-form-label mn_label" %>
@@ -68,7 +68,7 @@
 				<div class="col-sm-4 input-group">
 					<%= f.number_field :time, class: "form-control" %>
 					<div class="input-group-prepend">
-      					<span class="input-group-text ">分</span>
+      					<span class="input-group-text mn_min">分</span>
     				</div>
 				</div>
 			</div>
