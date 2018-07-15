@@ -8,7 +8,7 @@
 
 
 
-# admin = Admin.create(email: 'a@a', password: 'aaaaaa')
+# Admin.create(email: 'a@a', password: 'aaaaaa')
 
 # Country.create(country_name: '日本')
 # Country.create(country_name: 'アメリカ')
@@ -26,3 +26,9 @@
 # Genre.create(genre_name: '恋愛')
 # Genre.create(genre_name: 'サスペンス')
 # Genre.create(genre_name: 'SF')
+
+# Person.create(person_name: '伊藤')
+# Person.create(person_name: '田中')
+# Person.create(person_name: 'マイケル')
+# Person.create(person_name: '安田')
+# Person.create(person_name: 'リンカーン')

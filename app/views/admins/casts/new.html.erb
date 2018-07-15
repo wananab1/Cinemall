@@ -1,0 +1,86 @@
+<div class="container">
+	<div class="cn_main">
+		<h2 class="mn_title">出演者・監督・脚本 登録</h2>
+		<div class="cn_movie_info">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-3">
+					<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '150x200' %>
+				</div>
+				<div class="col-8">
+					<h3 class="cn_movie_title">「<%= @movie.j_title %>」</h3>
+					<p class="cn_e_title"><%= @movie.e_title %></p>
+					<p class="cn_p">ジャンル：<%= @movie.genre.genre_name %></p>
+					<p class="cn_p">配給会社：<%= @movie.company.company_name %></p>
+					<p class="cn_p">製作国：<%= @movie.country.country_name %></p>
+					<p class="cn_p">上映時間：<%= @movie.time %>分</p>
+					<p class="cn_p">公開日：<%= @movie.release %></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="col-9">
+		    	<%= form_for(@movie, url: admins_movie_casts_path, method: :post, html:{class: 'form-horizontal'}) do |f| %>
+		            <table class="table table-bordered table-hover">
+		                <tbody>
+		                    <tr>
+		                       <th>名前</th>
+		                       <th>監督</th>
+		                       <th>脚本</th>
+		                       <th>出演者</th>
+		                    </tr>
+		                    <%= f.nested_fields_for :casts, wrapper_tag: :tr do |q| %>
+		                        <td>
+		                            <%= q.text_field :p_name, list: "person_list" , autocomplete: "off", class: 'form-control'%>
+		                            <datalist id="person_list">
+		                                <% @people.each do |person| %>
+		                                    <option value="<%= person.person_name %>">
+		                                <% end %>
+		                            </datalist>
+		                        </td>
+		                        <td>
+		                            <%= q.check_box :director %>
+		                        </td>
+		                        <td>
+		                            <%= q.check_box :scenario %>
+		                        </td>
+		                        <td>
+		                            <%= q.check_box :actor %>
+		                        </td>
+		                    <% end %>
+		                </tbody>
+		            </table>
+		            <div>
+		            	<%= f.add_nested_fields_link :casts, 'フォーム追加', class: 'btn btn-outline-secondary btn-sm', role: 'button' %>
+			            <%= f.remove_nested_fields_link 'フォーム削除', class: 'btn btn-outline-danger btn-sm', role: 'button' %>
+		            </div>
+		            <div class="cn_submit clearfix">
+		            	<%= f.submit '情報登録', class: "btn btn-primary cn_submit_btn" %>
+		            </div>
+		        <% end %>
+		    </div>
+		    <div class="col-1">
+		 		<div class="cn_right">
+		 			 <table class="table table-bordered table-hover">
+		 			 	<tbody>
+		 			 		<tr>
+		 			 			<th><div class="delete_th"></div></th>
+		 			 		</tr>
+		 			 		<% @casts.each do |cast| %>
+		 			 		<tr>
+		 			 			<td>
+			 			 			<div class="cn_delete">
+				                		<%= link_to '削除', admins_movie_cast_path(@movie, cast), method: :delete, class: 'btn btn-danger', data: {confirm: "#{cast.p_name}を削除しますか？"} %>
+				            		</div>
+				            	</td>
+		 			 		</tr>
+		 			 		<% end %>
+		 			 	</tbody>
+		 			 </table>
+		 		</div>
+		    </div>
+		    <div class="col-1"></div>
+		</div>
+	</div>
+</div>

@@ -79,6 +79,9 @@ class Admins::MoviesController < ApplicationController
   end
 
   def destroy
+    movie = Movie.find(params[:id])
+    movie.destroy
+    redirect_to admins_movies_path
   end
 
   private

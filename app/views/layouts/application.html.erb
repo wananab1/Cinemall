@@ -25,6 +25,9 @@
                 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'h_link_item' %>
               </li>
               <% end %>
+              <li class="h_list_item1">
+                <%= link_to '映画一覧', admins_movies_path, class: 'h_link_item' %>
+              </li>
   						<li class="h_list_item1">映画を探す</li>
   						<li class="h_list_item1">
                 <%= link_to 'ログイン', new_user_session_path, class: 'h_link_item' %>

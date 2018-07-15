@@ -30,10 +30,12 @@ ActiveRecord::Schema.define(version: 20180711094422) do
   end
 
   create_table "casts", force: :cascade do |t|
+    t.boolean "actor", default: true, null: false
     t.boolean "director", default: false, null: false
     t.boolean "scenario", default: false, null: false
     t.integer "movie_id", null: false
     t.integer "person_id", null: false
+    t.string "p_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

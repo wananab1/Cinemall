@@ -1,0 +1,48 @@
+// Place all the styles related to the admins/casts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*cast/new*/
+
+.cn_main{
+	width: 80%;
+	margin: 50px auto;
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding-bottom: 20px;
+}
+.cn_movie_info{
+	width: 90%;
+	margin: 40px auto 40px ;
+	box-shadow: 0 0 1px gray;
+	background-color: #F5F5F5;
+	border-radius: 5px;
+	padding: 20px;
+}
+.cn_p{
+	line-height: 0.7;
+	margin: 16px 0 0 20px;
+}
+.cn_movie_title{
+	font-weight: 900;
+	margin: 0;
+}
+.cn_e_title{
+	margin-left: 20px;
+	color: #B0C4DE;
+}
+.delete_th{
+	height: 24px;
+}
+.cn_right{
+	margin-left: -31px;
+}
+.cn_submit{
+	margin-top: 50px;
+}
+/*.cn_submit_btn{
+	position: relative;
+	top: 0;
+	left: 665px;
+}
+*/
