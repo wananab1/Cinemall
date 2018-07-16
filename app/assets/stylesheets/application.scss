@@ -14,6 +14,8 @@
  *= require_self
  */
  @import "bootstrap";
+ @import "font-awesome";
+
 
 *{
 	margin: 0;
@@ -135,5 +137,78 @@ background-color: #2D2D2D;
 }
 .signup-form{
 	padding: 30px;
+}
+
+
+/*Movie/show/Star*/
+
+.rate {
+  position: relative;
+  display: inline-block;
+  width: 185px;
+  height: 25px;
+  font-size: 30px;
+}
+.rate:before, .rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '★★★★★';
+  letter-spacing: 8px;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 30px;
+  text-shadow: #23282f 0.2px 0.2px 0.2px;
+}
+.rate:before {
+  color: #ddd;
+}
+.rate:after {
+  color: #ffa500;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rate0:after {
+  width: 0;
+}
+.rate0-5:after {
+  width: 15px;
+}
+
+.rate1:after {
+  width: 30px;
+}
+
+.rate1-5:after {
+  width: 53px;
+}
+
+.rate2:after {
+  width: 69px;
+}
+
+.rate2-5:after {
+  width: 91px;
+}
+
+.rate3:after {
+  width: 106px;
+}
+
+.rate3-5:after {
+  width: 129px;
+}
+
+.rate4:after {
+  width: 145px;
+}
+
+.rate4-5:after {
+  width: 167px;
+}
+.rate5:after {
+  width: 182px;
 }
 

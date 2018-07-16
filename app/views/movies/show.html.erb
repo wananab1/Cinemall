@@ -1,9 +1,113 @@
 <div class="container">
-	<div class="row">
-		<div class="ms_info">
-			<div class="col-lg-4 ms ms1"></div>
-			<div class="col-lg-4 ms ms2"></div>
-			<div class="col-lg-4 ms ms3"></div>
+	<div class="ms_top">
+		<div class="row">
+			<div class="col-3 ms_top_1">
+				<div class="ms_image">
+					<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '240x320' %>
+				</div>
+				<div class="ms_icons clearfix">
+					<div class="ms_icon_box ms_icon_box1">
+						<div>
+							<%= fa_icon("eye") %>
+						</div>
+						<p class="ms_icon_p">12</p>
+					</div>
+					<div class="ms_icon_box ms_icon_box2">
+						<div>
+							<%= fa_icon("paperclip") %>
+						</div>
+						<p class="ms_icon_p">39</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-9 ms_top_2">
+				<div class="ms_top_2box">
+					<h2 class="ms_j_title"><%= @movie.j_title %></h2>
+					<p class="ms_e_title"><%= @movie.e_title %></p>
+					<div class="ms_star">
+						<span class="rate rate4-5"></span>
+						<span class="ms_score">4.6</span>
+					</div>
+				</div>
+				<div class="ms_top_2box">
+					<div>
+						<h5 class="mn_h5">あらすじ</h5>
+						<p><%= @movie.summary %></p>
+					</div>
+				</div>
+				<div class="row ms_top_2box">
+					<div class="col-6 ms_bottom_box">
+						<% if @casts <= 8 %>
+						<table class="table table-bordered ms_cast_table">
+							<tbody>
+								<!-- 監督 -->
+								<tr>
+									<td class="ds_td">監督</td>
+									<td><%= @director.person.person_name %></td>
+								</tr>
+								<% @directors.each do |d| %>
+								<tr>
+									<td class="ds_td"></td>
+									<td><%= d.person.person_name %></td>
+								</tr>
+								<% end %>
+								<!-- 脚本 -->
+								<tr>
+									<td class="ds_td">脚本</td>
+									<td><%= @scenario.person.person_name %></td>
+								</tr>
+								<% @scenarios.each do |s| %>
+								<tr>
+									<td class="ds_td"></td>
+									<td><%= s.person.person_name %></td>
+								</tr>
+								<% end %>
+								<!-- 出演者 -->
+								<tr>
+									<td class="a_td">出演者</td>
+									<td><%= @actor.person.person_name %></td>
+								</tr>
+								<% @actors.each do |a| %>
+								<tr>
+									<td class="a_td"></td>
+									<td><%= a.person.person_name %></td>
+								</tr>
+								<% end %>
+							</tbody>
+						</table>
+						<% else %>
+						<% end %>
+					</div>
+					<div class="col-6 ms_bottom_box ms_bottom_box_right">
+						<div class="ms_info_box">
+							<table class="table table-borderless">
+								<tbody>
+									<tr>
+										<td class="ms_info_td">ジャンル</td>
+										<td><span>:</span> <%= @movie.genre.genre_name %></td>
+									</tr>
+									<tr>
+										<td class="ms_info_td">配給会社</td>
+										<td><span>:</span> <%= @movie.company.company_name %></td>
+									</tr>
+									<tr>
+										<td class="ms_info_td">製作国</td>
+										<td><span>:</span> <%= @movie.country.country_name %></td>
+									</tr>
+									<tr>
+										<td class="ms_info_td">上映時間</td>
+										<td><span>:</span> <%= @movie.time %>分</td>
+									</tr>
+									<tr>
+										<td class="ms_info_td">公開日</td>
+										<td><span>:</span> <%= @movie.release %></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

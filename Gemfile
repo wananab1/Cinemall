@@ -65,3 +65,5 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 # nested_form
 gem 'nested_form_fields'
+# アイコン
+gem 'font-awesome-rails'

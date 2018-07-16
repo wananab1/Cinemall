@@ -2,6 +2,109 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.ms{
-	height:200px;
+.ms_top{
+	margin: 50px auto 0;
+	width: 90%;
 }
+.ms_top_1{
+	padding: 0 !important;
+}
+.ms_top_2{
+
+}
+.ms_top_2box{
+	padding-left: 50px;
+}
+.ms_icon_box{
+	width: 111px;
+	height: 70px;
+	margin-top: 15px;
+	background-color: #ff956b;
+	float: left;
+	border-radius: 5px;
+	text-align: center;
+	padding-top: 5px;
+
+}
+.ms_icon_box1{
+	margin-right: 2px;
+	margin-left: 4px;
+}
+.ms_icon_box2{
+	margin-left: 2px;
+
+}
+.ms_icon_box i{
+	color: #a35133;
+	font-size: 35px;
+}
+.ms_icon_p{
+	color: #a35133;
+	font-size: 20px;
+	font-weight: 900;
+	margin-top: -5px;
+}
+.ms_j_title{
+	font-weight: 900;
+}
+.ms_e_title{
+	margin-left: 5px;
+	color: #b4bcc5;
+	margin-bottom: 20px;
+}
+.ms_star{
+	margin-bottom: 20px;
+}
+.ms_score{
+	font-size: 25px;
+	font-weight: 900;
+	display: inline-block;
+	margin-left: 15px;
+	font-family: 'ＭＳ Ｐゴシック';
+	color: #ffa500;
+	text-shadow: #23282f 0.1px 0.5px 0.1px;
+}
+.mn_h5{
+	font-weight: bold;
+}
+.ms_bottom_box{
+	padding-top: 30px;
+}
+.ms_cast_table td{
+	padding: 0 !important;
+	text-align: center;
+}
+.ds_td{
+	background-color: #333333;
+	color: white;
+	font-weight: bold;
+}
+.a_td{
+	background-color: #999999;
+	color: white;
+	font-weight: bold;
+}
+.ms_bottom_box_right{
+	padding-left: 30px;
+}
+.ms_info_box{
+	padding-left: 30px;
+}
+.ms_info_box span{
+	font-weight: bold;
+}
+.ms_info_box td{
+	padding: 4px 0 !important;
+}
+.ms_info_td{
+	font-weight: bold;
+	width: 100px;
+}
+
+
+
+
+
+
+
+

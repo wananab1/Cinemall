@@ -38,22 +38,6 @@
 	border-bottom-right-radius: 5px !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*movie/index*/
 .mi_main{
 	width: 100%;
@@ -61,6 +45,15 @@
 	padding-bottom: 50px;
 	border: 1px solid gray;
 	border-radius: 5px;
+}
+.mi_title{
+	text-align: center;
+	background-color: #2D2D2D;
+	color: white;
+	border-radius: 3px 3px 0 0;
+	padding: 15px 0;
+	font-weight: 900;
+	margin-bottom: 50px;
 }
 .mi_moviebox{
 	width:90%;
@@ -108,10 +101,12 @@
 }
 .mi_j_title{
 	color: black;
+	font-weight: 700;
 }
 .mi_e_title{
 	font-size: 14px;
-	color: #B0C4DE;
+	color: #abb4bf;
+
 }
 .mi_p{
 	margin-bottom: 20px;
@@ -123,16 +118,4 @@
 .mi-delete{
 	padding: 2px 25px !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
