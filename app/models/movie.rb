@@ -4,5 +4,7 @@ class Movie < ApplicationRecord
 	belongs_to :company
 	attachment :movie_image
 	has_many :casts, :dependent => :destroy
+	has_many :reviews, :dependent => :destroy
+
 	accepts_nested_attributes_for :casts, allow_destroy: true
 end

@@ -1,0 +1,50 @@
+<div class="ms_review_box">
+	<div class="review_box_top">
+		<div class="row">
+			<div class="review_box_top1 col-1">
+				<%= attachment_image_tag review.user, :profile_image_id, format: 'jpeg', :size => '70x70', fallback: 'no_profile_image.jpg' %>
+			</div>
+			<div class="col-11 review_box_top2">
+				<p class="review_box_top2_name"><%= review.user.user_name %></p>
+				<% if review.score == 0.0 %>
+				<% elsif review.score == 5.0 %>
+					<span class="r_rate r_rate5 "></span>
+					<span class="review_box_score">5.0</span>
+				<% elsif review.score == 4.5 %>
+					<span class="r_rate r_rate4-5 "></span>
+					<span class="review_box_score">4.5</span>
+				<% elsif review.score == 4.0 %>
+					<span class="r_rate r_rate4 "></span>
+					<span class="review_box_score">4.0</span>
+				<% elsif review.score == 3.5 %>
+					<span class="r_rate r_rate3-5 "></span>
+					<span class="review_box_score">3.5</span>
+				<% elsif review.score == 3.0 %>
+					<span class="r_rate r_rate3 "></span>
+					<span class="review_box_score">3.0</span>
+				<% elsif review.score == 2.5 %>
+					<span class="r_rate r_rate2-5 "></span>
+					<span class="review_box_score">2.5</span>
+				<% elsif review.score == 2.0%>
+					<span class="r_rate r_rate2 "></span>
+					<span class="review_box_score">2.0</span>
+				<% elsif review.score == 1.5 %>
+					<span class="r_rate r_rate1-5 "></span>
+					<span class="review_box_score">1.5</span>
+				<% elsif review.score == 1.0 %>
+					<span class="r_rate r_rate1 "></span>
+					<span class="review_box_score">1.0</span>
+				<% elsif review.score == 0.5 %>
+					<span class="r_rate r_rate0-5 "></span>
+					<span class="review_box_score">0.5</span>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<div class="review_box_main">
+		<%= review.comment %>
+	</div>
+	<div class="review_box_bottom">
+		<span class="review_box_top2_t"><%= review.updated_at.strftime('%Y年%m月%d日 %H:%M') %></span>
+	</div>
+</div>

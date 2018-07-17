@@ -1,0 +1,70 @@
+<div class='container-fulid ms_bottom'>
+	<div class="ms_review">
+		<h4 class="ms_review_title">
+			「<%= movie.j_title %>」に投稿されたレビュー
+		</h4>
+		<!-- レビューがなかったら -->
+		<% unless movie.reviews.present? %>
+			<h5 class="ms_no_review">まだレビューがありません</h5>
+		<!-- レビューがあったら -->
+		<% else %>
+			<!-- ログインユーザーのレビューがあったら -->
+			<% if user_review.present? %>
+				<div class="ms_review_box">
+					<div class="review_box_top">
+						<div class="row">
+							<div class="review_box_top1 col-1">
+								<%= attachment_image_tag user_review.user, :profile_image_id, format: 'jpeg', :size => '60x60', fallback: 'no_profile_image.jpg' %>
+							</div>
+							<div class="col-4 review_box_top2">
+								<p class="review_box_top2_name"><%= current_user.user_name %></p>
+								<p class="review_box_top2_t"><%= user_review.updated_at.strftime('%Y年%m月%d日 %H:%M') %></p>
+							</div>
+							<div class="col-7">
+							</div>
+						</div>
+					</div>
+					<%= user_review.comment %>
+				</div>
+				<% reviews.each do |r| %>
+					<div class="ms_review_box">
+						<div class="review_box_top">
+							<div class="row">
+								<div class="review_box_top1 col-1">
+									<%= attachment_image_tag r.user, :profile_image_id, format: 'jpeg', :size => '60x60', fallback: 'no_profile_image.jpg' %>
+								</div>
+								<div class="col-4 review_box_top2">
+									<p class="review_box_top2_name"><%= r.user.user_name %></p>
+									<p class="review_box_top2_t"><%= r.updated_at.strftime('%Y年%m月%d日 %H:%M') %></p>
+								</div>
+								<div class="col-7">
+								</div>
+							</div>
+						</div>
+						<%= r.comment %>
+					</div>
+				<% end %>
+			<!-- ログインユーザーのレビューがなかったら -->
+			<% else %>
+				<% movie.reviews.each do |r| %>
+					<div class="ms_review_box">
+						<div class="review_box_top">
+							<div class="row">
+								<div class="review_box_top1 col-1">
+									<%= attachment_image_tag r.user, :profile_image_id, format: 'jpeg', :size => '60x60', fallback: 'no_profile_image.jpg' %>
+								</div>
+								<div class="col-4 review_box_top2">
+									<p class="review_box_top2_name"><%= r.user.user_name %></p>
+									<p class="review_box_top2_t"><%= r.updated_at.strftime('%Y年%m月%d日 %H:%M') %></p>
+								</div>
+								<div class="col-7">
+								</div>
+							</div>
+						</div>
+						<%= r.comment %>
+					</div>
+				<% end %>
+			<% end %>
+		<% end %>
+	</div>
+</div>

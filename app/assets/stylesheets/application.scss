@@ -212,3 +212,75 @@ background-color: #2D2D2D;
   width: 182px;
 }
 
+
+/*review/star*/
+
+.r_rate {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 25px;
+  font-size: 25px;
+}
+.r_rate:before, .r_rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '★★★★★';
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 25px;
+  text-shadow: #23282f 0.2px 0.2px 0.2px;
+
+}
+.r_rate:before {
+  color: #ddd;
+}
+.r_rate:after {
+  color: #ffa500;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.r_rate0:after {
+  width: 0;
+}
+.r_rate0-5:after {
+  width: 12px;
+}
+
+.r_rate1:after {
+  width: 25px;
+}
+
+.r_rate1-5:after {
+  width: 37px;
+}
+
+.r_rate2:after {
+  width: 50px;
+}
+
+.r_rate2-5:after {
+  width: 62px;
+}
+
+.r_rate3:after {
+  width: 75px;
+}
+
+.r_rate3-5:after {
+  width: 87px;
+}
+
+.r_rate4:after {
+  width: 100px;
+}
+
+.r_rate4-5:after {
+  width: 112px;
+}
+.r_rate5:after {
+  width: 125px;
+}

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     devise_for :admins
     devise_for :users
 
+    resources :users, only: [:show, :edit, :update]
+
     get '/search' => 'top#search'
    	root 'top#top'
 end

@@ -11,7 +11,7 @@
 					</span>
 				</div>
 				<h4 class="ms_modal_title">
-					「<%= @movie.j_title %>」<%= @user_review.score%>のレビュー
+					「<%= @movie.j_title %>」のレビュー
 				</h4>
 			</div>
 			<div class="ms_review_form">
@@ -259,7 +259,29 @@
 			</div>
 		</div>
 	</div>
-	<div class="ms_reivew">
-		
+</div>
+<div class='container-fulid ms_bottom'>
+	<div class="ms_review">
+		<h4 class="ms_review_title">
+			「<%= @movie.j_title %>」に投稿されたレビュー
+		</h4>
+		<!-- レビューがなかったら -->
+		<% unless @movie.reviews.present? %>
+			<h5 class="ms_no_review">まだレビューがありません</h5>
+		<!-- レビューがあったら -->
+		<% else %>
+			<!-- ログインユーザーのレビューがあったら -->
+			<% if @user_review.present? %>
+				<%= render 'movies/review', review: @user_review %>
+				<% @reviews.each do |r| %>
+					<%= render 'movies/review', review: r %>
+				<% end %>
+			<!-- ログインユーザーのレビューがなかったら -->
+			<% else %>
+				<% @movie.reviews.each do |r| %>
+					<%= render 'movies/review', review: r %>
+				<% end %>
+			<% end %>
+		<% end %>
 	</div>
 </div>
