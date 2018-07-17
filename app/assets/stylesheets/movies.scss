@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .ms_top{
-	margin: 50px auto 0;
+	margin: 0 auto;
+	padding-top: 50px;
 	width: 90%;
 }
 .ms_top_1{
@@ -16,7 +17,7 @@
 	padding-left: 50px;
 }
 .ms_icon_box{
-	width: 111px;
+	width: 126px;
 	height: 70px;
 	margin-top: 15px;
 	background-color: #ff956b;
@@ -28,7 +29,9 @@
 }
 .ms_icon_box1{
 	margin-right: 2px;
-	margin-left: 4px;
+}
+.ms_icon_box1:hover{
+	cursor: pointer;
 }
 .ms_icon_box2{
 	margin-left: 2px;
@@ -52,6 +55,7 @@
 	color: #b4bcc5;
 	margin-bottom: 20px;
 }
+/*score*/
 .ms_star{
 	margin-bottom: 20px;
 }
@@ -64,6 +68,7 @@
 	color: #ffa500;
 	text-shadow: #23282f 0.1px 0.5px 0.1px;
 }
+
 .mn_h5{
 	font-weight: bold;
 }
@@ -100,11 +105,100 @@
 	font-weight: bold;
 	width: 100px;
 }
-
-
-
-
-
-
-
+/*あらすじ、キャストの表示*/
+.ms_show_all{
+	color: #0099FF;
+}
+.ms_show_all:hover{
+	cursor: pointer;
+}
+.ms_actor_all{
+	display: none;
+}
+.ms_hide{
+	color: #0099FF;
+	display: none;
+}
+.ms_hide:hover{
+	cursor: pointer;
+}
+.summary_limit{
+	margin-bottom: 0px;
+}
+.summary_all{
+	display: none;
+}
+.ms_trailer_box{
+	padding-left: 50px;
+	margin-top: 50px;
+}
+.youtube-container{
+	margin-top: 50px;
+}
+/*モーダル*/
+.modal_back{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	display: none;
+}
+.ms_modal{
+	position: absolute;
+    top: 10%;
+    left: 34%;
+    width: 550px;
+    height: 620px;
+    background-color: white;
+    border-radius: 10px;
+}
+.ms_modal_top{
+	background-color: #FF5917;
+	padding-bottom: 20px;
+	border-radius: 10px 10px 0 0;
+}
+.ms_modal_title{
+	color: white;
+	text-align: center;
+	font-weight: 900;
+}
+.ms_modal_close{
+	text-align: right;
+	padding-right: 10px;
+}
+.modal_close_btn{
+	color: #CCCCCC;
+	font-size: 30px;
+}
+.modal_close_btn:hover{
+	cursor: pointer;
+}
+.ms_modal_submit{
+	text-align: right;
+}
+.ms_review_form{
+	padding: 0px 20px 20px;
+}
+.modal_bottom_btn{
+	padding: 7px 45px !important;
+}
+.ms_review_form img{
+	box-shadow: none;
+}
+.modal-score{
+	margin: 0px -20px 20px;
+	padding: 0 20px 10px;
+	background-color: #2D2D2D;
+}
+.modal_span{
+	color:white;
+	font-weight: bold;
+}
+.modal_star{
+	margin: 0 auto;
+	width: 33%;
+}
 

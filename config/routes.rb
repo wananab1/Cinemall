@@ -6,7 +6,9 @@ Rails.application.routes.draw do
       end
   	end
 
-  	resources :movies, only: [:show]
+  	resources :movies, only: [:show] do
+      resources :reviews, only: [:create, :update, :destroy]
+    end
 
     devise_for :admins
     devise_for :users
