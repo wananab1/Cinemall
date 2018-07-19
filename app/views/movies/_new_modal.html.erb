@@ -1,0 +1,43 @@
+<div class="modal_back" id="review_modal">
+	<div class="ms_modal">
+		<div class="ms_modal_top">
+			<div class="ms_modal_close">
+				<span class="modal_close_btn" id="modal_close_btn">
+					<%= fa_icon("times-circle") %>
+				</span>
+			</div>
+			<h4 class="ms_modal_title">
+				「<%= movie.j_title %>」のレビュー
+			</h4>
+		</div>
+		<div class="ms_review_form">
+			<%= form_for [movie, review] do |f|%>
+			<div class="modal-score">
+				<span class="modal_span">スコア</span>
+				<div class="modal_star">
+					<div id='star-rating'></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<%= f.label :comment, '感想' %>
+				<%= f.text_area :comment , class: 'form-control', rows: 10  %>
+			</div>
+			<div class="form-group">
+				<%= f.check_box :secret,{}, "true", "false"  %>
+				<span class="secret_i"><%= fa_icon("bomb") %></span><%= f.label :secret, 'ネタバレあり' %>
+			</div>
+			<div class="form-group ms_modal_submit">
+				<%= f.submit '投稿', class: 'btn btn-primary modal_bottom_btn'%>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script>
+	$('#star-rating').raty({
+		half:        true,
+		halfShow:    true,
+		path: '/assets/',
+	});
+</script>

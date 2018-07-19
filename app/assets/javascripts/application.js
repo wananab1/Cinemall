@@ -39,14 +39,21 @@
  		$(this).hide();
  	});
 	// モーダル表示
- 	$('#ms_review_create').click(function(){
- 		$('#review_modal').fadeIn();
+ 	$('.modal_open').click(function(){
+ 		$(this).next('div').fadeIn();
+    
  	});
  	// モーダル非表示
- 	$('#modal_close_btn').click(function(){
- 		$('#review_modal').fadeOut();
+ 	$('.modal_close_btn').click(function(){
+    $(this).parents('.modal_back').fadeOut();
  	});
 
+
+  // ネタバレ表示
+  $('.review_secret_p').click(function(){
+    var reivew = $(this).prev().show();
+    $(this).hide();
+  });
  });
 
 

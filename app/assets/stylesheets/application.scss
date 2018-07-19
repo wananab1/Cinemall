@@ -34,13 +34,19 @@ li{
 img{
    box-shadow: 0 0 1px gray;
  }
+ h1,h2,h4,h3,h5,h6{
+  font-weight: bold;
+ }
+ .modal_open:hover{
+  cursor: pointer;
+ }
 /*ヘッダー*/
 header{
 	background-color: #2D2D2D;
 }
 .h_left, .h_right{
 	width:50%;
-	height: 90px;
+	height: 110px;
 	float:left;
 }
 /*header_left*/

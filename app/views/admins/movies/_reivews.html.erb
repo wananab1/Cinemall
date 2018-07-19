@@ -51,7 +51,7 @@
 						<div class="review_box_top">
 							<div class="row">
 								<div class="review_box_top1 col-1">
-									<%= attachment_image_tag r.user, :profile_image_id, format: 'jpeg', :size => '60x60', fallback: 'no_profile_image.jpg' %>
+									<%= attachment_image_tag r.user, :profile_image_id, format: 'jpeg', :size => '60x60', fallback: 'no_profile_image.jpg' , class: 'profile_imag' %>
 								</div>
 								<div class="col-4 review_box_top2">
 									<p class="review_box_top2_name"><%= r.user.user_name %></p>

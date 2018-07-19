@@ -20,7 +20,7 @@
 	width: 126px;
 	height: 70px;
 	margin-top: 15px;
-	background-color: #ff956b;
+	background-color: #E6D5CF;
 	float: left;
 	border-radius: 5px;
 	text-align: center;
@@ -35,14 +35,16 @@
 }
 .ms_icon_box2{
 	margin-left: 2px;
-
+}
+.ms_icon_box1_present{
+	background-color: #FF5917;
 }
 .ms_icon_box i{
-	color: #a35133;
+	color: #7D3E27;
 	font-size: 35px;
 }
 .ms_icon_p{
-	color: #a35133;
+	color: #7D3E27;
 	font-size: 20px;
 	font-weight: 900;
 	margin-top: -5px;
@@ -243,7 +245,7 @@
 .review_box_top1{
 }
 .review_box_top2{
-	padding-left: 40px !important;
+	padding-left: 0px !important;
 }
 .review_box_top2 p{
 	margin-bottom: 10px !important;
@@ -272,4 +274,19 @@
 	position: relative;
 	top: -3px;
 	left: 50px;
+}
+.review_secret_p{
+	font-weight: bold;
+	color: #FE2E2E;
+
+}
+.secret_i{
+	font-size: 24px;
+	color: #5F2F1D;
+}
+.review_secret_p:hover{
+	cursor: pointer;
+}
+.secret_hide_review{
+	display: none;
 }

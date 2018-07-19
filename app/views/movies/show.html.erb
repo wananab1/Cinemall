@@ -1,100 +1,8 @@
-<div class="container">
-	<!-- modal -->
-		<!-- すでにレビューがある場合 -->
-	<% if @user_review.present? %>
-	<div class="modal_back" id="review_modal">
-		<div class="ms_modal">
-			<div class="ms_modal_top">
-				<div class="ms_modal_close">
-					<span class="modal_close_btn" id="modal_close_btn">
-						<%= fa_icon("times-circle") %>
-					</span>
-				</div>
-				<h4 class="ms_modal_title">
-					「<%= @movie.j_title %>」のレビュー
-				</h4>
-			</div>
-			<div class="ms_review_form">
-				<%= form_for [@movie, @user_review] do |f|%>
-				<div class="modal-score">
-					<span class="modal_span">スコア</span>
-					<div class="modal_star">
-						<div id='star-rating'></div>
-					</div>
-				</div>
-				<div class="form-group">
-					<%= f.label :comment, '感想' %>
-					<%= f.text_area :comment , class: 'form-control', rows: 10  %>
-				</div>
-				<div class="form-group">
-					<%= f.check_box :secret,{}, "true", "false"  %>
-					<%= f.label :secret, 'ネタバレあり' %>
-				</div>
-				<div class="form-group ms_modal_submit">
-					<%= link_to '削除', movie_review_path(@movie, @user_review), method: :delete, class: 'btn btn-danger modal_bottom_btn', data: {confirm: "レビューを削除しますか？"}  %>
-					<%= f.submit '更新', class: 'btn btn-primary modal_bottom_btn'%>
-				</div>
-				<% end %>
-			</div>
-		</div>
-	</div>
-	<!-- js -->
-	<script>
-		$('#star-rating').raty({
-			half:        true,
-			halfShow:    true,
-			path: '/assets/',
-			score: <%= @user_review.score %>,
-		});
-	</script>
-		<!-- レビューが存在しない場合 -->
-	<% else %>
-	<div class="modal_back" id="review_modal">
-		<div class="ms_modal">
-			<div class="ms_modal_top">
-				<div class="ms_modal_close">
-					<span class="modal_close_btn" id="modal_close_btn">
-						<%= fa_icon("times-circle") %>
-					</span>
-				</div>
-				<h4 class="ms_modal_title">
-					「<%= @movie.j_title %>」のレビュー
-				</h4>
-			</div>
-			<div class="ms_review_form">
-				<%= form_for [@movie, @review] do |f|%>
-				<div class="modal-score">
-					<span class="modal_span">スコア</span>
-					<div class="modal_star">
-						<div id='star-rating'></div>
-					</div>
-				</div>
-				<div class="form-group">
-					<%= f.label :comment, '感想' %>
-					<%= f.text_area :comment , class: 'form-control', rows: 10  %>
-				</div>
-				<div class="form-group">
-					<%= f.check_box :secret,{}, "true", "false"  %>
-					<%= f.label :secret, 'ネタバレあり' %>
-				</div>
-				<div class="form-group ms_modal_submit">
-					<%= f.submit '投稿', class: 'btn btn-primary modal_bottom_btn'%>
-				</div>
-				<% end %>
-			</div>
-		</div>
-	</div>
-	<!-- js -->
-	<script>
-		$('#star-rating').raty({
-			half:        true,
-			halfShow:    true,
-			path: '/assets/',
-		});
-	</script>
-	<% end %>
-	<!-- modal end -->
+<!-- modal -->
+	<!-- すでにレビューがある場合 -->
 
+<!-- modal end -->
+<div class="container">
 	<div class="ms_top">
 		<div class="row">
 			<div class="col-3 ms_top_1">
@@ -102,26 +10,41 @@
 					<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '257x342' %>
 				</div>
 				<div class="ms_icons clearfix">
+					<!-- ユーザーがログインしている場合 -->
 					<% if user_signed_in? %>
-					<div class="ms_icon_box ms_icon_box1" id="ms_review_create">
-						<div>
-							<%= fa_icon("eye") %>
+						<!-- ログインユーザーのレビューがある場合 -->
+						<% if @user_review.present? %>
+							<div class="ms_icon_box ms_icon_box1 ms_icon_box1_present modal_open" >
+								<div>
+									<%= fa_icon("eye") %>
+								</div>
+								<p class="ms_icon_p"><%= @movie.reviews.count %></p>
+							</div>
+							<%= render 'movies/edit_modal', movie: @movie, user_review: @user_review %>
+						<!-- ログインユーザーのレビューがない場合 -->
+						<% else %>
+							<div class="ms_icon_box ms_icon_box1 modal_open">
+								<div>
+									<%= fa_icon("eye") %>
+								</div>
+								<p class="ms_icon_p"><%= @movie.reviews.count %></p>
+							</div>
+							<%= render 'movies/new_modal', movie: @movie, review: @review %>
+						<% end %>
+						<div class="ms_icon_box ms_icon_box2">
+							<div>
+								<%= fa_icon("paperclip") %>
+							</div>
+							<p class="ms_icon_p">39</p>
 						</div>
-						<p class="ms_icon_p">12</p>
-					</div>
-					<div class="ms_icon_box ms_icon_box2">
-						<div>
-							<%= fa_icon("paperclip") %>
-						</div>
-						<p class="ms_icon_p">39</p>
-					</div>
+					<!-- ログインしていない場合 -->
 					<% else %>
 						<%= link_to new_user_session_path do %>
 						<div class="ms_icon_box ms_icon_box1">
 							<div>
 								<%= fa_icon("eye") %>
 							</div>
-							<p class="ms_icon_p">12</p>
+							<p class="ms_icon_p"><%= @movie.reviews.count %></p>
 						</div>
 						<% end %>
 						<%= link_to new_user_session_path do %>
@@ -140,8 +63,30 @@
 					<h2 class="ms_j_title"><%= @movie.j_title %></h2>
 					<p class="ms_e_title"><%= @movie.e_title %></p>
 					<div class="ms_star">
-						<span class="rate rate4-5"></span>
-						<span class="ms_score">4.6</span>
+						<% unless @movie.score_average == 0.0 %>
+							<% if @movie.score_average == 5.0 %>
+								<span class="rate rate5"></span>
+							<% elsif @movie.score_average >= 4.5 %>
+								<span class="rate rate4-5"></span>
+							<% elsif @movie.score_average >= 4.0 %>
+								<span class="rate rate4"></span>
+							<% elsif @movie.score_average >= 3.5 %>
+								<span class="rate rate3-5"></span>
+							<% elsif @movie.score_average >= 3.0 %>
+								<span class="rate rate3"></span>
+							<% elsif @movie.score_average >= 2.5 %>
+								<span class="rate rate2-5"></span>
+							<% elsif @movie.score_average >= 2.0 %>
+								<span class="rate rate2"></span>
+							<% elsif @movie.score_average >= 1.5 %>
+								<span class="rate rate1-5"></span>
+							<% elsif @movie.score_average >= 1.0 %>
+								<span class="rate rate1"></span>
+							<% elsif @movie.score_average >= 0.5 %>
+								<span class="rate rate0-5"></span>
+							<% end %>
+							<span class="ms_score"><%= @movie.score_average %></span>
+						<% end %>
 					</div>
 				</div>
 				<div class="ms_top_2box">
@@ -272,7 +217,9 @@
 		<% else %>
 			<!-- ログインユーザーのレビューがあったら -->
 			<% if @user_review.present? %>
+				<!-- ログインユーザー部分 -->
 				<%= render 'movies/review', review: @user_review %>
+				<!-- その他のユーザー -->
 				<% @reviews.each do |r| %>
 					<%= render 'movies/review', review: r %>
 				<% end %>

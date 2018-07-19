@@ -1,3 +1,177 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*user/edit*/
+.ue_form{
+	width: 50%;
+	background-color: white;
+	margin: 0px auto;
+	padding: 30px 60px;
+}
+.ue_form label{
+	font-weight: bold;
+}
+.ue_title{
+	padding: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+.ue_cantainer{
+	background-color: #fafafa;
+	padding: 50px 0 100px;
+}
+.profile_image{
+	border-radius: 8px;
+}
+.ue_profile_image{
+	padding-bottom: 30px;
+}
+.ue_form_group{
+	padding-top: 30px;
+}
+.ue_submit{
+	text-align: right;
+}
+
+
+/*user/show*/
+.us_info_container{
+	background-color: #fafafa;
+}
+.us_user_info{
+	padding: 50px 0 50px;
+}
+.us_main_container{
+}
+.us_name{
+	padding-bottom: 20px;
+}
+.us_intro{
+	margin: 0;
+	font-size: 15px;
+}
+.us_edit_link{
+	position: absolute;
+	bottom: 0;
+}
+.us_main_box{
+	border: 2px solid #6c757d;
+	margin-bottom: 50px;
+}
+
+.us_main_top{
+	background-color: orange;
+	margin-bottom: 20px;
+}
+.us_main_top_box1{
+	height:90px;
+	background-color: #ff5917;
+	width: 50%;
+	float: left;
+	border-bottom: 2px solid #6c757d;
+	box-shadow: 2px 2px 4px #6c757d;
+	border-right: 2px solid #6c757d;
+
+}
+.us_main_top_box2{
+	height:90px;
+	background-color: #E6D5CF;
+	width: 49.8%;
+	float: right;
+}
+.us_main_top_box2:hover{
+	cursor: pointer;
+}
+.us_watch_logo{
+	width: 20%;
+	text-align: center;
+	margin-left: 35%;
+}
+.us_clip_logo{
+	width: 20%;
+	text-align: center;
+	margin-left: 35%;
+	padding-top: 5px;
+}
+.us_watch_logo i{
+	font-size: 48px;
+}
+.us_clip_logo i{
+	font-size: 46px;
+}
+.us_count{
+	float: left;
+	display: inline-block;
+	position: relative;
+	top: -75%;
+	left: 60%;
+}
+.us_review_box{
+	height: 300px;
+	width: 48%;
+	background-color: #f2f2f2;
+	margin: 1%;
+	float: left;
+}
+.us_review_box_left{
+	width: 35%;
+	height: 85%;
+	float: left;
+	padding: 0 10px;
+}
+.us_review_box_right{
+	width: 65%;
+	height: 85%;
+	float: left;
+}
+.us_review_box_title{
+	height: 10%;
+	padding: 10px 10px 5px;
+	color: black;
+}
+.us_review_box_title a{
+	color: black;
+}
+.us_review_box_title a:hover{
+    text-decoration: none;
+}
+.us_icons_box{
+
+}
+.us_icon_box{
+	width: 44%;
+	background-color: #e6d5cf;
+	height: 50px;
+	float:left;
+	margin-top: 1%;
+	border-radius: 5px 0 0 5px;
+	text-align: center;
+	color: #7D3E27;
+}
+.us_icon_box i{
+	font-size: 24px;
+}
+.us_icon_box1{
+	margin-right: 1%;
+	border-radius: 5px 0 0 5px;
+
+}
+.us_icon_box2{
+	margin-left: 1%;
+	border-radius: 0px 5px 5px 0px;
+}
+.us_review_secret_p{
+	font-weight: bold;
+	color: #01DFA5;
+}
+.us_review_box_comment{
+	height: 145px;
+	border-bottom: 1px dotted gray;
+	font-size: 14px;
+}
+.us_icon_box1_present{
+	background-color: #FF5917;
+}
+
+
+

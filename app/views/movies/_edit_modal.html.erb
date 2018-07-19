@@ -1,0 +1,45 @@
+<div class="modal_back">
+	<div class="ms_modal">
+		<div class="ms_modal_top">
+			<div class="ms_modal_close">
+				<span class="modal_close_btn">
+					<%= fa_icon("times-circle") %>
+				</span>
+			</div>
+			<h4 class="ms_modal_title">
+				「<%= movie.j_title %>」のレビュー
+			</h4>
+		</div>
+		<div class="ms_review_form">
+			<%= form_for [movie, user_review] do |f|%>
+			<div class="modal-score">
+				<span class="modal_span">スコア</span>
+				<div class="modal_star">
+					<div id='star-rating'></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<%= f.label :comment, '感想' %>
+				<%= f.text_area :comment , class: 'form-control', rows: 10  %>
+			</div>
+			<div class="form-group">
+				<%= f.check_box :secret,{}, "true", "false"  %>
+				<span class="secret_i"><%= fa_icon("bomb") %></span><%= f.label :secret, 'ネタバレあり' %>
+			</div>
+			<div class="form-group ms_modal_submit">
+				<%= link_to '削除', movie_review_path(movie, user_review), method: :delete, class: 'btn btn-danger modal_bottom_btn', data: {confirm: "レビューを削除しますか？"}  %>
+				<%= f.submit '更新', class: 'btn btn-primary modal_bottom_btn'%>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+<!-- js -->
+<script>
+	$('#star-rating').raty({
+		half:        true,
+		halfShow:    true,
+		path: '/assets/',
+		score: <%= user_review.score %>,
+	});
+</script>
