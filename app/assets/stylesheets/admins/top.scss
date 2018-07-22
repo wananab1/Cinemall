@@ -1,0 +1,37 @@
+// Place all the styles related to the admins/top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.atm-title{
+	text-align: center;
+	padding-top: 100px;
+	color: white;
+}
+.at-content{
+	padding: 50px 0;
+}
+.at-box{
+	width: 33%;
+	height: 200px;
+	background-color: #EBEAF2;
+	border: 1px solid white;
+	float: left;
+	color: #585858;
+	border-radius: 5px;
+}
+.at-box a{
+	color: #585858;
+}
+.at-content-back{
+	background-color: white;
+}
+.at-box-title{
+	text-align: center;
+	padding-top: 20px;
+}
+.at-box-link{
+	padding: 20px 0px 30px 120px;
+
+}
+.at-box-link li{
+	line-height: 3;
+}

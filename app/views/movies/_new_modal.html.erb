@@ -15,7 +15,7 @@
 			<div class="modal-score">
 				<span class="modal_span">スコア</span>
 				<div class="modal_star">
-					<div id='star-rating'></div>
+					<div id='star-rating-new<%= movie.id %>'></div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -35,7 +35,7 @@
 </div>
 <!-- js -->
 <script>
-	$('#star-rating').raty({
+	$('#star-rating-new<%= movie.id %>').raty({
 		half:        true,
 		halfShow:    true,
 		path: '/assets/',

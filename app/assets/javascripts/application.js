@@ -54,6 +54,18 @@
     var reivew = $(this).prev().show();
     $(this).hide();
   });
+
+// user/show切り替え
+  // $('.us_main_top_box2').click(function(){
+  //   $('.us_main_container_watch').hide();
+  //   $('.us_main_container_clip').show();
+  // });
+
+  // $('.us_main_top_box1_2').click(function(){
+  //   $('.us_main_container_clip').hide();
+  //   $('.us_main_container_watch').show();
+  // });
+
  });
 
 

@@ -57,6 +57,11 @@
 	color: #b4bcc5;
 	margin-bottom: 20px;
 }
+.clipped_ms_icon_box2{
+	background-color: #FF5917;
+}
+
+
 /*score*/
 .ms_star{
 	margin-bottom: 20px;
@@ -185,6 +190,7 @@
 }
 .ms_review_form{
 	padding: 0px 20px 20px;
+	text-align: left;
 }
 .modal_bottom_btn{
 	padding: 7px 45px !important;
@@ -290,3 +296,21 @@
 .secret_hide_review{
 	display: none;
 }
+.review_box_bottom_time{
+	width: 80%;
+	float: left;
+}
+.review_box_bottom_iine{
+	width: 20%;
+	float: left;
+	text-align: right;
+}
+.iine i{
+	color: red;
+}
+
+.uniine i{
+	color: gray;
+}
+
+

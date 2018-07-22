@@ -1,0 +1,46 @@
+<div class="container-fulid top-main">
+	<div class="tm-cover">
+		<div class="container">
+			<div class="tm-top">
+				<p class="tm-p">映画の情報・評価・レビュー投稿なら</p>
+				<h1 class="tm-h1"><%= fa_icon("film") %>Cinemall</h1>
+				<p class="tm-catch">今日は、何を見よう？</p>
+			</div>
+			<div class="tm-bottom">
+				<div class="atm-title">
+					<h2>管理者ページ</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fulid at-content-back">
+	<div class="container at-content clearfix">
+		<div class="at-box">
+			<h3 class="at-box-title">Movie <%= fa_icon("film") %></h3>
+			<div class="at-box-link">
+				<ul>
+					<li><%= link_to '・作品一覧', admins_movies_path %></li>
+					<li><%= link_to '・作品新規登録', new_admins_movie_path %></li>
+				</ul>
+			</div>
+		</div>
+		<div class="at-box">
+			<h3 class="at-box-title">User <%= fa_icon("users") %></h3>
+			<div class="at-box-link">
+				<ul>
+					<li><%= link_to '・利用者一覧', admins_users_path %></li>
+				</ul>
+			</div>
+		</div>
+		<div class="at-box">
+			<h3 class="at-box-title">List <%= fa_icon("th-list") %></h3>
+			<div class="at-box-link">
+				<ul>
+					<li>・リスト一覧</li>
+					<li>・リスト作成</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

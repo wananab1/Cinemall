@@ -7,7 +7,7 @@
 				<div class="col-3">
 					<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '150x200' %>
 				</div>
-				<div class="col-8">
+				<div class="col-7">
 					<h3 class="cn_movie_title">「<%= @movie.j_title %>」</h3>
 					<p class="cn_e_title"><%= @movie.e_title %></p>
 					<p class="cn_p">ジャンル：<%= @movie.genre.genre_name %></p>
@@ -15,12 +15,15 @@
 					<p class="cn_p">製作国：<%= @movie.country.country_name %></p>
 					<p class="cn_p">上映時間：<%= @movie.time %>分</p>
 					<p class="cn_p">公開日：<%= @movie.release %></p>
+					<div class="cn_show_link">
+						<span><%= link_to '作品詳細へ', movie_path(@movie) %></span>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-1"></div>
-			<div class="col-9">
+			<div class="col-9 cn_form_box">
 		    	<%= form_for(@movie, url: admins_movie_casts_path, method: :post, html:{class: 'form-horizontal'}) do |f| %>
 		            <table class="table table-bordered table-hover">
 		                <tbody>

@@ -1,4 +1,10 @@
 class ReviewsController < ApplicationController
+
+  def show
+    @show_review= Review.find(params[:id])
+    @review = Review.new
+  end
+
   def create
   	movie = Movie.find(params[:movie_id])
   	review = Review.new(review_params)

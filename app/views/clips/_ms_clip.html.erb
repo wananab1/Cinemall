@@ -1,0 +1,22 @@
+<!-- すでにクリップされていたら -->
+<% @clips = Clip.where(movie_id: @movie.id) %>
+<% if movie.clipped_by?(current_user) %>
+	<%= link_to movie_clips_path(movie), remote: true, method: :delete do %>
+		<div class="ms_icon_box ms_icon_box2 clipped_ms_icon_box2">
+			<div>
+				<%= fa_icon("paperclip") %>
+			</div>
+			<p class="ms_icon_p"><%= @clips.count %></p>
+		</div>
+	<% end %>
+<!-- まだクリップされていなかったら -->
+<% else %>
+	<%= link_to movie_clips_path(movie), remote: true, method: :post do %>
+		<div class="ms_icon_box ms_icon_box2">
+			<div>
+				<%= fa_icon("paperclip") %>
+			</div>
+			<p class="ms_icon_p"><%= @clips.count %></p>
+		</div>
+	<% end %>
+<% end %>

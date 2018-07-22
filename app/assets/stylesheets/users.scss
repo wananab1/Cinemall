@@ -42,6 +42,8 @@
 	padding: 50px 0 50px;
 }
 .us_main_container{
+
+
 }
 .us_name{
 	padding-bottom: 20px;
@@ -60,7 +62,7 @@
 }
 
 .us_main_top{
-	background-color: orange;
+	background-color: #6c757d;
 	margin-bottom: 20px;
 }
 .us_main_top_box1{
@@ -69,7 +71,7 @@
 	width: 50%;
 	float: left;
 	border-bottom: 2px solid #6c757d;
-	box-shadow: 2px 2px 4px #6c757d;
+	box-shadow: 2px 2px 4px  #6c757d;
 	border-right: 2px solid #6c757d;
 
 }
@@ -78,10 +80,37 @@
 	background-color: #E6D5CF;
 	width: 49.8%;
 	float: right;
+	color: black;
 }
+
 .us_main_top_box2:hover{
 	cursor: pointer;
 }
+/*clip側表示部分*/
+.us_main_top_box1_2{
+	color: black;
+	height:90px;
+	background-color: #E6D5CF;
+	width: 50%;
+	float: left;
+	border-bottom: 2px solid #6c757d;
+	border-right: 2px solid #6c757d;
+}
+.us_main_top_box2_2{
+	height:90px;
+	background-color: #ff5917;
+	width: 49.8%;
+	float: right;
+	box-shadow: -2px 2px 1px 1px #6c757d;
+}
+.us_main_top_box1_2:hover{
+	cursor: pointer;
+}
+
+
+
+/*共通部分*/
+
 .us_watch_logo{
 	width: 20%;
 	text-align: center;
@@ -106,6 +135,9 @@
 	top: -75%;
 	left: 60%;
 }
+
+
+/*watch側表示部分*/
 .us_review_box{
 	height: 300px;
 	width: 48%;
@@ -172,6 +204,47 @@
 .us_icon_box1_present{
 	background-color: #FF5917;
 }
+.us_review_box_iine{
+	text-align: right;
+	padding: 15px 15px 0 0;
+}
 
 
 
+/*clip側表示部分*/
+.us_main_container_clip{
+/*	display: none;
+*/}
+.us_clip_movie_box{
+	width: 20%;
+	float: left;
+	text-align: center;
+	margin-bottom: 20px;
+	background-color: #f2f2f2;
+	border: 1px solid white;
+
+}
+.us_clip_movie_title{
+	font-size: 14px;
+	height: 40px;
+	padding: 10px 10px 5px;
+}
+.us_clip_movie_icon{
+	width: 33%;
+	height: 55px;
+	background-color: #e6d5cf;
+	border: 1px solid #f2f2f2;
+	float: left;
+	color: #7D3E27;
+}
+.us_clip_movie_icon i{
+	font-size: 24px;
+}
+.us_clip_movie_icon_eye{
+	border-radius: 5px 0 0 5px;
+}
+.us_clip_movie_icon_star{
+	border-radius: 0 5px 5px 0;
+	background-color: white;
+	color: #ffd700;
+}

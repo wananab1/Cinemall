@@ -39,7 +39,7 @@ class Admins::MoviesController < ApplicationController
     end
 
     movie.save
-    redirect_to admins_movies_path
+    redirect_to new_admins_movie_cast_path(movie)
   end
 
   def edit

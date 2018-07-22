@@ -17,7 +17,8 @@
 		</div>
 	</div>
 </div>
-<div class="container us_main_container">
+
+<div class="container us_main_container us_main_container_watch">
 	<div class="us_main_box" >
 		<div class="us_main_top clearfix">
 			<div class="us_main_top_box us_main_top_box1">
@@ -29,6 +30,7 @@
 				</div>
 				<h2 class="us_count"><%= @user.reviews.count %></h2>
 			</div>
+			<%= link_to user_clips_path(@user.id) do %>
 			<div class="us_main_top_box us_main_top_box2">
 				<div class="us_clip_logo">
 					<div>
@@ -36,8 +38,9 @@
 					</div>
 					<p>clip</p>
 				</div>
-				<h3 class="us_count">142</h3>
+				<h3 class="us_count"><%= @user.clips.count %></h3>
 			</div>
+			<% end %>
 		</div>
 		<div class="us_main_bottom clearfix">
 			<% @user.reviews.order(created_at: :desc).each do |r| %>
@@ -75,7 +78,7 @@
 									<div>
 										<%= fa_icon("paperclip") %>
 									</div>
-									<span>123</span>
+									<span><%= r.movie.clips.count %></span>
 								</div>
 							<!-- ログインしてない場合 -->
 							<% else %>
@@ -90,7 +93,7 @@
 									<div>
 										<%= fa_icon("paperclip") %>
 									</div>
-									<span>123</span>
+									<span><%= r.movie.clips.count %></span>
 								</div>
 								<% end %>
 							<% end %>
@@ -129,7 +132,7 @@
 								<% if r.comment.length > 120 %>
 									<p class="secret_hide_review">
 										<%= r.comment.truncate(120) %><br>
-										<a href=""><span>続きを読む</span></a>
+										<span><%= link_to "続きを読む", review_path(r)%></span>
 									</p>
 									<p class="review_secret_p">
 										<span class="secret_i"><%= fa_icon("bomb") %></span>ネタバレ表示する▽
@@ -144,11 +147,14 @@
 							<% else %>
 								<% if r.comment.length > 120 %>
 									<%= r.comment.truncate(120) %><br>
-									<a href=""><span>続きを読む</span></a>
+									<span><%= link_to "続きを読む", review_path(r)%></span>
 								<% else %>
 									<%= r.comment.truncate(120) %>
 								<% end %>
 							<% end %>
+						</div>
+						<div class="us_review_box_iine" id="review-<%= r.id%>">
+							<%= render 'likes/like', review: r %>
 						</div>
 					</div>
 				</div>

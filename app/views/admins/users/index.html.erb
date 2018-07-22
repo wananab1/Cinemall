@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="mi_main">
+		<h2 class="mi_title">利用者一覧</h2>
+		<% @users.each do |u| %>
+			<div class="ui_box clearfix">
+				<div class="ui_box_item ui_box_item1">
+					<%= attachment_image_tag u, :profile_image, format: 'jpeg', :size => '100x100', fallback: 'no_profile_image.jpg' %>
+				</div>
+				<div class="ui_box_item ui_box_item2">
+					<h5><%= u.user_name %></h5>
+				</div>
+				<div class="ui_box_item ui_box_item3">
+					<p><%= u.email %></p>
+				</div>
+				<div class="ui_box_item ui_box_item4">
+					<p>レビュー：<%= u.reviews.count %>件</p>
+					<p>クリップ：<%= u.clips.count %>個</p>
+					<p><%= link_to 'ユーザー詳細', user_path(u) %></p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

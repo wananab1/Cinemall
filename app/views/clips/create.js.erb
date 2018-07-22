@@ -1,0 +1,1 @@
+$("#movie-<%= @movie.id %>").html("<%= j(render partial: "clips/ms_clip", locals: {movie: @movie}) %>");

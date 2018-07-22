@@ -1,0 +1,38 @@
+// Place all the styles related to the admins/users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ui_box{
+	margin: 0 auto;
+	width: 85%;
+	height: 130px;
+	padding: 0 50px;
+}
+.ui_box_item{
+	height: 130px;
+	padding: 10px;
+	background-color: #F2F2F2;
+	float: left;
+	margin-bottom: 10px;
+}
+.ui_box_item1{
+	width: 15%;
+	text-align: center;
+	border-right: 1px dotted #D8D8D8;
+}
+.ui_box_item2{
+	width: 25%;
+	border-right: 1px dotted #D8D8D8;
+	padding-top: 50px;
+}
+.ui_box_item3{
+	width: 35%;
+	border-right: 1px dotted #D8D8D8;
+	padding-top: 50px;
+
+}
+.ui_box_item4{
+	width: 25%;
+	padding-top: 10px;
+
+}

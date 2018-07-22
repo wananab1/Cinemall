@@ -6,15 +6,16 @@
 				<h1 class="tm-h1"><%= fa_icon("film") %>Cinemall</h1>
 				<p class="tm-catch">今日は、何を見よう？</p>
 			</div>
-			<div class="tm-bottom">
-				<div class="tm-link">
-					<button class="btn btn-outline-primary btn-lg tm-up">新規登録</button>
-					<button class="btn btn-outline-success btn-lg tm-in">ログイン</button>
+			<% unless user_signed_in? || admin_signed_in? %>
+				<div class="tm-bottom">
+					<div class="tm-link">
+						<%= link_to "新規登録", new_user_registration_path, class: "btn btn-outline-primary btn-lg tm-up" %>
+						<%= link_to "ログイン", new_user_session_path, class: "btn btn-outline-success btn-lg tm-in" %>
+					</div>
 				</div>
-			</div>
+			<% end %>
 		</div>
 	</div>
 </div>
 <div class="container top-content">
-	
 </div>

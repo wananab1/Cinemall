@@ -40,9 +40,14 @@
 .cn_submit{
 	margin-top: 50px;
 }
-/*.cn_submit_btn{
+.cn_submit_btn{
 	position: relative;
 	top: 0;
-	left: 665px;
+	left: 98%;
 }
-*/
+.cn_form_box{
+	z-index: 2;
+}
+.cn_show_link{
+	text-align: right;
+}

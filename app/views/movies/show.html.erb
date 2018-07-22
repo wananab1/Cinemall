@@ -31,11 +31,9 @@
 							</div>
 							<%= render 'movies/new_modal', movie: @movie, review: @review %>
 						<% end %>
-						<div class="ms_icon_box ms_icon_box2">
-							<div>
-								<%= fa_icon("paperclip") %>
-							</div>
-							<p class="ms_icon_p">39</p>
+				<!-- clip -->
+						<div id="movie-<%= @movie.id %>">
+							<%= render 'clips/ms_clip', movie: @movie %>
 						</div>
 					<!-- ログインしていない場合 -->
 					<% else %>
