@@ -1,0 +1,33 @@
+<div class="container ln_container">
+	<div class="mn_main">
+		<h2 class="mn_title">リスト作成</h2>
+		<%= form_for([:admins, @list], html: {class: 'form-horizontal'}) do |f| %>
+			<div class="from-group row mn_form">
+				<%= f.label :list_name, 'リスト名',class: "col-form-label col-sm-3 mn_label" %>
+				<div class="col-sm-8">
+					<%= f.text_field :list_name, class: "form-control" %>
+				</div>
+			</div>
+			<div class="from-group row mn_form">
+				<%= f.label :list_intro, 'リスト説明',class: "col-form-label col-sm-3 mn_label" %>
+				<div class="col-sm-8">
+					<%= f.text_area :list_intro, class: "form-control", rows: 8 %>
+				</div>
+			</div>
+			<div class="from-group row mn_form">
+				<%= f.label :top, 'Topページ表示',class: "col-form-label col-sm-3 mn_label" %>
+				<div class="col-sm-8">
+					<%= f.check_box :top, class: "ls_check", id: 'top_help' %><br>
+				<small id="top_help" class="help-block">※Topページに表示したい場合はチェックする</small>
+				</div>
+			</div>
+			<div class="from-group row ls_btn">
+				<div class="col-8">
+				</div>
+				<div class="col-3">
+					<%= f.submit '登録', class: 'btn btn-primary btn-md btn-block' %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

@@ -45,9 +45,6 @@
 	font-size: 18px;
 	font-family: 'ヒラギノ丸ゴ Pro W4';
 }
-.top-content{
-	height:500px;
-}
 .tm-link{
 	text-align: center;
 	padding-top: 100px;
@@ -61,7 +58,57 @@
 	padding: 10px 30px !important;
 
 }
+.top-content{
+	text-align: center;
+	padding-bottom: 50px;
+}
+.top-content:nth-child(even){
+	background-color: #f4f4f4;
+}
+.top-container{
+	margin-bottom: 30px;
+}
+.top_list_name{
+	padding: 50px 0 30px 0;
+}
+.top_movie_box{
+	width: 17%;
+	margin: 0 1%;
+	display: inline-block;
+	box-shadow: 0 0 1px #C6C5C2;
+	border-radius: 5px;
+}
+.top_movie_box a{
+	color: black;
+}
+.top_movie_box a:hover{
+	text-decoration: none;
+}
+.top_movie_box_j{
+	font-size: 12px;
+	height: 30px;
+	padding-top: 10px;
+}
+.top_icon_box{
+	width: 32%;
+	float: left;
+	background-color: #E6D5CF;
+	border-radius: 5px;
+	margin: 1.2px;
+	color: #7D3E27;
+	box-shadow: 0 0 1px #C6C5C2;
 
-
-
-
+}
+.top_icon_box i{
+	font-size: 20px;
+}
+.top_icon_box span{
+	font-size: 14px;
+}
+.top_star{
+	background-color:  #FBF9F4;
+	box-shadow: 0 0 1px #C6C5C2;
+	border-radius: 5px;
+	margin: 1px;
+	color: #F9C804;
+}

@@ -67,3 +67,5 @@ gem "refile-mini_magick"
 gem 'nested_form_fields'
 # アイコン
 gem 'font-awesome-rails'
+# 検索
+gem "ransack"

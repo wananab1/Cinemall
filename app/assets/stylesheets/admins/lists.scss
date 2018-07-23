@@ -1,0 +1,54 @@
+// Place all the styles related to the admins/lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*list/new*/
+.ln_container{
+	margin: 100px 0;
+}
+.ls_check{
+	margin-top: 12px !important;
+}
+.ls_btn{
+	margin: 50px 0 20px;
+}
+
+
+/*list/index*/
+.li_wrapper{
+	margin: 50px 0;
+}
+.li_list-box{
+	width: 90%;
+	margin: 0 auto 20px;
+	background-color: #f2f2f2;
+	border-radius: 8px;
+	box-shadow: 0 0 2px gray;
+}
+.li_list-box_title{
+	padding: 10px;
+	background-color: #F23A3A;
+	color: white;
+	border-radius: 8px 8px 0 0;
+	margin: 0;
+}
+.li_list-box_left{
+	width: 80%;
+	float: left;
+	padding: 10px;
+	border-right: 1px dotted gray;
+}
+.li_list-box_right{
+	width: 20%;
+	float: left;
+	padding: 10px;
+	text-align: center;
+	margin-top: 4%;
+}
+.li_list-box_right_p{
+	margin-bottom: 25px;
+}
+.li_item_movie{
+	float: left;
+	width: 20%;
+}

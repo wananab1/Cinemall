@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="li_wrapper">
+		<% @lists.each do |l| %>
+			<div class="li_list-box">
+				<div class="li_list-box_bottom clearfix">
+					<h5 class="li_list-box_title">
+						<% if l.top == true %>
+							<%= fa_icon("flag") %>
+						<% end %>
+						<%= l.list_name %>
+					</h5>
+					<div class="li_list-box_left clearfix">
+						<% list_items = ListItem.where(list_id: l.id).limit(5) %>
+						<% list_items.each do |l_i| %>
+							<div class="li_item_movie">
+								<%= attachment_image_tag l_i.movie, :movie_image, format: 'jpeg', :size => '159x212' %>
+							</div>
+						<% end %>
+					</div>
+					<div class="li_list-box_right">
+						<p class="li_list-box_right_p">
+							<%= link_to 'リスト編集', edit_admins_list_path(l) %>
+						</p>
+						<p class="li_list-box_right_p">
+							<%= link_to '作品登録', new_admins_list_list_item_path(l) %>
+						</p>
+						<p>
+							<%= link_to '削除', admins_list_path(l), method: :delete, class: 'btn btn-outline-danger btn-sm mi-delete', data: {confirm: "このリストを削除しますか？"} %>
+						</p>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+

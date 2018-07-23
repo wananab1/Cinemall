@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="cn_main">
+		<h2 class="mn_title">リストアイテム登録</h2>
+		<div class="cn_movie_info">
+			<h4>リスト名：「<%= @list.list_name %>」</h4>
+			<p class="li_intro"><%= @list.list_intro %></p>
+			<% if @list.list_items.present? %>
+					<table class="table table-striped lin_table">
+						<thead class="thead-dark">
+							<tr>
+								<th width='90%'>作品名</th>
+								<th width='10%'></th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @list.list_items.each do |l| %>
+							<tr>
+								<td><%= l.movie.j_title %></td>
+								<td><%= link_to '削除', admins_list_list_item_path(@list,l), method: :delete, class: 'btn btn-outline-danger btn-sm'  %></td>
+							</tr>
+							<%end%>
+						</tbody>
+					</table>
+				</div>
+			<% end %>
+			<div class="lin_back">
+				<%= link_to '<<リスト一覧へ', admins_lists_path %>
+			</div>
+		</div>
+		<div class="li_form">
+			<%= search_form_for @q, html: {class: 'form-horizontal'}, url: new_admins_list_list_item_path(@list) do |f| %>
+				<div class="form-group row">
+					<div class="col-2"></div>
+					<%= f.label :j_title_or_e_title_cont, "作品名検索" ,class: "col-form-label col-2 mn_label lin_label" %>
+	            	<%= f.search_field :j_title_or_e_title_cont, class: 'form-control col-4 lin_serch' %>
+	            	<%= f.submit 'Search', class: "btn btn-primary " %>
+				</div>
+            <% end %>
+		</div>
+		<div class="lin_movies clearfix">
+			<% @movies.each do |m| %>
+	        	<div class="lin_movie_box">
+	        		<%= attachment_image_tag m, :movie_image, format: 'jpeg', :size => '156x208' %>
+	        		<h6 class="lin_movie_title"><%= m.j_title %></h6>
+	        		<div class="lin_movie_form">
+	        			<% if ListItem.find_by(list_id: @list.id, movie_id: m.id) %>
+	        					<%= fa_icon("lock") %>
+	        			<% else %>
+	        				<%= form_for [:admins,@list,@list_item] do |f| %>
+	        					<%= f.hidden_field :movie_id, value: "#{m.id}" %>
+	        					<%= f.submit 'リストに登録', class: "btn btn-outline-success btn-sm " %>
+	        				<% end %>
+	        			<% end %>
+	        		</div>
+	        	</div>
+	        <% end %>
+		</div>
+	</div>
+</div>

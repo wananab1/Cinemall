@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 	  when Admin
 	    admins_top_path
 	  when User
-	    top_path
+	    user_path(current_user)
 	  end
 	end
 end

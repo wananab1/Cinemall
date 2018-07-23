@@ -1,17 +1,27 @@
-<% if review.liked_by?(current_user) %>
-	<span class="iine">
-		<%= link_to fa_icon("heart"), review_likes_path(review), remote: true, method: :delete %> 
-		<% unless review.likes.count == 0 %>
-			<%= review.likes.count %> 
-		<% end %>
-		イイね！
-	</span>
+<% if user_signed_in? %>
+	<% if review.liked_by?(current_user) %>
+		<span class="iine">
+			<%= link_to fa_icon("heart"), review_likes_path(review), remote: true, method: :delete %> 
+			<% unless review.likes.count == 0 %>
+				<%= review.likes.count %> 
+			<% end %>
+			イイね！
+		</span>
+	<% else %>
+		<span class="uniine">
+			<%= link_to fa_icon("heart"), review_likes_path(review), remote: true ,method: :post %> 
+			<% unless review.likes.count == 0 %>
+				<%= review.likes.count %> 
+			<% end %>
+			イイね！
+		</span>
+	<% end %>
 <% else %>
 	<span class="uniine">
-		<%= link_to fa_icon("heart"), review_likes_path(review), remote: true ,method: :post %> 
-		<% unless review.likes.count == 0 %>
-			<%= review.likes.count %> 
-		<% end %>
-		イイね！
-	</span>
+			<%= link_to fa_icon("heart"), new_user_session_path %> 
+			<% unless review.likes.count == 0 %>
+				<%= review.likes.count %> 
+			<% end %>
+			イイね！
+		</span>
 <% end %>

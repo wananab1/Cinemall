@@ -6,6 +6,7 @@ class Movie < ApplicationRecord
 	has_many :casts, :dependent => :destroy
 	has_many :reviews, :dependent => :destroy
 	has_many :clips, dependent: :destroy
+	has_many :list_items, dependent: :destroy
 
 	accepts_nested_attributes_for :casts, allow_destroy: true
 

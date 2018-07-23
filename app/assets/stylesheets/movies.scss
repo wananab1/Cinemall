@@ -19,12 +19,13 @@
 .ms_icon_box{
 	width: 126px;
 	height: 70px;
-	margin-top: 15px;
+	margin-top: 5px;
 	background-color: #E6D5CF;
 	float: left;
 	border-radius: 5px;
 	text-align: center;
 	padding-top: 5px;
+	color: #7D3E27;
 
 }
 .ms_icon_box1{
@@ -43,12 +44,12 @@
 	color: #7D3E27;
 	font-size: 35px;
 }
-.ms_icon_p{
-	color: #7D3E27;
+.ms_icon_box p{
 	font-size: 20px;
 	font-weight: 900;
 	margin-top: -5px;
 }
+
 .ms_j_title{
 	font-weight: 900;
 }
@@ -282,7 +283,7 @@
 	left: 50px;
 }
 .review_secret_p{
-	font-weight: bold;
+	font-weight: nomal;
 	color: #FE2E2E;
 
 }
@@ -297,13 +298,13 @@
 	display: none;
 }
 .review_box_bottom_time{
-	width: 80%;
+	width: 85%;
 	float: left;
 }
 .review_box_bottom_iine{
-	width: 20%;
+	width: 15%;
 	float: left;
-	text-align: right;
+	text-align: left;
 }
 .iine i{
 	color: red;

@@ -1,0 +1,130 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*sidebar*/
+.lind_sidebar{
+	box-shadow: 0 0 1px #C6C5C2;
+	text-align: center;
+	border-radius: 5px;
+}
+.lind_sidebar_title{
+	background-color: #2D2D2D;
+	color: white;
+	padding: 20px 0;
+	margin-bottom: 0px;
+}
+.lind_sidebar_title:first-child{
+	border-radius: 5px 5px 0 0 ;
+}
+.lind_sidebar_item{
+	border-bottom: 1px solid #eee;
+	padding: 10px 0;
+}
+.lind_sidebar_item:hover{
+	background-color: #FFC575;
+}
+.lind_sidebar_item a{
+	color: black;
+}
+.lind_sidebar_item a:hover{
+	color: black;
+	text-decoration: none;
+}
+.lind_sidebar_item:last-child{
+	border-bottom: 0;
+	border-radius: 0 0 5px 5px;
+}
+
+.lin-content{
+	text-align: center;
+	padding-bottom: 50px;
+	box-shadow: 0 0 1px #C6C5C2;
+	border-radius: 5px;
+	margin-bottom: 30px;
+}
+.lin_list_name{
+	padding: 20px 0 ;
+	background-color: #ff5917;
+	border-radius: 5px 5px 0 0 ;
+	color: #2D2D2D;
+}
+.lin-container{
+	margin-bottom: 30px;
+	padding: 0 !important;
+}
+.lin_warpper{
+	margin: 50px 0;
+}
+.lind_movie_box{
+	width: 17%;
+	margin: 0 1%;
+	display: inline-block;
+}
+.lin_list_intro{
+	padding: 20px 30px;
+	text-align: left;
+	font-size: 14px;
+}
+.lind_list_movies{
+	background-color: #ECEFF3;
+}
+
+
+/*list/show*/
+.lsh-header{
+	text-align: center;
+	background-color: #fafafa;
+	padding: 30px 15% 10px;
+}
+.lsh_list_intro{
+	padding-top: 20px;
+	text-align: left;
+	font-size: 16px;
+}
+.lsh-movie-box{
+	border: 10px solid #f2f2f2;
+	border-bottom: 0;
+}
+.lsh-movie-box:last-child{
+	border-bottom: 10px solid #f2f2f2;
+}
+.lsh-movie-box-left{
+	width: 35%;
+	float: left;
+}
+.lsh-movie-box-right{
+	width: 65%;
+	height: 100%;
+	float: left;
+	padding-top: 10px;
+}
+.lsh-movie-box-title{
+}
+.lsh_e_title{
+	margin-bottom: 0px !important;
+	margin-left: 5px;
+    color: #b4bcc5;
+}
+.lsh_star{
+	height: 50px;
+}
+.lsh_summary{
+	padding-right: 20px;
+	padding-bottom: 15px;
+}
+.lsh_cast{
+	background-color: #f4f4f4;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 20px;
+	margin-bottom: 2px;
+}
+.lsh_casts a{
+	color: black;
+}
+.lsh_casts_last{
+	text-align: right;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,146 @@
+<div class="container-fulid lsh-header">
+	<h2>『<%= @list.list_name %>』の作品</h2>
+</div>
+<div class="container lin_warpper">
+	<div class="row">
+		<div class="col-3">
+			<div class="lind_sidebar">
+				<h5 class="lind_sidebar_title">ジャンル</h5>
+				<% @genres.each do |g| %>
+					<div class="lind_sidebar_item">
+						<%= link_to genre_path(g) do %>
+							<div>
+								<%= g.genre_name %>
+								(<%= g.movies.count %>)
+							</div>
+						<% end %>
+					</div>
+				<% end %>
+				<h5 class="lind_sidebar_title">製作国</h5>
+				<% @countries.each do |c| %>
+					<div class="lind_sidebar_item">
+						<%= link_to country_path(c) do %>
+							<div>
+								<%= c.country_name %>
+								(<%= c.movies.count %>)
+							</div>
+						<% end %>
+					</div>
+				<% end %>
+			</div>
+
+		</div>
+		<div class="col-9">
+			<div>
+				<% @list.list_items.each do |l|  %>
+				<% movie = l.movie %>
+					<div class="lsh-movie-box clearfix">
+						<div class="lsh-movie-box-left">
+							<div class="ms_image">
+								<%= link_to movie_path(movie) do %>
+								<%= attachment_image_tag movie, :movie_image, format: 'jpeg', :size => '257x342' %>
+								<% end %>
+							</div>
+							<!-- ユーザーがログインしている場合 -->
+							<% if user_signed_in? %>
+								<!-- ログインユーザーのレビューがある場合 -->
+								<% @user_review = Review.find_by(user_id: current_user.id, movie_id: movie.id) %>
+								<% if @user_review.present? %>
+									<div class="ms_icon_box ms_icon_box1 ms_icon_box1_present modal_open" >
+										<div>
+											<%= fa_icon("eye") %>
+										</div>
+										<p class="ms_icon_p"><%= movie.reviews.count %></p>
+									</div>
+									<%= render 'movies/edit_modal', movie: movie, user_review: @user_review %>
+								<!-- ログインユーザーのレビューがない場合 -->
+								<% else %>
+									<div class="ms_icon_box ms_icon_box1 modal_open">
+										<div>
+											<%= fa_icon("eye") %>
+										</div>
+										<p class="ms_icon_p"><%= movie.reviews.count %></p>
+									</div>
+									<%= render 'movies/new_modal', movie: movie, review: @review %>
+								<% end %>
+						<!-- clip -->
+								<div id="movie-<%= movie.id %>">
+									<%= render 'clips/ms_clip', movie: movie %>
+								</div>
+							<!-- ログインしていない場合 -->
+							<% else %>
+								<%= link_to new_user_session_path do %>
+								<div class="ms_icon_box ms_icon_box1">
+									<div>
+										<%= fa_icon("eye") %>
+									</div>
+									<p class="ms_icon_p"><%= movie.reviews.count %></p>
+								</div>
+								<% end %>
+								<%= link_to new_user_session_path do %>
+								<div class="ms_icon_box ms_icon_box2">
+									<div>
+										<%= fa_icon("paperclip") %>
+									</div>
+									<p class="ms_icon_p"><%= movie.clips.count %></p>
+								</div>
+								<% end %>
+							<% end %>
+						</div>
+						<div class="lsh-movie-box-right">
+							<div class="lsh-movie-box-title">
+								<h4><%= movie.j_title %></h4>
+								<p class="lsh_e_title"><%= movie.e_title %></p>
+							</div>
+							<div class="lsh_star">
+								<% unless movie.score_average == 0.0 %>
+									<% if movie.score_average == 5.0 %>
+										<span class="rate rate5"></span>
+									<% elsif movie.score_average >= 4.5 %>
+										<span class="rate rate4-5"></span>
+									<% elsif movie.score_average >= 4.0 %>
+										<span class="rate rate4"></span>
+									<% elsif movie.score_average >= 3.5 %>
+										<span class="rate rate3-5"></span>
+									<% elsif movie.score_average >= 3.0 %>
+										<span class="rate rate3"></span>
+									<% elsif movie.score_average >= 2.5 %>
+										<span class="rate rate2-5"></span>
+									<% elsif movie.score_average >= 2.0 %>
+										<span class="rate rate2"></span>
+									<% elsif movie.score_average >= 1.5 %>
+										<span class="rate rate1-5"></span>
+									<% elsif movie.score_average >= 1.0 %>
+										<span class="rate rate1"></span>
+									<% elsif movie.score_average >= 0.5 %>
+										<span class="rate rate0-5"></span>
+									<% end %>
+									<span class="ms_score"><%= movie.score_average %></span>
+								<% end %>
+							</div>
+							<div class="lsh_summary">
+								<h6>あらすじ</h6>
+								<%= movie.summary.truncate(140)%>
+								<% if movie.summary.length > 140 %>
+									<%= link_to '>>続きを読む', movie_path(movie) %>
+								<% end %>
+							</div>
+							<div class="lsh_casts">
+								<% casts = Cast.where(movie_id: movie.id).limit(5) %>
+								<div>
+									<h6>監督・出演者</h6>
+									<% casts.each do |c| %>
+										<a href="#"><span class="lsh_cast"><%= c.person.person_name %></span></a>
+									<% end %>
+								</div>
+							</div>
+							<div class="lsh_casts_last">
+								<%= link_to ">>詳細を見る", movie_path(movie) %>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

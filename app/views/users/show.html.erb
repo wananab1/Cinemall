@@ -74,11 +74,10 @@
 									</div>
 									<%= render 'movies/new_modal', movie: r.movie, review: @review %>
 								<% end %>
-								<div class="us_icon_box us_icon_box2">
-									<div>
-										<%= fa_icon("paperclip") %>
-									</div>
-									<span><%= r.movie.clips.count %></span>
+								<!-- clip -->
+								<% @movie = r.movie %>
+								<div id="movie-<%= @movie.id %>">
+									<%= render 'clips/us_clip', movie: @movie %>
 								</div>
 							<!-- ログインしてない場合 -->
 							<% else %>
