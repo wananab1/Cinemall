@@ -41,7 +41,6 @@
 	// モーダル表示
  	$('.modal_open').click(function(){
  		$(this).next('div').fadeIn();
-    
  	});
  	// モーダル非表示
  	$('.modal_close_btn').click(function(){
@@ -55,16 +54,11 @@
     $(this).hide();
   });
 
-// user/show切り替え
-  // $('.us_main_top_box2').click(function(){
-  //   $('.us_main_container_watch').hide();
-  //   $('.us_main_container_clip').show();
-  // });
-
-  // $('.us_main_top_box1_2').click(function(){
-  //   $('.us_main_container_clip').hide();
-  //   $('.us_main_container_watch').show();
-  // });
+  // 検索ワード代入
+  $('#search_submit').click(function(){
+    var inputText =$('#search_field').val();
+    $("#hidden_field").val(inputText);
+  });
 
  });
 

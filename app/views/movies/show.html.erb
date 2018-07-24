@@ -105,12 +105,24 @@
 								<!-- 監督 -->
 								<tr>
 									<td class="ds_td">監督</td>
-									<td><%= @director.person.person_name %></td>
+									<td>
+										<%= link_to person_path(@director.person) do %>
+											<div>
+												<%= @director.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% @directors.each do |d| %>
 								<tr>
 									<td class="ds_td"></td>
-									<td><%= d.person.person_name %></td>
+									<td>
+										<%= link_to person_path(d.person) do %>
+											<div>
+												<%= d.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% end %>
 							</tbody>
@@ -120,12 +132,24 @@
 							<tbody>
 								<tr>
 									<td class="ds_td">脚本</td>
-									<td><%= @scenario.person.person_name %></td>
+									<td>
+										<%= link_to person_path(@scenario.person) do %>
+											<div>
+												<%= @scenario.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% @scenarios.each do |s| %>
 								<tr>
 									<td class="ds_td"></td>
-									<td><%= s.person.person_name %></td>
+									<td>
+										<%= link_to person_path(s.person) do %>
+											<div>
+												<%= s.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% end %>
 							</tbody>
@@ -135,12 +159,24 @@
 							<tbody class="ms_actor_all">
 								<tr>
 									<td class="a_td">出演者</td>
-									<td><%= @actor.person.person_name %></td>
+									<td>
+										<%= link_to person_path(@actor.person) do %>
+											<div>
+												<%= @actor.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% @actors_all.each do |a| %>
 								<tr>
 									<td class="a_td"></td>
-									<td><%= a.person.person_name %></td>
+									<td>
+										<%= link_to person_path(a.person) do %>
+											<div>
+												<%= a.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% end %>
 							</tbody>
@@ -148,18 +184,30 @@
 							<tbody class="ms_actor_limit">
 								<tr>
 									<td class="a_td">出演者</td>
-									<td><%= @actor.person.person_name %></td>
+									<td>
+										<%= link_to person_path(@actor.person) do %>
+											<div>
+												<%= @actor.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% @actors_limit.each do |a| %>
 								<tr>
 									<td class="a_td"></td>
-									<td><%= a.person.person_name %></td>
+									<td>
+										<%= link_to person_path(a.person) do %>
+											<div>
+												<%= a.person.person_name %>
+											</div>
+										<% end %>
+									</td>
 								</tr>
 								<% end %>
 							</tbody>
 							<% end %>
 						</table>
-						<% if @cast_count >= 7 %>
+						<% if @actors_all.count >= 3 %>
 						<p class="ms_show_all" id="ms_show_all">▽すべて表示する</p>
 						<p class="ms_hide" id="ms_hide">△もとに戻す</p>
 						<% end %>

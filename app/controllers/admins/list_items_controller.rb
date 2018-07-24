@@ -21,8 +21,8 @@ class Admins::ListItemsController < ApplicationController
   def new
   	@list = List.find(params[:list_id])
   	@list_item = ListItem.new
-  	@q = Movie.search(params[:q])
-  	@movies = @q.result(distinct: true)
+    @m = Movie.search(params[:m], search_key: :m)
+  	@movies = @m.result(distinct: true)
   end
 
 private

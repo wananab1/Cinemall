@@ -64,8 +64,14 @@
   				</div>
   				<div class="h_form clearfix">
   					<div class="h_input">
-  						<input type="text" size="35" placeholder="作品名・俳優・監督で検索！" style="padding: 5px 0;">
-  						<input type="submit" value="Search" class="btn btn-outline-light" style="margin-bottom: 3px;">
+  						<%= search_form_for @q, html: {class: 'form-inline'}, url: search_path  do |f| %>
+              <div class="form-group">
+                <%= f.search_field :j_title_or_e_title_cont, id: 'search_field', class: 'form-control search_field', placeholder: '作品名・人物名で検索' %>
+              </div>
+                <%= f.hidden_field :person_name_cont, :value => '', id: 'hidden_field'  %>
+                <%= f.submit 'Search', id: 'search_submit', class: "btn-outline-light btn" %>
+              <% end %>
+              </div>
   					</div>
   				</div>
   			</div>

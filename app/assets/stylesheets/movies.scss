@@ -143,7 +143,16 @@
 .youtube-container{
 	margin-top: 50px;
 }
-
+.ms_cast_table a{
+	color: black;
+}
+.ms_cast_table a:hover{
+	text-decoration: none;
+	color: black;
+}
+.ms_cast_table td:hover{
+	background-color: #FFC575;
+}
 
 /*モーダル*/
 .modal_back{

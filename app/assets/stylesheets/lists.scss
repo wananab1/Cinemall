@@ -121,7 +121,15 @@
 	border-radius: 20px;
 	margin-bottom: 2px;
 }
+.lsh_cast:hover{
+	background-color: #D5E1F2;
+}
+
 .lsh_casts a{
+	color: black;
+}
+.lsh_casts a:hover{
+	text-decoration: none;
 	color: black;
 }
 .lsh_casts_last{

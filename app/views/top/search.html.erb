@@ -1,1 +1,7 @@
-<h1>Search</h1>
+<% @movies.each do |m| %>
+	<%= m.j_title %><br>
+<% end %>
+---------------------------------------<br>
+<% @people.each do |p| %>
+	<%= p.person_name %><br>
+<% end %>

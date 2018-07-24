@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   	namespace :admins do
       get '/top' => 'top#top'
       resources :users, only: [:index]
@@ -11,8 +10,8 @@ Rails.application.routes.draw do
         resources :casts, only: [:new, :create, :destroy]
       end
   	end
-
     resources :lists, only: [:show, :index]
+    resources :people, only: [:show]
     resources :genres, only: [:show]
     resources :countries, only: [:show]
   	resources :movies, only: [:show] do
@@ -33,7 +32,7 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :edit, :update] do
       resources :clips, only: [:index]
     end
-
+    get '/search/people' => 'top#p_search'
     get '/search' => 'top#search'
    	get '' => 'top#top', as: :top
 end

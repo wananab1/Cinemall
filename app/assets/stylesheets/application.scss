@@ -59,6 +59,9 @@ header{
 	margin: 0;
 	padding-top: 16px;
 }
+.h_left a:hover{
+  text-decoration: none;
+}
 .h_sub{
 	color:#FF5917;
 }
@@ -88,10 +91,16 @@ header{
 .h_input{
 	display: inline-block;
 	float: right;
+  padding-right: 10px;
 }
 .h_link_item{
 	color: white;
 }
+.search_field{
+  width: 300px !important;
+  margin-right: 10px;
+}
+
 
 /*footer*/
 footer{
@@ -144,7 +153,9 @@ background-color: #2D2D2D;
 .signup-form{
 	padding: 30px;
 }
-
+.devise_bottom{
+  text-align: right;
+}
 
 /*Movie/show/Star*/
 

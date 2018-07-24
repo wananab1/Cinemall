@@ -28,7 +28,7 @@
 			</div>
 		</div>
 		<div class="li_form">
-			<%= search_form_for @q, html: {class: 'form-horizontal'}, url: new_admins_list_list_item_path(@list) do |f| %>
+			<%= search_form_for @m, as: :m, html: {class: 'form-horizontal'}, url: new_admins_list_list_item_path(@list) do |f| %>
 				<div class="form-group row">
 					<div class="col-2"></div>
 					<%= f.label :j_title_or_e_title_cont, "作品名検索" ,class: "col-form-label col-2 mn_label lin_label" %>
