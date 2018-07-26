@@ -10,7 +10,8 @@ Rails.application.routes.draw do
         resources :casts, only: [:new, :create, :destroy]
       end
   	end
-    resources :lists, only: [:show, :index]
+    get '/lists/score' => 'lists#score'
+    resources :lists, only: [:show, :index] 
     resources :people, only: [:show]
     resources :genres, only: [:show]
     resources :countries, only: [:show]
@@ -32,7 +33,6 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :edit, :update] do
       resources :clips, only: [:index]
     end
-    get '/search/people' => 'top#p_search'
     get '/search' => 'top#search'
    	get '' => 'top#top', as: :top
 end

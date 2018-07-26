@@ -1,31 +1,124 @@
 <div class="container-fulid top-main">
 	<div class="tm-cover">
-		<div class="container">
+		<div class="container tm_menu">
 			<div class="tm-top">
 				<p class="tm-p">映画の情報・評価・レビュー投稿なら</p>
 				<h1 class="tm-h1"><%= fa_icon("film") %>Cinemall</h1>
-				<p class="tm-catch">今日は、何を見よう？</p>
+				<p class="tm-catch">今日は何を見よう？</p>
 			</div>
 			<% unless user_signed_in? || admin_signed_in? %>
 				<div class="tm-bottom">
 					<div class="tm-link">
-						<%= link_to "新規登録", new_user_registration_path, class: "btn btn-outline-primary btn-lg tm-up" %>
-						<%= link_to "ログイン", new_user_session_path, class: "btn btn-outline-success btn-lg tm-in" %>
+						<button class="btn btn-outline-primary btn-lg tm-in" id="top-signup-btn">新規登録</button>
+						<button class="btn btn-outline-success btn-lg tm-in" id="top-login-btn">ログイン</button>
 					</div>
 				</div>
 			<% end %>
+		</div>
+		<div class="container top-login-form top-form-hide">
+			<%= form_for(:user, html: {class: 'form-inline top-form-inline'}, url: session_path(:user)) do |f| %>
+		        <div class="form-group">
+		          <%= f.email_field :email, autofocus: true, autocomplete: "off", class: 'top_lg_form top-email form-control ', placeholder: 'Email Address' %>
+		        </div>
+		        <div class="form-group">
+		          <%= f.password_field :password, autocomplete: "off", class: 'top_lg_form top-password form-control', placeholder: 'Password' %>
+		        </div>
+		        <div class="actions">
+		          <%= f.submit "Submit", class: 'btn btn-success btn-block btn-lg' %>
+		        </div>
+		    <% end %>
+		    <div class="top_back_btn1">
+		    	<span class="top_back_span"><%= fa_icon("backward") %> TOP</span>
+		    </div>
+		</div>
+		<div class="container top-signup-form top-form-hide">
+			<div class="top-signup-form-wrapper">
+				<%= form_for(:user, html: {class: 'form-horizontal'}, url: registration_path(:user)) do |f| %>
+			        <div class="form-group row">
+			            <label for="user_user_name" class="user_user_name col-sm-2 col-form-label"><%= fa_icon("user") %></label>
+			            <div class="col-sm-9">
+			            	<%= f.text_field :user_name, autofocus: true, autocomplete: "off", class: 'form-control top_lg_form', placeholder: 'User name' %>
+			            </div>
+			        </div>
+			        <div class="form-group row">
+			            <label for="user_email" class="col-sm-2 col-form-label"><%= fa_icon("envelope") %></label>
+			            <div class="col-sm-9">
+			            	<%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control top_lg_form', placeholder: 'Email address' %>
+			            </div>
+			        </div>
+			        <div class="form-group row">
+			            <label for="user_password" class="col-sm-2 col-form-label"><%= fa_icon("key") %></label>
+			            <div class="col-sm-9">
+			            	<%= f.password_field :password, autocomplete: "off", class: 'form-control top_lg_form', placeholder: 'Password'%>
+			            </div>
+			        </div>
+			        <div class="form-group row password_confirmation">
+			           	<label for="user_password_confirmation" class="col-sm-2 col-form-label">
+			           		<%= fa_icon("key") %><%= fa_icon("check") %>
+			       		</label>
+			       		<div class="col-sm-9">
+			       			<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control top_lg_form', placeholder: 'Password confirmation' %>
+			       		</div>
+			        </div>
+			        <div class="actions top-sign-btn">
+			           	<%= f.submit "Sign up", class: 'btn btn-primary btn-block' %>
+			        </div>
+			    <% end %>
+			    <div class="top_back_btn">
+			    	<span class="top_back_span"><%= fa_icon("backward") %> TOP</span>
+			    </div>
+			</div>
 		</div>
 	</div>
 </div>
 <% @lists.each do |l| %>
 <div class="container-fulid top-content">
-	<div class="container top-container">
+	<div class="container top-container clearfix">
 		<h4 class="top_list_name"><%= l.list_name %></h4>
-		<% l.list_items.limit(5).each do |li| %>
+		<div>
+			<% l.list_items.limit(5).each do |li| %>
+				<div class="top_movie_box">
+					<%= link_to movie_path(li.movie) do %>
+						<%= attachment_image_tag li.movie, :movie_image, format: 'jpeg', :size => '187x248' %>
+						<h6 class="top_movie_box_j"><%= li.movie.j_title %></h6>
+					<% end %>
+					<div class="top_icon-boxes clearfix">
+						<%= link_to new_user_session_path do %>
+							<div class="top_icon_box">
+								<div>
+									<%= fa_icon("eye") %>
+								</div>
+								<span><%= li.movie.reviews.count %></span>
+							</div>
+							<div class="top_icon_box">
+								<div>
+									<%= fa_icon("paperclip") %>
+								</div>
+								<span><%= li.movie.clips.count %></span>
+							</div>
+						<% end %>
+				        <div class="top_icon_box top_star">
+							<div>
+								<%= fa_icon("star") %>
+							</div>
+							<span><%= li.movie.score_average %></span>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	<%= link_to 'すべて見る', list_path(l), class: 'btn btn-outline-warning badge-pill'  %>
+</div>
+<% end %>
+<div class="container-fulid top-content">
+	<div class="container top-container clearfix">
+		<h4 class="top_list_name">レビュー高評価作品</h4>
+		<% @movies.each do |movie| %>
 			<div class="top_movie_box">
-				<%= link_to movie_path(li.movie) do %>
-					<%= attachment_image_tag li.movie, :movie_image, format: 'jpeg', :size => '187x248' %>
-					<h6 class="top_movie_box_j"><%= li.movie.j_title %></h6>
+				<%= link_to movie_path(movie) do %>
+					<%= attachment_image_tag movie, :movie_image, format: 'jpeg', :size => '187x248' %>
+					<h6 class="top_movie_box_j"><%= movie.j_title %></h6>
 				<% end %>
 				<div class="top_icon-boxes clearfix">
 					<%= link_to new_user_session_path do %>
@@ -33,25 +126,24 @@
 							<div>
 								<%= fa_icon("eye") %>
 							</div>
-							<span><%= li.movie.reviews.count %></span>
+							<span><%= movie.reviews.count %></span>
 						</div>
 						<div class="top_icon_box">
 							<div>
 								<%= fa_icon("paperclip") %>
 							</div>
-							<span><%= li.movie.clips.count %></span>
+							<span><%= movie.clips.count %></span>
 						</div>
 					<% end %>
 			        <div class="top_icon_box top_star">
 						<div>
 							<%= fa_icon("star") %>
 						</div>
-						<span><%= li.movie.score_average %></span>
+						<span><%= movie.score_average %></span>
 					</div>
 				</div>
 			</div>
 		<% end %>
 	</div>
-	<%= link_to 'すべて見る', list_path(l), class: 'btn btn-outline-warning badge-pill'  %>
+	<%= link_to 'すべて見る', lists_score_path, class: 'btn btn-outline-warning badge-pill'  %>
 </div>
-<% end %>

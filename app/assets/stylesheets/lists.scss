@@ -7,35 +7,45 @@
 .lind_sidebar{
 	box-shadow: 0 0 1px #C6C5C2;
 	text-align: center;
-	border-radius: 5px;
+	background-color: #2D2D2D;
+	padding-bottom: 30px;
 }
 .lind_sidebar_title{
 	background-color: #2D2D2D;
-	color: white;
+	color: #ff5917;
 	padding: 20px 0;
 	margin-bottom: 0px;
 }
 .lind_sidebar_title:first-child{
-	border-radius: 5px 5px 0 0 ;
 }
 .lind_sidebar_item{
-	border-bottom: 1px solid #eee;
+	margin: 5px 10px;
 	padding: 10px 0;
+	background-color: white;
+	text-align: left;
+	font-weight: bold;
+	padding-left: 20px;
 }
 .lind_sidebar_item:hover{
-	background-color: #FFC575;
+	background-color: #4d4d4d;
+	color: #ff5917;
+	transition: 0.2s ;
 }
-.lind_sidebar_item a{
+.lind_sidebar_item_link{
+	width: 80%;
+	float: left;
+}
+.lind_sidebar a{
 	color: black;
 }
-.lind_sidebar_item a:hover{
+.lind_sidebar a:hover{
 	color: black;
 	text-decoration: none;
 }
 .lind_sidebar_item:last-child{
 	border-bottom: 0;
-	border-radius: 0 0 5px 5px;
 }
+
 
 .lin-content{
 	text-align: center;
@@ -43,19 +53,23 @@
 	box-shadow: 0 0 1px #C6C5C2;
 	border-radius: 5px;
 	margin-bottom: 30px;
+	background-color: #f2f2f2;
 }
 .lin_list_name{
 	padding: 20px 0 ;
-	background-color: #ff5917;
+	background-color: #2d2d2d;
 	border-radius: 5px 5px 0 0 ;
-	color: #2D2D2D;
+	color: #ff5917;
 }
 .lin-container{
 	margin-bottom: 30px;
 	padding: 0 !important;
 }
 .lin_warpper{
-	margin: 50px 0;
+	margin: 60px 0 50px;
+}
+.li_wrapper-container{
+	margin-top: 150px;
 }
 .lind_movie_box{
 	width: 17%;
@@ -68,7 +82,6 @@
 	font-size: 14px;
 }
 .lind_list_movies{
-	background-color: #ECEFF3;
 }
 
 
@@ -93,6 +106,7 @@
 .lsh-movie-box-left{
 	width: 35%;
 	float: left;
+	padding: 10px 0 0 10px;
 }
 .lsh-movie-box-right{
 	width: 65%;
@@ -135,4 +149,6 @@
 .lsh_casts_last{
 	text-align: right;
 	margin-bottom: 10px;
+	padding-right: 20px;
+	padding-top: 20px;
 }

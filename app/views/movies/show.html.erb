@@ -107,7 +107,7 @@
 									<td class="ds_td">監督</td>
 									<td>
 										<%= link_to person_path(@director.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= @director.person.person_name %>
 											</div>
 										<% end %>
@@ -118,7 +118,7 @@
 									<td class="ds_td"></td>
 									<td>
 										<%= link_to person_path(d.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= d.person.person_name %>
 											</div>
 										<% end %>
@@ -134,7 +134,7 @@
 									<td class="ds_td">脚本</td>
 									<td>
 										<%= link_to person_path(@scenario.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= @scenario.person.person_name %>
 											</div>
 										<% end %>
@@ -145,7 +145,7 @@
 									<td class="ds_td"></td>
 									<td>
 										<%= link_to person_path(s.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= s.person.person_name %>
 											</div>
 										<% end %>
@@ -161,7 +161,7 @@
 									<td class="a_td">出演者</td>
 									<td>
 										<%= link_to person_path(@actor.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= @actor.person.person_name %>
 											</div>
 										<% end %>
@@ -172,7 +172,7 @@
 									<td class="a_td"></td>
 									<td>
 										<%= link_to person_path(a.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= a.person.person_name %>
 											</div>
 										<% end %>
@@ -186,7 +186,7 @@
 									<td class="a_td">出演者</td>
 									<td>
 										<%= link_to person_path(@actor.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= @actor.person.person_name %>
 											</div>
 										<% end %>
@@ -197,7 +197,7 @@
 									<td class="a_td"></td>
 									<td>
 										<%= link_to person_path(a.person) do %>
-											<div>
+											<div class="ms_cast_table_link">
 												<%= a.person.person_name %>
 											</div>
 										<% end %>
@@ -207,7 +207,7 @@
 							</tbody>
 							<% end %>
 						</table>
-						<% if @actors_all.count >= 3 %>
+						<% if @actors_all.count > 3 %>
 						<p class="ms_show_all" id="ms_show_all">▽すべて表示する</p>
 						<p class="ms_hide" id="ms_hide">△もとに戻す</p>
 						<% end %>

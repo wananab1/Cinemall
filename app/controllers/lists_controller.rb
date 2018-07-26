@@ -10,5 +10,12 @@ class ListsController < ApplicationController
   	@lists = List.all
   	@genres = Genre.all
   	@countries = Country.all
+    @movies = Movie.all.order(score_average: :desc).limit(5)
+  end
+
+  def score
+    @genres = Genre.all
+    @countries = Country.all
+    @movies = Movie.all.order(score_average: :desc).limit(10)
   end
 end

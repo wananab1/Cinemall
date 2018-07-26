@@ -1,13 +1,12 @@
 <div class="container-fulid lsh-header">
-	<h2>『<%= @list.list_name %>』の映画</h2>
+	<h2>レビュー高評価の 映画</h2>
 </div>
 <div class="container lin_warpper">
 	<div class="row">
 		<%= render 'movies/sidebar', genres: @genres, countries: @countries %>
 		<div class="col-9">
 			<div>
-				<% @list.list_items.each do |l|  %>
-				<% movie = l.movie %>
+				<% @movies.each do |movie|  %>
 					<div class="lsh-movie-box clearfix">
 						<div class="lsh-movie-box-left">
 							<div class="ms_image">

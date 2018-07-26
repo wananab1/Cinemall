@@ -1,26 +1,26 @@
 <div class="col-3">
 	<div class="lind_sidebar">
-		<h5 class="lind_sidebar_title">ジャンル</h5>
-		<% genres.each do |g| %>
-			<div class="lind_sidebar_item">
+		<h4 class="lind_sidebar_title"><%= fa_icon("tags") %> Genre</h4>
+			<% genres.each do |g| %>
 				<%= link_to genre_path(g) do %>
-					<div>
-						<%= g.genre_name %>
-						(<%= g.movies.count %>)
+					<div class="lind_sidebar_item clearfix">
+						<div class="lind_sidebar_item_link">
+							<%= g.genre_name %>
+						</div>
+						<span>(<%= g.movies.count %>)</span>
 					</div>
 				<% end %>
-			</div>
-		<% end %>
-		<h5 class="lind_sidebar_title">製作国</h5>
+			<% end %>
+		<h4 class="lind_sidebar_title"><%= fa_icon("globe") %> Country</h4>
 		<% countries.each do |c| %>
-			<div class="lind_sidebar_item">
-				<%= link_to country_path(c) do %>
-					<div>
+			<%= link_to country_path(c) do %>
+				<div class="lind_sidebar_item clearfix">
+					<div class="lind_sidebar_item_link">
 						<%= c.country_name %>
-						(<%= c.movies.count %>)
 					</div>
-				<% end %>
-			</div>
+					<span>(<%= c.movies.count %>)</span>
+				</div>
+			<% end %>
 		<% end %>
 	</div>
 </div>

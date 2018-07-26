@@ -1,37 +1,11 @@
-<div class="container lin_warpper">
+<div class="container li_wrapper-container">
 	<div class="row">
-		<div class="col-3">
-			<div class="lind_sidebar">
-				<h5 class="lind_sidebar_title">ジャンル</h5>
-				<% @genres.each do |g| %>
-					<div class="lind_sidebar_item">
-						<%= link_to genre_path(g) do %>
-							<div>
-								<%= g.genre_name %>
-								(<%= g.movies.count %>)
-							</div>
-						<% end %>
-					</div>
-				<% end %>
-				<h5 class="lind_sidebar_title">製作国</h5>
-				<% @countries.each do |c| %>
-					<div class="lind_sidebar_item">
-						<%= link_to country_path(c) do %>
-							<div>
-								<%= c.country_name %>
-								(<%= c.movies.count %>)
-							</div>
-						<% end %>
-					</div>
-				<% end %>
-			</div>
-
-		</div>
+		<%= render 'movies/sidebar', genres: @genres, countries: @countries %>
 		<div class="col-9">
 			<% @lists.each do |l| %>
 				<div class="container-fulid lin-content">
 					<div class="container lin-container">
-						<h5 class="lin_list_name"><%= l.list_name %></h5>
+						<h3 class="lin_list_name"><%= l.list_name %></h3>
 						<p class="lin_list_intro"><%= l.list_intro %></p>
 						<div class="lind_list_movies">
 							<% l.list_items.limit(5).each do |li| %>
@@ -44,6 +18,20 @@
 					<%= link_to 'すべて見る', list_path(l), class: 'btn btn-outline-warning badge-pill'  %>
 				</div>
 			<% end %>
+				<div class="container-fulid lin-content">
+					<div class="container lin-container">
+						<h3 class="lin_list_name">レビュー高評価作品</h3>
+						<p class="lin_list_intro">Cinemallのユーザーに高く評価された作品を集めました。映画好きなら絶対に見ておきたい面白い映画ばかりです。古典的な名作から最新の映画まで...あなたは何作品観ていますか？</p>
+						<div class="lind_list_movies">
+							<% @movies.each do |movie| %>
+								<div class="lind_movie_box">
+										<%= attachment_image_tag movie, :movie_image, format: 'jpeg', :size => '135x180' %>
+								</div>
+							<% end %>
+						</div>
+					</div>
+					<%= link_to 'すべて見る', lists_score_path, class: 'btn btn-outline-warning badge-pill'  %>
+				</div>
 		</div>
 	</div>
 </div>

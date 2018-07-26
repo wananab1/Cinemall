@@ -16,24 +16,33 @@
 	height: 500px;
 	width: 100%;
 }
+.tm_menu{
+	display: none;
+}
+.top-login-form{
+	display: none;
+}
+.top-signup-form{
+	display: none;
+}
 .tm-top{
 	text-align: center;
 	height:300px;
 	color: white;
 }
 .tm-p{
-	padding:150px 0 10px;
+	padding:100px 0 10px;
 	margin: 0;
 	font-size: 14px;
 }
 .tm-h1{
 	font-family:'Trebuchet';
-	font-size: 80px;
+	font-size: 100px;
 	font-weight: 900;
 	letter-spacing: 2px;
 	color:#FF5917;
 	margin: 0;
-	padding-right: 55px;
+	padding-right: 30px;
 }
 .tm-bottom{
 	height: 200px;
@@ -47,7 +56,8 @@
 }
 .tm-link{
 	text-align: center;
-	padding-top: 100px;
+	padding-top: 50px;
+	padding-right: 30px;
 }
 .tm-up{
 	margin-right: 40px;
@@ -74,7 +84,8 @@
 .top_movie_box{
 	width: 17%;
 	margin: 0 1%;
-	display: inline-block;
+	/*display: inline-block;*/
+	float: left;
 	box-shadow: 0 0 1px #C6C5C2;
 	border-radius: 5px;
 }
@@ -84,6 +95,7 @@
 .top_movie_box a:hover{
 	text-decoration: none;
 }
+
 .top_movie_box_j{
 	font-size: 12px;
 	height: 30px;
@@ -111,4 +123,110 @@
 	border-radius: 5px;
 	margin: 1px;
 	color: #F9C804;
+}
+.top-login-form{
+	padding-top: 15%;
+}
+.top-form-inline{
+	margin-left: 23%;
+}
+.top_lg_form{
+	padding: 11px !important;
+	margin-right: 5px;
+	background-color: black;
+	background-color: rgba(0,0,0,0.8) !important;
+	color: white !important;
+}
+.top-email{
+	width: 300px !important;
+}
+.top-signup-form-wrapper{
+	width: 40%;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+.top-signup-form-wrapper i{
+	color: #D8D8D8;
+	font-size: 32px;
+	text-align: right;
+}
+.password_confirmation i{
+	font-size: 20px;
+}
+.user_user_name i{
+	padding-left: 5px;
+}
+.top-sign-btn{
+	width: 74%;
+	margin-left: 17%;
+}
+.top_back_btn{
+	text-align: right;
+	padding-right: 40px;
+	margin-top: 30px;
+}
+.top_back_btn1{
+	text-align: right;
+	padding-right: 265px;
+	margin-top: 30px;
+}
+.top_back_span{
+	color: white;
+	font-size: 16px;
+}
+.top_back_span i{
+	font-size: 16px;
+}
+.top_back_span:hover{
+	cursor: pointer;
+}
+/*search*/
+.s_top_js{
+	text-align: right;
+	padding-right:0;
+	font-weight: bold;
+	color: #007bff;
+}
+.s_top_js span:hover{
+	color: #0056b3;
+	cursor: pointer;
+}
+
+.s_person{
+	display: none;
+}
+.s_person_box{
+	width: 47%;
+	margin: 1%;
+	height: 210px;
+	float: left;
+	border: 10px solid #f2f2f2;
+}
+.s_person_box a{
+	color: black;
+}
+.s_person_box a:hover{
+	color: black;
+}
+.s_person_box p{
+	margin-bottom: 0;
+	font-size: 14px;
+	padding-left: 10px;
+}
+.s_person_box h5{
+	padding-left: 10px;
+}
+.s_person_movie{
+	width: 33%;
+	height: 70%;
+	float: left;
+	text-align: center;
+}
+.s_person_movie_ex{
+	width: 33%;
+	height: 40%;
+	margin-top: 30px;
+	float: left;
+	background-image: url("Cinemall-logo.png");
+	background-position: center;
 }

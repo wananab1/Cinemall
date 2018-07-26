@@ -43,6 +43,14 @@ img{
 /*ヘッダー*/
 header{
 	background-color: #2D2D2D;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+}
+body{
+  margin-top: 110px;
 }
 .h_left, .h_right{
 	width:50%;
@@ -53,11 +61,11 @@ header{
 .h_logo{
 	display: inline-block;
 	color: #FF5917;
-	font-size: 48px;
+	font-size: 62px;
 	font-weight: 900;
 	font-family:'Trebuchet';
 	margin: 0;
-	padding-top: 16px;
+	padding-top: 20px;
 }
 .h_left a:hover{
   text-decoration: none;
@@ -100,7 +108,9 @@ header{
   width: 300px !important;
   margin-right: 10px;
 }
-
+.search_submit{
+  padding: 5px 30px;
+}
 
 /*footer*/
 footer{
@@ -110,10 +120,21 @@ background-color: #2D2D2D;
 	height: 50px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /*Userログイン*/
 .login-main{
 	width: 50%;
-	margin: 120px auto 100px;
+	margin: 190px auto 100px;
 	border: 1px solid gray;
 	border-radius: 5px;
 }
@@ -142,7 +163,7 @@ background-color: #2D2D2D;
 /*userサインアップ*/
 .signup-main{
 	width: 50%;
-	margin: 80px auto 60px;
+	margin: 150px auto 60px;
 	border: 1px solid gray;
 	border-radius: 5px;
 }

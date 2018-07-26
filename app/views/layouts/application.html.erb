@@ -21,7 +21,6 @@
                 <h1 class="h_logo"><%= fa_icon("film") %>Cinemall</h1>
               <% end %>
           <% end %>
-  				<span class="h_sub">-シネモール-</span>
   			</div>
   			<div class="h_right">
   				<div class="h_link">
@@ -69,7 +68,7 @@
                 <%= f.search_field :j_title_or_e_title_cont, id: 'search_field', class: 'form-control search_field', placeholder: '作品名・人物名で検索' %>
               </div>
                 <%= f.hidden_field :person_name_cont, :value => '', id: 'hidden_field'  %>
-                <%= f.submit 'Search', id: 'search_submit', class: "btn-outline-light btn" %>
+                <%= button_tag fa_icon("search"), id: 'search_submit', class: "btn-outline-light btn badge-pill search_submit" %>
               <% end %>
               </div>
   					</div>

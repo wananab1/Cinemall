@@ -43,65 +43,72 @@
 		</div>
 		<div class="us_main_bottom clearfix">
 			<!-- クリップした作品 -->
-			<% @user.clips.each do |c| %>
-				<div class="us_clip_movie_box">
-					<%= link_to movie_path(c.movie) do %>
-						<%= attachment_image_tag c.movie, :movie_image, format: 'jpeg', :size => '218x292',class: 'us_clip_movie_image' %>
-					<% end %>
-					<h6 class="us_clip_movie_title"><%= c.movie.j_title %></h6>
-					<div class="us_clip_movie_icons clearfix">
-						<!-- もしユーザーがログインしてたら -->
-						<% if user_signed_in? %>
-							<!-- もしログインユーザーのレビューが存在していたら -->
-							<% if @user_review = Review.find_by(movie_id: c.movie.id , user_id: current_user.id) %>
-								<div class="us_clip_movie_icon us_clip_movie_icon_eye modal_open " id="ci_review_exist">
-									<div>
-										<%= fa_icon("eye") %>
-									</div>
-									<span><%= c.movie.reviews.count %></span>
-								</div>
-								<%= render 'movies/edit_modal', movie: c.movie, user_review: @user_review %>
-							<!-- レビューが存在していなかったら -->
-							<% else %>
-								<div class="us_clip_movie_icon us_clip_movie_icon_eye modal_open">
-									<div>
-										<%= fa_icon("eye") %>
-									</div>
-									<span><%= c.movie.reviews.count %></span>
-								</div>
-								<%= render 'movies/new_modal', movie: c.movie, review: @review %>
-							<% end %>
-							<!-- clip部分 -->
-								<% @movie = c.movie %>
-								<div id="movie-<%= @movie.id %>">
-									<%= render 'clips/us_clip', movie: @movie %>
-								</div>
-						<!-- ログインしてなかったら -->
-						<% else %>
-							<!-- ログインページへ -->
-							<%= link_to new_user_session_path do %>
-								<div class="us_clip_movie_icon us_clip_movie_icon_eye">
-									<div>
-										<%= fa_icon("eye") %>
-									</div>
-									<span><%= c.movie.reviews.count %></span>
-								</div>
-								<div class="us_clip_movie_icon">
-									<div>
-										<%= fa_icon("paperclip") %>
-									</div>
-									<span><%= c.movie.clips.count %></span>
-								</div>
-							<% end %>
+			<% if @user.clips.count == 0 %>
+				<div class="us_no_review">
+					<h4>表示する作品がありません。</h4>
+					<div class="us_no_review_image"></div>
+				</div>
+			<% else %>
+				<% @user.clips.each do |c| %>
+					<div class="us_clip_movie_box">
+						<%= link_to movie_path(c.movie) do %>
+							<%= attachment_image_tag c.movie, :movie_image, format: 'jpeg', :size => '218x292',class: 'us_clip_movie_image' %>
 						<% end %>
-						<div class="us_clip_movie_icon us_clip_movie_icon_star">
-							<div>
-								<%= fa_icon("star") %>
+						<h6 class="us_clip_movie_title"><%= c.movie.j_title %></h6>
+						<div class="us_clip_movie_icons clearfix">
+							<!-- もしユーザーがログインしてたら -->
+							<% if user_signed_in? %>
+								<!-- もしログインユーザーのレビューが存在していたら -->
+								<% if @user_review = Review.find_by(movie_id: c.movie.id , user_id: current_user.id) %>
+									<div class="us_clip_movie_icon us_clip_movie_icon_eye modal_open " id="ci_review_exist">
+										<div>
+											<%= fa_icon("eye") %>
+										</div>
+										<span><%= c.movie.reviews.count %></span>
+									</div>
+									<%= render 'movies/edit_modal', movie: c.movie, user_review: @user_review %>
+								<!-- レビューが存在していなかったら -->
+								<% else %>
+									<div class="us_clip_movie_icon us_clip_movie_icon_eye modal_open">
+										<div>
+											<%= fa_icon("eye") %>
+										</div>
+										<span><%= c.movie.reviews.count %></span>
+									</div>
+									<%= render 'movies/new_modal', movie: c.movie, review: @review %>
+								<% end %>
+								<!-- clip部分 -->
+									<% @movie = c.movie %>
+									<div id="movie-<%= @movie.id %>">
+										<%= render 'clips/us_clip', movie: @movie %>
+									</div>
+							<!-- ログインしてなかったら -->
+							<% else %>
+								<!-- ログインページへ -->
+								<%= link_to new_user_session_path do %>
+									<div class="us_clip_movie_icon us_clip_movie_icon_eye">
+										<div>
+											<%= fa_icon("eye") %>
+										</div>
+										<span><%= c.movie.reviews.count %></span>
+									</div>
+									<div class="us_clip_movie_icon">
+										<div>
+											<%= fa_icon("paperclip") %>
+										</div>
+										<span><%= c.movie.clips.count %></span>
+									</div>
+								<% end %>
+							<% end %>
+							<div class="us_clip_movie_icon us_clip_movie_icon_star">
+								<div>
+									<%= fa_icon("star") %>
+								</div>
+								<span><%= c.movie.score_average %></span>
 							</div>
-							<span><%= c.movie.score_average %></span>
 						</div>
 					</div>
-				</div>
+				<% end %>
 			<% end %>
 		</div>
 	</div>

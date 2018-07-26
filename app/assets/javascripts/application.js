@@ -60,10 +60,43 @@
     $("#hidden_field").val(inputText);
   });
 
+  // 検索ワードチェック
+  $('#search_submit').prop('disabled', true);
+  $('#search_field').on('keyup', function(){
+      if($(this).val() === "" ){
+        $('#search_submit').prop('disabled', true);
+      }else{
+        $('#search_submit').prop('disabled', false);
+      }
+  });
+
+  // 検索結果切替
+  $('.change_person').click(function(){
+    $('.s_movie').hide();
+    $('.s_person').show();
+  });
+  $('.change_movie').click(function(){
+    $('.s_person').hide();
+    $('.s_movie').show();
+  });
+// topページ
+  $('#top-login-btn').click(function(){
+    $('.tm_menu').hide();
+    $('.top-login-form').fadeIn(2000);
+  });
+  $('#top-signup-btn').click(function(){
+    $('.tm_menu').hide();
+    $('.top-signup-form').fadeIn(2000);
+  });
+  $('.top_back_span').click(function(){
+    $('.top-form-hide').hide();
+    $('.tm_menu').fadeIn(2000);
+  });
+
+
+  $('.tm_menu').fadeIn(1000);
+
  });
-
-
-
 
 
 
