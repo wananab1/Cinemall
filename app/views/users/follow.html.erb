@@ -1,0 +1,4 @@
+<%= render 'users/userinfo', user: @user %>
+<% @user.followings.each do |f|%>
+	<%= f.user_name %>
+<% end %>

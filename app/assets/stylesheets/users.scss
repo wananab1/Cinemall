@@ -39,11 +39,30 @@
 	background-color: #fafafa;
 }
 .us_user_info{
-	padding: 65px 0 50px;
+	padding: 65px 0 20px;
 }
-.us_main_container{
+.us_f_box{
+	width: 46%;
+	height: 60px;
+	background-color: #E6D5CF;
+	float: left;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 5px;
+	margin-right: 2px;
+	box-shadow: 0 2px 5px #ccc;
+	padding-top: 5px;
+}
+.us_f_box:hover{
+	background-color: #ff5219;
+}
 
-
+.us_f a{
+	color: black;
+	font-weight: bold;
+}
+.us_f a:hover{
+	color: black;
 }
 .us_name{
 	padding-bottom: 20px;
@@ -52,13 +71,14 @@
 	margin: 0;
 	font-size: 15px;
 }
-.us_edit_link{
-	position: absolute;
-	bottom: 0;
-}
+
 .us_main_box{
 	border: 2px solid #6c757d;
 	margin-bottom: 50px;
+}
+.us_right_btn_zone{
+	height: 100%;
+	padding-top: 110%;
 }
 
 .us_main_top{

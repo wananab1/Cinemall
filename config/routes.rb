@@ -24,14 +24,15 @@ Rails.application.routes.draw do
     resources :reviews, only: [:show] do
       resource :likes, only: [:destroy, :create]
     end
-
-
+    resources :relationships, only: [:create, :destroy]
 
     devise_for :admins
     devise_for :users
 
     resources :users, only: [:show, :edit, :update] do
       resources :clips, only: [:index]
+      get 'follow' => 'users#follow'
+      get 'follower' => 'users#follower'
     end
     get '/search' => 'top#search'
    	get '' => 'top#top', as: :top

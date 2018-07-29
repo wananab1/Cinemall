@@ -1,23 +1,4 @@
-<div class="container-fulid us_info_container">
-	<div class="container us_user_info">
-		<div class="row">
-			<div class="col-2">
-				<%= attachment_image_tag @user, :profile_image, format: 'jpeg', :size => '150x150', fallback: 'no_profile_image.jpg', class: 'profile_image us_profile_image' %>
-			</div>
-			<div class="col-8">
-				<h4	class="us_name"><%= @user.user_name %></h4>
-				<p class="us_intro"><%= @user.user_intro %></p>
-			</div>
-			<div class="col-2">
-				<% if user_signed_in? && current_user.id == @user.id %>
-					<%= link_to 'プロフィール編集', edit_user_path(@user), class: "btn btn-secondary us_edit_link" %>
-				<% end %>
-			</div>
-
-		</div>
-	</div>
-</div>
-
+<%= render 'users/userinfo', user: @user %>
 <div class="container us_main_container us_main_container_watch">
 	<div class="us_main_box" >
 		<div class="us_main_top clearfix">
