@@ -96,7 +96,9 @@
 								<h6>あらすじ</h6>
 								<%= movie.summary.truncate(140)%>
 								<% if movie.summary.length > 140 %>
-									<%= link_to '>>続きを読む', movie_path(movie) %>
+									<%= link_to movie_path(movie) do %>
+										<%= fa_icon("angle-double-right")%>続きを読む
+									<% end %>
 								<% end %>
 							</div>
 							<div class="lsh_casts">
@@ -111,7 +113,9 @@
 								</div>
 							</div>
 							<div class="lsh_casts_last">
-								<%= link_to ">>詳細を見る", movie_path(movie) %>
+								<%= link_to movie_path(movie) do %>
+									<%= fa_icon("angle-double-right")%>詳細を見る
+								<% end %>
 							</div>
 						</div>
 					</div>

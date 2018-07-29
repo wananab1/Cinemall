@@ -1,9 +1,12 @@
 <div class="container">
 	<div class="mn_main">
 		<h2 class="mn_title">作品編集</h2>
+		<div class="mn_alt">
+			※太字は必須項目
+		</div>
 		<%= form_for([:admins, @movie], html: {class: 'form-horizontal'}) do |f| %>
 			<div class="form-group row mn_form">
-				<%= f.label :j_title, '邦題', class: "col-sm-2 col-form-label mn_label" %>
+				<%= f.label :j_title, '邦題', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 				<div class="col-sm-8">
 					<%= f.text_field :j_title, class: "form-control" %>
 				</div>
@@ -18,7 +21,7 @@
 
 			<div class="form-group row mn_form_ex">
 				<%= fields_for @genre do |a| %>
-					<%= a.label :genre_name, 'ジャンル', class: "col-sm-2 col-form-label mn_label" %>
+					<%= a.label :genre_name, 'ジャンル', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 					<div class="col-sm-8">
 						<%= a.text_field :genre_name , :list => "genre_list", :autocomplete => "off", class: "form-control", value: "#{@movie.genre.genre_name}" %>
 						<datalist id="genre_list">
@@ -32,7 +35,7 @@
 
 			<div class="form-group row mn_form">
 				<%= fields_for @company do |a| %>
-					<%= a.label :company_name, '配給会社', class: "col-sm-2 col-form-label mn_label" %>
+					<%= a.label :company_name, '配給会社', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 					<div class="col-sm-8">
 						<%= a.text_field :company_name , :list => "company_list", :autocomplete => "off", class: "form-control", value: "#{@movie.company.company_name}" %>
 						<datalist id="company_list">
@@ -46,7 +49,7 @@
 
 			<div class="form-group row mn_form">
 				<%= fields_for @country do |a| %>
-					<%= a.label :country_name, '製作国', class: "col-sm-2 col-form-label mn_label" %>
+					<%= a.label :country_name, '製作国', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 					<div class="col-sm-8">
 						<%= a.text_field :country_name , :list => "country_list", :autocomplete => "off", class: "form-control", value: "#{@movie.country.country_name}"  %>
 						<datalist id="country_list">
@@ -58,13 +61,13 @@
 				<% end %>
 			</div>
 			<div class="form-group row mn_form">
-				<%= f.label :release, '公開日', class: "col-sm-2 col-form-label mn_label" %>
+				<%= f.label :release, '公開日', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 				<div class="col-sm-4">
 					<%= f.date_field :release, class: "form-control" %>
 				</div>
 			</div>
 			<div class="form-group row mn_form has-feedback">
-				<%= f.label :time, '上映時間', class: "col-sm-2 col-form-label mn_label" %>
+				<%= f.label :time, '上映時間', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 				<div class="col-sm-4 input-group">
 					<%= f.number_field :time, class: "form-control" %>
 					<div class="input-group-prepend">
@@ -73,20 +76,20 @@
 				</div>
 			</div>
 			<div class="form-group row mn_form">
-				<%= f.label :trailer_id, '予告映像ID', class: "col-sm-2 col-form-label mn_label" %>
+				<%= f.label :trailer_id, '予告映像ID', class: "col-sm-2 col-form-label mn_label " %>
 				<div class="col-sm-8">
 					<%= f.text_field :trailer_id, class: "form-control", id: 'trailer_help' %>
 					<small id="trailer_help" class="help-block">※「https://www.youtube.com/embed/」の後のIDを入力</small>
 				</div>
 			</div>
 			<div class="form-group row mn_form_ex">
-				<%= f.label :summary, 'あらすじ', class: "col-sm-2 col-form-label mn_label" %>
+				<%= f.label :summary, 'あらすじ', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 				<div class="col-sm-8">
 					<%= f.text_area :summary, class: "form-control", :rows => '6' %>
 				</div>
 			</div>
 			<div class="form-group row mn_form">
-				<%= f.label :movie_image, 'ポスター', class: "col-sm-2 col-form-label mn_label" %>
+				<%= f.label :movie_image, 'ポスター', class: "col-sm-2 col-form-label mn_label mn_label_bold" %>
 				<div class="col-sm-8">
 					<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '150x200' %><br>
 					<%= f.attachment_field :movie_image, class: "mn_attachment" %>

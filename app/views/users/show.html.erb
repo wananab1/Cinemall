@@ -162,8 +162,13 @@
 									<% end %>
 								<% end %>
 							</div>
-							<div class="us_review_box_iine" id="review-<%= r.id%>">
-								<%= render 'likes/like', review: r %>
+							<div>
+								<div class="us_bottom_time">
+									<span class="review_box_top2_t"><%= r.updated_at.strftime('%Y年%m月%d日 %H:%M') %></span>
+								</div>
+								<div class="us_review_box_iine" id="review-<%= r.id%>">
+									<%= render 'likes/like', review: r %>
+								</div>
 							</div>
 						</div>
 					</div>

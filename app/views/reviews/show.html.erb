@@ -125,8 +125,13 @@
 				<div class="rs_review_box_comment">
 					<%= @show_review.comment %>
 				</div>
-				<div class="rs_review_box_iine" id="review-<%= @show_review.id%>">
-					<%= render 'likes/like', review: @show_review %>
+				<div>
+					<div class="us_bottom_time">
+						<span class="review_box_top2_t"><%= @show_review.updated_at.strftime('%Y年%m月%d日 %H:%M') %></span>
+					</div>
+					<div class="rs_review_box_iine" id="review-<%= @show_review.id%>">
+						<%= render 'likes/like', review: @show_review %>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -58,6 +58,7 @@ class Admins::MoviesController < ApplicationController
       @company = Company.new
       @countries = Country.all
       @country = Country.new
+      flash[:warning] = '必須項目を入力してください'
       render 'admins/movies/new'
     end
   end
@@ -105,6 +106,7 @@ class Admins::MoviesController < ApplicationController
       @company = Company.new
       @countries = Country.all
       @country = Country.new
+      flash[:warning] = '必須項目を入力してください'
       render :edit
     end
   end

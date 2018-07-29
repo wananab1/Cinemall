@@ -18,8 +18,9 @@
 		<div class="col-9 s_movie">
 			<div>
 				<% if @movies.count == 0 %>
-					<div class="search_zero">
-						<h4>一致する情報はありませんでした。</h4>
+					<div class="us_no_review">
+						<h4>表示する情報がありません。</h4>
+						<div class="us_no_review_image"></div>
 					</div>
 					<% @lists.each do |l| %>
 						<div class="container-fulid lin-content">
@@ -157,8 +158,9 @@
 		<div class="col-9 s_person">
 			<div class="clearfix">
 				<% if @people.count == 0 %>
-					<div class="search_zero">
-						<h4>一致する情報はありませんでした。</h4>
+					<div class="us_no_review">
+						<h4>表示する情報がありません。</h4>
+						<div class="us_no_review_image"></div>
 					</div>
 					<% @lists.each do |l| %>
 						<div class="container-fulid lin-content">
