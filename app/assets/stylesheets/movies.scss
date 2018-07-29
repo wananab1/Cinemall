@@ -4,7 +4,7 @@
 
 .ms_top{
 	margin: 0 auto;
-	padding-top: 50px;
+	padding: 80px 0 50px;
 	width: 90%;
 }
 .ms_top_1{
@@ -37,6 +37,7 @@
 .ms_icon_box2{
 	margin-left: 2px;
 }
+
 .ms_icon_box1_present{
 	background-color: #FF5917;
 }
@@ -62,6 +63,26 @@
 	background-color: #FF5917;
 }
 
+/*関連作品*/
+.movie_side{
+	margin-top: 100px;
+}
+.movie_side_box{
+	width: 46%;
+	float: left;
+	text-align: center;
+	height: 152px;
+	margin:0 2% 10px;
+	box-shadow: 0 2px 5px #ccc;
+}
+.movie_side_title{
+	background-color: #2d2d2d;
+	color: white;
+	padding: 10px;
+}
+.movie_side_boxes{
+	padding: 5px;
+}
 
 /*score*/
 .ms_star{
@@ -162,13 +183,13 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 100;
 	display: none;
 }
 .ms_modal{
 	position: absolute;
     top: 10%;
-    left: 34%;
+    left: 32%;
     width: 550px;
     height: 620px;
     background-color: white;

@@ -7,12 +7,12 @@
 .lind_sidebar{
 	box-shadow: 0 0 1px #C6C5C2;
 	text-align: center;
-	background-color: #2D2D2D;
+	background-color: #4d4d4d;
 	padding-bottom: 30px;
 }
 .lind_sidebar_title{
-	background-color: #2D2D2D;
-	color: #ff5917;
+	background-color: #4d4d4d;
+	color: white;
 	padding: 20px 0;
 	margin-bottom: 0px;
 }
@@ -30,6 +30,7 @@
 	background-color: #4d4d4d;
 	color: #ff5917;
 	transition: 0.2s ;
+	box-shadow: 0 0 5px #2d2d2d;
 }
 .lind_sidebar_item_link{
 	width: 80%;
@@ -99,6 +100,7 @@
 .lsh-movie-box{
 	border: 10px solid #f2f2f2;
 	border-bottom: 0;
+	padding: 10px 0;
 }
 .lsh-movie-box:last-child{
 	border-bottom: 10px solid #f2f2f2;

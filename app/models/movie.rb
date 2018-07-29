@@ -7,8 +7,16 @@ class Movie < ApplicationRecord
 	has_many :reviews, :dependent => :destroy
 	has_many :clips, dependent: :destroy
 	has_many :list_items, dependent: :destroy
-
 	accepts_nested_attributes_for :casts, allow_destroy: true
+
+	validates :j_title, presence: true
+	validates :release, presence: true
+	validates :time, presence: true
+	validates :summary, presence: true
+	validates :genre_id, presence: true
+	validates :country_id, presence: true
+	validates :company_id, presence: true
+	validates :movie_image, presence: true
 
 
 	def clipped_by?(user)

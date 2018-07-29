@@ -1,6 +1,15 @@
 <h4 class="ue_title">プロフィール編集</h4>
 <div class="container-fulid ue_cantainer">
 	<div class="ue_form">
+		<% if @user.errors.any? %>
+		  <div id="error_explanation" class=" alert-danger">
+		    <ul>
+		      <% @user.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		      <% end %>
+		    </ul>
+		  </div>
+		<% end %>
 		<%= form_for @user do |f| %>
 			<%= f.label :profile_image, 'プロフィール画像' %>
 			<div class="ue_profile_image">

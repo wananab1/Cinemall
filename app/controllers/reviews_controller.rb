@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
   	review.user_id = current_user.id
   	review.movie_id = movie.id
   	review.save
+    flash[:success] = "レビューを投稿しました"
     # sucore_avrageに関して
     # スコアが０点ではなかった時のみ、処理をする
     unless review.score == 0.0
@@ -65,6 +66,7 @@ class ReviewsController < ApplicationController
   	review = Review.find(params[:id])
   	movie = Movie.find(params[:movie_id])
   	review.destroy
+    flash[:danger] = "レビューを削除しました"
 
     reviews = Review.where(movie_id: movie.id).where.not(score: 0.0)
     if reviews.present?

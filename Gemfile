@@ -60,6 +60,7 @@ gem 'devise'
 # Bootstrap
 gem 'bootstrap', '~>4.1.1'
 gem 'jquery-rails'
+gem 'jquery-color'
 # Rifile
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
@@ -69,3 +70,5 @@ gem 'nested_form_fields'
 gem 'font-awesome-rails'
 # 検索
 gem "ransack"
+# 日本語化
+gem 'rails-i18n'

@@ -1,4 +1,6 @@
 class TopController < ApplicationController
+  	before_action :user_not_access, only: [:top]
+
 	def top
 		@lists = List.where(top: true)
 		@movies = Movie.all.order(score_average: :desc).limit(5)
@@ -11,9 +13,13 @@ class TopController < ApplicationController
 		@genres = Genre.all
   		@countries = Country.all
   		@review = Review.new
+  		@lists = List.all
 
 	end
-	def p_search
-		@people = Person.all
+
+	def user_not_access
+		if user_signed_in?
+			redirect_to user_path(current_user)
+		end
 	end
 end

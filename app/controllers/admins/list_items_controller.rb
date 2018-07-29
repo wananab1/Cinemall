@@ -1,4 +1,6 @@
 class Admins::ListItemsController < ApplicationController
+  before_action :access_admin
+
   def create
   	list = List.find(params[:list_id])
   	list_item = ListItem.new(list_item_params)

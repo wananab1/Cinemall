@@ -7,18 +7,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-  	<header>
+  	<header class="<%='top-header' if current_page?(top_path) %>">
   		<div class="container header clearfix">
-  			<div class="h_left">
+  			<div class="h_left clearfix">
           <% if user_signed_in? %>
               <%= link_to user_path(current_user) do %>
-                <h1 class="h_logo"><%= fa_icon("film") %>Cinemall</h1>
+                <h1 class="h_logo <%='h_logo_hide' if current_page?(top_path) %>"><%= fa_icon("film") %>Cinemall</h1>
               <% end %>
             <% else %>
               <%= link_to '/' do %>
-                <h1 class="h_logo"><%= fa_icon("film") %>Cinemall</h1>
+                <h1 class="h_logo <%='h_logo_hide' if current_page?(top_path) %>" ><%= fa_icon("film") %>Cinemall</h1>
               <% end %>
           <% end %>
   			</div>
@@ -76,6 +75,14 @@
   			</div>
   		</div>
   	</header>
+    <% flash.each do |name, msg| %>
+      <% unless name == 'notice' || name == 'alert'  %>
+        <div class="alert alert-<%= name %>">
+          <a class="close" data-dismiss="alert">×</a>
+          <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
     <%= yield %>
     <footer>
     	<div class="footer container-fulid"></div>

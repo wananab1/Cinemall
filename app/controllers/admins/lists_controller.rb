@@ -1,4 +1,5 @@
 class Admins::ListsController < ApplicationController
+  before_action :access_admin
 
   def index
     @lists = List.all
@@ -9,9 +10,12 @@ class Admins::ListsController < ApplicationController
   end
 
   def create
-    list = List.new(list_params)
-    list.save
-    redirect_to new_admins_list_list_item_path(list)
+    @list = List.new(list_params)
+     if @list.save
+      redirect_to new_admins_list_list_item_path(@list)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -20,8 +24,11 @@ class Admins::ListsController < ApplicationController
 
   def update
     @list = List.find(params[:id])
-    @list.update(list_params)
-    redirect_to admins_lists_path
+    if @list.update(list_params)
+      redirect_to admins_lists_path
+    else
+      render :edit
+    end
   end
 
   def destroy

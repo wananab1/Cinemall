@@ -105,7 +105,7 @@
 							</div>
 						</div>
 						<div class="us_review_box_right">
-							<div class="ms_star">
+							<div class="us_ms_star">
 								<% unless r.score == 0.0 %>
 									<% if r.score == 5.0 %>
 										<span class="rate rate5"></span>
@@ -152,7 +152,11 @@
 								<% else %>
 									<% if r.comment.length > 120 %>
 										<%= r.comment.truncate(120) %><br>
-										<span><%= link_to "続きを読む", review_path(r)%></span>
+										<span>
+											<%= link_to review_path(r) do %>
+												<%= fa_icon("angle-double-right")%>続きを読む
+											<% end %>
+										</span>
 									<% else %>
 										<%= r.comment.truncate(120) %>
 									<% end %>

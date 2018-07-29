@@ -88,12 +88,12 @@ ActiveRecord::Schema.define(version: 20180722045937) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "j_title"
+    t.string "j_title", null: false
     t.string "e_title"
-    t.date "release"
-    t.integer "time"
-    t.text "summary"
-    t.text "movie_image_id"
+    t.date "release", null: false
+    t.integer "time", null: false
+    t.text "summary", null: false
+    t.text "movie_image_id", null: false
     t.string "trailer_id"
     t.decimal "score_average", precision: 2, scale: 1, default: "0.0", null: false
     t.integer "genre_id", null: false

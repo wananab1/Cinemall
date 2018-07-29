@@ -4,25 +4,43 @@
 
 
 /*top*/
+.top-header{
+	background-color: rgba(45,45,45,0);
+}
+.h_logo_hide{
+	display: none;
+}
 .top-main{
 	background-color: red;
-	height: 500px;
+	height: 550px;
+	background-image: url('/images/top.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: -110px;
+}
+.admin_top-main{
+	background-color: red;
+	height: 550px;
 	background-image: url('/images/top.jpg');
 	background-size: cover;
 	background-position: center;
 }
+
 .tm-cover{
 	background-color: rgba(0,0,0,0.8);
-	height: 500px;
+	height: 550px;
 	width: 100%;
 }
 .tm_menu{
 	display: none;
+	padding-top: 50px;
 }
 .top-login-form{
+	padding-top: 250px;
 	display: none;
 }
 .top-signup-form{
+	padding-top: 70px;
 	display: none;
 }
 .tm-top{
@@ -57,7 +75,7 @@
 .tm-link{
 	text-align: center;
 	padding-top: 50px;
-	padding-right: 30px;
+	padding-right: 37px;
 }
 .tm-up{
 	margin-right: 40px;
@@ -94,6 +112,7 @@
 }
 .top_movie_box a:hover{
 	text-decoration: none;
+	color: black
 }
 
 .top_movie_box_j{
@@ -124,9 +143,7 @@
 	margin: 1px;
 	color: #F9C804;
 }
-.top-login-form{
-	padding-top: 15%;
-}
+
 .top-form-inline{
 	margin-left: 23%;
 }
@@ -195,18 +212,25 @@
 .s_person{
 	display: none;
 }
+.search_zero{
+	text-align: center;
+	padding: 100px 0;
+	background-color: #f4f4f4;
+	margin-bottom: 50px;
+}
 .s_person_box{
 	width: 47%;
 	margin: 1%;
-	height: 210px;
+	height: 255px;
 	float: left;
 	border: 10px solid #f2f2f2;
 }
-.s_person_box a{
+.s_person_box h5 a{
 	color: black;
 }
-.s_person_box a:hover{
-	color: black;
+.s_person_box h5 a:hover{
+	color: #ff5219;
+	text-decoration: none;
 }
 .s_person_box p{
 	margin-bottom: 0;
@@ -224,7 +248,7 @@
 }
 .s_person_movie_ex{
 	width: 33%;
-	height: 40%;
+	height: 75px;
 	margin-top: 30px;
 	float: left;
 	background-image: url("Cinemall-logo.png");

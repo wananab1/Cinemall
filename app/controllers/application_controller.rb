@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
+  add_flash_types :success, :info, :warning, :danger
 
 
   def configure_permitted_parameters
@@ -22,4 +23,15 @@ class ApplicationController < ActionController::Base
 	    user_path(current_user)
 	  end
 	end
+
+  def access_admin
+     unless   admin_signed_in?
+        flash[:danger] = "管理者としてのログインが必要です"
+        if user_signed_in?
+          redirect_to user_path(current_user)
+        else
+         redirect_to("/")
+        end
+     end
+  end
 end

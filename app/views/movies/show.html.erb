@@ -6,55 +6,75 @@
 	<div class="ms_top">
 		<div class="row">
 			<div class="col-3 ms_top_1">
-				<div class="ms_image">
-					<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '257x342' %>
-				</div>
-				<div class="ms_icons clearfix">
-					<!-- ユーザーがログインしている場合 -->
-					<% if user_signed_in? %>
-						<!-- ログインユーザーのレビューがある場合 -->
-						<% if @user_review.present? %>
-							<div class="ms_icon_box ms_icon_box1 ms_icon_box1_present modal_open" >
-								<div>
-									<%= fa_icon("eye") %>
+				<div>
+					<div class="ms_image">
+						<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '257x342' %>
+					</div>
+					<div class="ms_icons clearfix">
+						<!-- ユーザーがログインしている場合 -->
+						<% if user_signed_in? %>
+							<!-- ログインユーザーのレビューがある場合 -->
+							<% if @user_review.present? %>
+								<div class="ms_icon_box ms_icon_box1 ms_icon_box1_present modal_open" >
+									<div>
+										<%= fa_icon("eye") %>
+									</div>
+									<p class="ms_icon_p"><%= @movie.reviews.count %></p>
 								</div>
-								<p class="ms_icon_p"><%= @movie.reviews.count %></p>
+								<%= render 'movies/edit_modal', movie: @movie, user_review: @user_review %>
+							<!-- ログインユーザーのレビューがない場合 -->
+							<% else %>
+								<div class="ms_icon_box ms_icon_box1 modal_open">
+									<div>
+										<%= fa_icon("eye") %>
+									</div>
+									<p class="ms_icon_p"><%= @movie.reviews.count %></p>
+								</div>
+								<%= render 'movies/new_modal', movie: @movie, review: @review %>
+							<% end %>
+					<!-- clip -->
+							<div id="movie-<%= @movie.id %>">
+								<%= render 'clips/ms_clip', movie: @movie %>
 							</div>
-							<%= render 'movies/edit_modal', movie: @movie, user_review: @user_review %>
-						<!-- ログインユーザーのレビューがない場合 -->
+						<!-- ログインしていない場合 -->
 						<% else %>
-							<div class="ms_icon_box ms_icon_box1 modal_open">
+							<%= link_to new_user_session_path do %>
+							<div class="ms_icon_box ms_icon_box1">
 								<div>
 									<%= fa_icon("eye") %>
 								</div>
 								<p class="ms_icon_p"><%= @movie.reviews.count %></p>
 							</div>
-							<%= render 'movies/new_modal', movie: @movie, review: @review %>
-						<% end %>
-				<!-- clip -->
-						<div id="movie-<%= @movie.id %>">
-							<%= render 'clips/ms_clip', movie: @movie %>
-						</div>
-					<!-- ログインしていない場合 -->
-					<% else %>
-						<%= link_to new_user_session_path do %>
-						<div class="ms_icon_box ms_icon_box1">
-							<div>
-								<%= fa_icon("eye") %>
+							<% end %>
+							<%= link_to new_user_session_path do %>
+							<div class="ms_icon_box ms_icon_box2">
+								<div>
+									<%= fa_icon("paperclip") %>
+								</div>
+								<p class="ms_icon_p"><%= @movie.clips.count %></p>
 							</div>
-							<p class="ms_icon_p"><%= @movie.reviews.count %></p>
-						</div>
+							<% end %>
 						<% end %>
-						<%= link_to new_user_session_path do %>
-						<div class="ms_icon_box ms_icon_box2">
-							<div>
-								<%= fa_icon("paperclip") %>
-							</div>
-							<p class="ms_icon_p"><%= @movie.clips.count %></p>
-						</div>
-						<% end %>
-					<% end %>
+					</div>
 				</div>
+				<% unless @movie.trailer_id.blank? %>
+					<div class="movie_side clearfix">
+						<h6 class="movie_side_title">
+							<%= fa_icon("bookmark") %> 関連作品
+						</h6>
+						<div class="movie_side_boxes">
+							<% @movies.each do |m| %>
+								<%= link_to movie_path(m) do %>
+									<div class="movie_side_box">
+										<div>
+											<%= attachment_image_tag m, :movie_image, format: 'jpeg', :size => '114x152' %>
+										</div>
+									</div>
+								<% end %>
+							<% end %>
+						</div>
+					</div>
+				<% end %>
 			</div>
 			<div class="col-9 ms_top_2">
 				<div class="ms_top_2box">
@@ -155,7 +175,7 @@
 							</tbody>
 							<% end %>
 								<!-- 出演者　すべて -->
-							<% if @actor.present? %>
+					<% if @actor.present? %>
 							<tbody class="ms_actor_all">
 								<tr>
 									<td class="a_td">出演者</td>
@@ -205,12 +225,12 @@
 								</tr>
 								<% end %>
 							</tbody>
-							<% end %>
 						</table>
-						<% if @actors_all.count > 3 %>
-						<p class="ms_show_all" id="ms_show_all">▽すべて表示する</p>
-						<p class="ms_hide" id="ms_hide">△もとに戻す</p>
-						<% end %>
+							<% if @actors_all.count > 3 %>
+								<p class="ms_show_all" id="ms_show_all">▽すべて表示する</p>
+								<p class="ms_hide" id="ms_hide">△もとに戻す</p>
+							<% end %>
+					<% end %>
 					</div>
 					<div class="col-6 ms_bottom_box ms_bottom_box_right">
 						<div class="ms_info_box">

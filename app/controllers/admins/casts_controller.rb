@@ -1,4 +1,6 @@
 class Admins::CastsController < ApplicationController
+  before_action :access_admin
+
   def new
   	@movie = Movie.find(params[:movie_id])
   	@cast = Cast.new
