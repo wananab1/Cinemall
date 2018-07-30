@@ -12,7 +12,7 @@
   		<div class="container header clearfix">
   			<div class="h_left clearfix">
           <% if user_signed_in? %>
-              <%= link_to user_path(current_user) do %>
+              <%= link_to user_timeline_path(current_user) do %>
                 <h1 class="h_logo <%='h_logo_hide' if current_page?(top_path) %>"><%= fa_icon("film") %>Cinemall</h1>
               <% end %>
             <% else %>
@@ -85,7 +85,9 @@
     <% end %>
     <%= yield %>
     <footer>
-    	<div class="footer container-fulid"></div>
+    	<div class="footer container-fulid">
+        <span>Copyright© Cinemall All Rights Reserved.</span>
+      </div>
     </footer>
   </body>
 </html>

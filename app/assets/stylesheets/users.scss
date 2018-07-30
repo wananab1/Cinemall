@@ -36,7 +36,7 @@
 
 /*user/show*/
 .us_main_container_fulid{
-	background-color: #EDEDED;
+	background-color: #FAFAFA;
 }
 .us_main_container{
 	padding-bottom: 100px;
@@ -182,6 +182,7 @@
 	margin: 1%;
 	float: left;
 	box-shadow: 0 1px 3px #ccc;
+	padding-right: 20px;
 }
 .us_review_box_left{
 	width: 35%;
@@ -306,6 +307,7 @@
 	font-weight: normal;
 	color: #939393;
 	border-bottom: 5px solid  coral;
+	font-family: 'Georgia';
 }
 .fol_userbox{
 	width: 30%;
@@ -365,17 +367,66 @@
 }
 
 
+
 /*timeline*/
 .tl_top{
-	margin-top: 150px;
+	background-color: #fafafa;
 }
 .tl_rbox{
 	width: 100%;
 	margin-bottom: 10px;
-	height: 200px;
+	height: 340px;
 	box-shadow: 0 2px 5px #ccc;
+	background-color: white;
 }
 .tl_main{
-	margin: 0 auto;
+	margin: 10px auto 0;
+	padding: 30px 0;
 	width: 70%;
+}
+.tl_rbox_left{
+	width: 78%;
+	float: left;
+	height: 87%;
+}
+.tl_rbox_right{
+	width: 22%;
+	float: left;
+	height: 87%;
+	padding-top: 20px;
+}
+.tl_m_image{
+	margin-left: 4px;
+	margin-top: 30px;
+}
+
+.tl_rbox_top{
+	padding: 20px 10px 10px 30px;
+}
+.tl_rbox_topitem{
+	float: left;
+}
+.tl_rbox_topitem1{
+	width: 12%;
+}
+.tl_rbox_topitem2{
+	width: 75%;
+	padding-top: 3px;
+}
+.tl_rbox_bottom{
+	padding: 0 20px 10px 30px;
+	font-size: 14px;
+}
+.tl_comment{
+	height: 120px;
+	padding-top: 20px;
+	padding-right: 40px;
+}
+.tl_iine_box{
+	width: 15%;
+	float: right;
+}
+.tl_title{
+	margin-bottom: 50px;
+	font-family: 'Georgia'
 }

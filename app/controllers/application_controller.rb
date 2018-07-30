@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 	  when Admin
 	    admins_top_path
 	  when User
-	    user_path(current_user)
+	    user_timeline_path(current_user)
 	  end
 	end
 
