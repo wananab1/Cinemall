@@ -35,15 +35,37 @@
 
 
 /*user/show*/
-.us_info_container{
-	background-color: #fafafa;
-}
-.us_user_info{
-	padding: 65px 0 50px;
+.us_main_container_fulid{
+	background-color: #EDEDED;
 }
 .us_main_container{
+	padding-bottom: 100px;
+}
+.us_user_info{
+	padding: 65px 0 20px;
+}
+.us_f_box{
+	width: 46%;
+	height: 60px;
+	background-color: #E6D5CF;
+	float: left;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 5px;
+	margin-right: 2px;
+	box-shadow: 0 2px 5px #ccc;
+	padding-top: 5px;
+}
+.us_f_box:hover{
+	background-color: #ff5219;
+}
 
-
+.us_f a{
+	color: black;
+	font-weight: bold;
+}
+.us_f a:hover{
+	color: black;
 }
 .us_name{
 	padding-bottom: 20px;
@@ -52,13 +74,13 @@
 	margin: 0;
 	font-size: 15px;
 }
-.us_edit_link{
-	position: absolute;
-	bottom: 0;
-}
+
 .us_main_box{
 	border: 2px solid #6c757d;
-	margin-bottom: 50px;
+}
+.us_right_btn_zone{
+	height: 100%;
+	padding-top: 110%;
 }
 
 .us_main_top{
@@ -156,9 +178,10 @@
 .us_review_box{
 	height: 300px;
 	width: 48%;
-	background-color: #f2f2f2;
+	background-color: white;
 	margin: 1%;
 	float: left;
+	box-shadow: 0 1px 3px #ccc;
 }
 .us_review_box_left{
 	width: 35%;
@@ -239,9 +262,8 @@
 	float: left;
 	text-align: center;
 	margin-bottom: 20px;
-	background-color: #F6F0EE;
-	border: 1px solid white;
-
+	background-color: white;
+	border: 1px solid #f2f2f2;
 }
 .us_clip_movie_title{
 	font-size: 14px;
@@ -264,6 +286,7 @@
 	margin-top: 1px;
 }
 .us_clip_movie_icon_star{
+	width: 75px;
 	background-color: white;
 	color: #ffd700;
 	margin-left: 2px;
@@ -272,4 +295,87 @@
 }
 .clipped_us_icon_box{
 	background-color: #FF5917;
+}
+
+
+
+
+/*follow*/
+.fol_title{
+	padding-top: 50px;
+	font-weight: normal;
+	color: #939393;
+	border-bottom: 5px solid  coral;
+}
+.fol_userbox{
+	width: 30%;
+	height: 290px;
+	margin: 10px 18px;
+	box-shadow: 0 2px 5px #ccc;
+	float: left;
+	background-color: white;
+	padding: 10px;
+}
+.fol_userbox_item3{
+	text-align: right;
+	padding-top: 20px;
+}
+.fol_userbox_item3 a:hover{
+	text-decoration: none;
+}
+.fol_username{
+	width: 70%;
+	float: left;
+	padding-top: 30px;
+	padding-left: 10px;
+}
+.fol_userimg{
+	float: left;
+}
+.fol_f_box{
+	color: #383D36;
+	width: 46%;
+	height: 60px;
+	background-color: #E6D5CF;
+	float: left;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 5px;
+	margin-left: 8px;
+	box-shadow: 0 2px 5px #ccc;
+	padding-top: 5px;
+	font-weight: bold;
+}
+.fol_rc_box{
+	color: #383D36;
+	width: 46%;
+	height: 60px;
+	background-color: #ff5219;
+	float: left;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 5px;
+	margin-left: 8px;
+	box-shadow: 0 2px 5px #ccc;
+	padding-top: 5px;
+	font-weight: bold;
+}
+.fol_rc_box i{
+	font-size: 20px;
+}
+
+
+/*timeline*/
+.tl_top{
+	margin-top: 150px;
+}
+.tl_rbox{
+	width: 100%;
+	margin-bottom: 10px;
+	height: 200px;
+	box-shadow: 0 2px 5px #ccc;
+}
+.tl_main{
+	margin: 0 auto;
+	width: 70%;
 }
