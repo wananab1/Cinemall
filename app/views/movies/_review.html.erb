@@ -9,6 +9,8 @@
 			<div class="col-10 review_box_top2">
 				<p class="review_box_top2_name"><%= review.user.user_name %></p>
 				<% if review.score == 0.0 %>
+					<span class="r_rate r_rate0 "></span>
+					<span class="review_box_score0">ー</span>
 				<% elsif review.score == 5.0 %>
 					<span class="r_rate r_rate5 "></span>
 					<span class="review_box_score">5.0</span>
