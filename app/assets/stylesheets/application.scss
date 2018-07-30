@@ -38,6 +38,9 @@ img{
  h1,h2,h4,h3,h5,h6{
   font-weight: bold;
  }
+ a:hover{
+  text-decoration: none;
+}
  .modal_open:hover{
   cursor: pointer;
  }

@@ -17,5 +17,6 @@ class ListsController < ApplicationController
     @genres = Genre.all
     @countries = Country.all
     @movies = Movie.all.order(score_average: :desc).limit(10)
+    @review = Review.new
   end
 end

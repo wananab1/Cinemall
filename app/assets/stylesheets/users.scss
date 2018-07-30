@@ -90,26 +90,64 @@
 .us_main_top_box1{
 	height:90px;
 	background-color: #ff5917;
+	width: 33.3%;
+	float: left;
+	border-bottom: 2px solid #6c757d;
+	box-shadow: 0 2px 5px #ccc;
+	border-right: 2px solid #6c757d;
+}
+.us_main_top_box1_50{
+	height:90px;
+	background-color: #ff5917;
 	width: 50%;
 	float: left;
 	border-bottom: 2px solid #6c757d;
-	box-shadow: 2px 2px 4px  #6c757d;
+	box-shadow: 0 2px 5px #ccc;
 	border-right: 2px solid #6c757d;
-
 }
 .us_main_top_box2{
 	height:90px;
 	background-color: #E6D5CF;
-	width: 49.8%;
-	float: right;
+	width: 33.3%;
+	float: left;
 	color: black;
+	border-bottom: 2px solid gray
 }
+.us_main_top_box2_50{
+	height:90px;
+	background-color: #E6D5CF;
+	width: 50%;
+	float: left;
+	color: black;
+	border-bottom: 2px solid gray
+}
+.us_main_top_box3{
+	border-left: 2px solid gray
+}
+.us_main_top_box3_2{
+	height:90px;
+	background-color: #ff5917;
+	width: 33.3%;
+	float: left;
+	border-bottom: 2px solid #6c757d;
+	box-shadow: 0 1px 1px 1px grey;
+}
+
 
 .us_main_top_box2:hover{
 	cursor: pointer;
 }
 /*clip側表示部分*/
 .us_main_top_box1_2{
+	color: black;
+	height:90px;
+	background-color: #E6D5CF;
+	width: 33.3%;
+	float: left;
+	border-bottom: 2px solid #6c757d;
+	border-right: 2px solid #6c757d;
+}
+.us_main_top_box1_2_50{
 	color: black;
 	height:90px;
 	background-color: #E6D5CF;
@@ -121,9 +159,16 @@
 .us_main_top_box2_2{
 	height:90px;
 	background-color: #ff5917;
-	width: 49.8%;
-	float: right;
-	box-shadow: -2px 2px 1px 1px #6c757d;
+	width: 33.3%;
+	float: left;
+	box-shadow: 0 2px 5px #ccc;
+}
+.us_main_top_box2_2_50{
+	height:90px;
+	background-color: #ff5917;
+	width: 50%;
+	float: left;
+	box-shadow: 0 2px 5px #ccc;
 }
 .us_main_top_box1_2:hover{
 	cursor: pointer;
@@ -165,6 +210,16 @@
 .us_clip_logo i{
 	font-size: 46px;
 }
+.us_time_logo{
+	width: 35%;
+	text-align: center;
+	margin-left: 32%;
+	padding-top: 6px;
+}
+.us_time_logo i{
+	font-size: 46px;
+}
+
 .us_count{
 	float: left;
 	display: inline-block;
@@ -322,8 +377,8 @@
 	text-align: right;
 	padding-top: 20px;
 }
-.fol_userbox_item3 a:hover{
-	text-decoration: none;
+.fol_userbox_item3 a{
+	color: gray;
 }
 .fol_username{
 	width: 70%;
@@ -371,6 +426,7 @@
 /*timeline*/
 .tl_top{
 	background-color: #fafafa;
+	padding-bottom: 100px;
 }
 .tl_rbox{
 	width: 100%;
@@ -429,4 +485,12 @@
 .tl_title{
 	margin-bottom: 50px;
 	font-family: 'Georgia'
+}
+.fl_mypage{
+	position: relative;
+	top: 0;
+	left: 88%;
+}
+.fl_mypage a{
+	color: #939393;
 }

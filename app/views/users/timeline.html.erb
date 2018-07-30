@@ -1,114 +1,147 @@
 <%= render 'users/userinfo', user: @user %>
 <div class="container-fulid tl_top">
 	<div class="container">
-		<div class="tl_main">
-			<h2 class="fol_title tl_title">Time Line</h2>
-			<% @reviews.each do |r| %>
-				<div class="tl_rbox clearfix">
-					<div class="clearfix">
-						<!-- 左部分 -->
-						<div class="tl_rbox_left">
-							<div class="tl_rbox_top clearfix">
-								<div class="tl_rbox_topitem tl_rbox_topitem1">
-									<%= link_to user_path(r.user) do %>
-										<%= attachment_image_tag r.user, :profile_image, format: 'jpeg', :size => '50x50', fallback: 'no_profile_image.jpg' %>
-									<% end %>
-								</div>
-								<div class="tl_rbox_topitem tl_rbox_topitem2">
-									<h6><%= r.user.user_name %> のレビュー</h6>
-									<span class="review_box_top2_t"><%= r.updated_at.strftime('%Y年%m月%d日 %H:%M') %></span>
-								</div>
+		<div class="us_main_box" >
+			<div class="us_main_top clearfix">
+				<%= link_to user_path(@user) do %>
+					<div class="us_main_top_box us_main_top_box1_2">
+						<div class="us_watch_logo">
+							<div>
+								<%= fa_icon("eye") %>
 							</div>
-							<div class="tl_rbox_bottom clearfix">
-								<h5><%= r.movie.j_title %></h5>
-								<% if r.score == 0.0 %>
-									<span class="r_rate r_rate0 "></span>
-									<span class="review_box_score0">ー</span>
-								<% elsif r.score == 5.0 %>
-									<span class="r_rate r_rate5 "></span>
-									<span class="review_box_score">5.0</span>
-								<% elsif r.score == 4.5 %>
-									<span class="r_rate r_rate4-5 "></span>
-									<span class="review_box_score">4.5</span>
-								<% elsif r.score == 4.0 %>
-									<span class="r_rate r_rate4 "></span>
-									<span class="review_box_score">4.0</span>
-								<% elsif r.score == 3.5 %>
-									<span class="r_rate r_rate3-5 "></span>
-									<span class="review_box_score">3.5</span>
-								<% elsif r.score == 3.0 %>
-									<span class="r_rate r_rate3 "></span>
-									<span class="review_box_score">3.0</span>
-								<% elsif r.score == 2.5 %>
-									<span class="r_rate r_rate2-5 "></span>
-									<span class="review_box_score">2.5</span>
-								<% elsif r.score == 2.0%>
-									<span class="r_rate r_rate2 "></span>
-									<span class="review_box_score">2.0</span>
-								<% elsif r.score == 1.5 %>
-									<span class="r_rate r_rate1-5 "></span>
-									<span class="review_box_score">1.5</span>
-								<% elsif r.score == 1.0 %>
-									<span class="r_rate r_rate1 "></span>
-									<span class="review_box_score">1.0</span>
-								<% elsif r.score == 0.5 %>
-									<span class="r_rate r_rate0-5 "></span>
-									<span class="review_box_score">0.5</span>
-								<% end %>
-								<div>
-									<div class="tl_comment">
-										<% if r.secret == true %>
-											<% if r.comment.length > 150 %>
-												<p class="secret_hide_review">
+							<p>watch</p>
+						</div>
+						<h2 class="us_count"><%= @user.reviews.count %></h2>
+					</div>
+				<% end %>
+				<%= link_to user_clips_path(@user.id) do %>
+				<div class="us_main_top_box us_main_top_box2 ">
+					<div class="us_clip_logo">
+						<div>
+							<%= fa_icon("paperclip") %>
+						</div>
+						<p>clip</p>
+					</div>
+					<h3 class="us_count"><%= @user.clips.count %></h3>
+				</div>
+				<% end %>
+				<div class="us_main_top_box us_main_top_box3_2 us_main_top_box3">
+					<div class="us_time_logo">
+						<div>
+							<%= fa_icon("history") %>
+						</div>
+						<p>Time Line</p>
+					</div>
+				</div>
+				</div>
+			<div class="tl_main">
+				<% @reviews.each do |r| %>
+					<div class="tl_rbox clearfix">
+						<div class="clearfix">
+							<!-- 左部分 -->
+							<div class="tl_rbox_left">
+								<div class="tl_rbox_top clearfix">
+									<div class="tl_rbox_topitem tl_rbox_topitem1">
+										<%= link_to user_path(r.user) do %>
+											<%= attachment_image_tag r.user, :profile_image, format: 'jpeg', :size => '50x50', fallback: 'no_profile_image.jpg' %>
+										<% end %>
+									</div>
+									<div class="tl_rbox_topitem tl_rbox_topitem2">
+										<h6><%= r.user.user_name %> のレビュー</h6>
+										<span class="review_box_top2_t"><%= r.updated_at.strftime('%Y年%m月%d日 %H:%M') %></span>
+									</div>
+								</div>
+								<div class="tl_rbox_bottom clearfix">
+									<h5><%= r.movie.j_title %></h5>
+									<% if r.score == 0.0 %>
+										<span class="r_rate r_rate0 "></span>
+										<span class="review_box_score0">ー</span>
+									<% elsif r.score == 5.0 %>
+										<span class="r_rate r_rate5 "></span>
+										<span class="review_box_score">5.0</span>
+									<% elsif r.score == 4.5 %>
+										<span class="r_rate r_rate4-5 "></span>
+										<span class="review_box_score">4.5</span>
+									<% elsif r.score == 4.0 %>
+										<span class="r_rate r_rate4 "></span>
+										<span class="review_box_score">4.0</span>
+									<% elsif r.score == 3.5 %>
+										<span class="r_rate r_rate3-5 "></span>
+										<span class="review_box_score">3.5</span>
+									<% elsif r.score == 3.0 %>
+										<span class="r_rate r_rate3 "></span>
+										<span class="review_box_score">3.0</span>
+									<% elsif r.score == 2.5 %>
+										<span class="r_rate r_rate2-5 "></span>
+										<span class="review_box_score">2.5</span>
+									<% elsif r.score == 2.0%>
+										<span class="r_rate r_rate2 "></span>
+										<span class="review_box_score">2.0</span>
+									<% elsif r.score == 1.5 %>
+										<span class="r_rate r_rate1-5 "></span>
+										<span class="review_box_score">1.5</span>
+									<% elsif r.score == 1.0 %>
+										<span class="r_rate r_rate1 "></span>
+										<span class="review_box_score">1.0</span>
+									<% elsif r.score == 0.5 %>
+										<span class="r_rate r_rate0-5 "></span>
+										<span class="review_box_score">0.5</span>
+									<% end %>
+									<div>
+										<div class="tl_comment">
+											<% if r.secret == true %>
+												<% if r.comment.length > 150 %>
+													<p class="secret_hide_review">
+														<%= r.comment.truncate(150) %><br>
+														<span>
+															<%= link_to review_path(r) do %>
+																<%= fa_icon("angle-double-right")%>続きを読む
+															<% end %>
+														</span>
+													</p>
+													<p class="review_secret_p">
+														<span class="secret_i"><%= fa_icon("bomb") %></span>ネタバレ表示する▽
+													</p>
+												<% else %>
+													<p class="secret_hide_review"><%= r.comment.truncate(150) %></p>
+													<p class="review_secret_p">
+														<span class="secret_i"><%= fa_icon("bomb") %></span>ネタバレ表示する▽
+													</p>
+												<% end %>
+												<!-- ネタバレ無し -->
+											<% else %>
+												<% if r.comment.length > 150 %>
 													<%= r.comment.truncate(150) %><br>
 													<span>
 														<%= link_to review_path(r) do %>
 															<%= fa_icon("angle-double-right")%>続きを読む
 														<% end %>
 													</span>
-												</p>
-												<p class="review_secret_p">
-													<span class="secret_i"><%= fa_icon("bomb") %></span>ネタバレ表示する▽
-												</p>
-											<% else %>
-												<p class="secret_hide_review"><%= r.comment.truncate(150) %></p>
-												<p class="review_secret_p">
-													<span class="secret_i"><%= fa_icon("bomb") %></span>ネタバレ表示する▽
-												</p>
+												<% else %>
+													<%= r.comment.truncate(150) %>
+												<% end %>
 											<% end %>
-											<!-- ネタバレ無し -->
-										<% else %>
-											<% if r.comment.length > 150 %>
-												<%= r.comment.truncate(150) %><br>
-												<span>
-													<%= link_to review_path(r) do %>
-														<%= fa_icon("angle-double-right")%>続きを読む
-													<% end %>
-												</span>
-											<% else %>
-												<%= r.comment.truncate(150) %>
-											<% end %>
-										<% end %>
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- 右部分 -->
+							<div class="tl_rbox_right">
+								<%= link_to movie_path(r.movie) do %>
+									<%= attachment_image_tag r.movie, :movie_image, format: 'jpeg', :size => '141x188' , class: "tl_m_image" %>
+								<% end %>
+							</div>
 						</div>
-						<!-- 右部分 -->
-						<div class="tl_rbox_right">
-							<%= link_to movie_path(r.movie) do %>
-								<%= attachment_image_tag r.movie, :movie_image, format: 'jpeg', :size => '141x188' , class: "tl_m_image" %>
-							<% end %>
-						</div>
-					</div>
-					<div class="review_box_bottom clearfix">
-						<div class="tl_iine_box">
-							<div id="review-<%= r.id%>">
-								<%= render 'likes/like', review: r %>
+						<div class="review_box_bottom clearfix">
+							<div class="tl_iine_box">
+								<div id="review-<%= r.id%>">
+									<%= render 'likes/like', review: r %>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			<% end %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>

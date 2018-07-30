@@ -3,26 +3,61 @@
 	<div class="container us_main_container us_main_container_clip">
 		<div class="us_main_box" >
 			<div class="us_main_top clearfix">
-				<%= link_to user_path(@user) do %>
-					<div class="us_main_top_box us_main_top_box1_2">
-						<div class="us_watch_logo">
-							<div>
-								<%= fa_icon("eye") %>
+				<% if user_signed_in? && current_user.id == @user.id %>
+				<!-- アクセスしているのが本人 -->
+					<%= link_to user_path(@user) do %>
+						<div class="us_main_top_box us_main_top_box1_2">
+							<div class="us_watch_logo">
+								<div>
+									<%= fa_icon("eye") %>
+								</div>
+								<p>watch</p>
 							</div>
-							<p>watch</p>
+							<h2 class="us_count"><%= @user.reviews.count %></h2>
 						</div>
-						<h2 class="us_count"><%= @user.reviews.count %></h2>
+					<% end %>
+					<div class="us_main_top_box us_main_top_box2_2">
+						<div class="us_clip_logo">
+							<div>
+								<%= fa_icon("paperclip") %>
+							</div>
+							<p>clip</p>
+						</div>
+						<h3 class="us_count"><%= @user.clips.count %></h3>
 					</div>
+					<%= link_to user_timeline_path(@user.id) do %>
+					<div class="us_main_top_box us_main_top_box2 us_main_top_box3">
+						<div class="us_time_logo">
+							<div>
+								<%= fa_icon("history") %>
+							</div>
+							<p>Time Line</p>
+						</div>
+					</div>
+					<% end %>
+				<% else %>
+				<!-- アクセスしているのが本人以外 -->
+					<%= link_to user_path(@user) do %>
+						<div class="us_main_top_box1_2_50">
+							<div class="us_watch_logo">
+								<div>
+									<%= fa_icon("eye") %>
+								</div>
+								<p>watch</p>
+							</div>
+							<h2 class="us_count"><%= @user.reviews.count %></h2>
+						</div>
+					<% end %>
+						<div class="us_main_top_box2_2_50">
+							<div class="us_clip_logo">
+								<div>
+									<%= fa_icon("paperclip") %>
+								</div>
+								<p>clip</p>
+							</div>
+							<h3 class="us_count"><%= @user.clips.count %></h3>
+						</div>
 				<% end %>
-				<div class="us_main_top_box us_main_top_box2_2">
-					<div class="us_clip_logo">
-						<div>
-							<%= fa_icon("paperclip") %>
-						</div>
-						<p>clip</p>
-					</div>
-					<h3 class="us_count"><%= @user.clips.count %></h3>
-				</div>
 			</div>
 			<div class="us_main_bottom clearfix">
 				<!-- クリップした作品 -->

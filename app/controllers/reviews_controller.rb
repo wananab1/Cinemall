@@ -58,7 +58,7 @@ class ReviewsController < ApplicationController
         movie.update(score_average: score_average)
       end
     end
-
+    flash[:success] = "レビューを編集しました"
   	redirect_to movie_path(movie)
   end
 

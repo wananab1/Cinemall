@@ -2,6 +2,20 @@
 <div class="container-fulid us_main_container_fulid">
 	<div class="container us_main_container clearfix">
 		<h2 class="fol_title">Follow</h2>
+		<div class="fl_mypage">
+			<%= link_to user_path(@user) do %>
+				<% if user_signed_in? %>
+					<% if @user.id == current_user.id %>
+						<%= fa_icon("angle-double-left")%>マイページへ
+					<% else %>
+						<%= fa_icon("angle-double-left")%>ユーザーページへ
+					<% end %>
+				<% else %>
+							<%= fa_icon("angle-double-left")%>ユーザーページへ
+				<% end %>
+			<% end %>
+		</div>
+
 		<% @user.followings.each do |f|%>
 			<div class="fol_userbox">
 				<div class="fol_userbox_item1 clearfix">
@@ -30,7 +44,7 @@
 				</div>
 				<div class="fol_userbox_item3">
 					<%= link_to user_path(f) do %>
-						<%= fa_icon("angle-double-right")%>ユーザーページ
+						<%= fa_icon("angle-double-right")%><%= fa_icon("user")%>
 					<% end %>
 				</div>
 			</div>
