@@ -28,6 +28,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
+  def timeline
+    @user = User.find(params[:user_id])
+    @reviews = Review.where(user_id: current_user.following_ids + [current_user.id]).order('updated_at DESC')
+  end
 
 
 

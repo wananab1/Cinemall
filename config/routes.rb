@@ -33,6 +33,7 @@ Rails.application.routes.draw do
       resources :clips, only: [:index]
       get 'follow' => 'users#follow'
       get 'follower' => 'users#follower'
+      get 'timeline' => 'users#timeline'
     end
     get '/search' => 'top#search'
    	get '' => 'top#top', as: :top
