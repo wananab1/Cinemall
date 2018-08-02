@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
     # sqliteの場合
     @movies = Movie.where(genre_id: @movie.genre.id).where.not(id: @movie.id).order("RANDOM()").limit(6)
     # MySQLの場合
-    # @movies = Movie.where(genre_id: @movie.genre.id).where.not(id: @movie.id).order("RANDOM()").limit(6)
+    # @movies = Movie.where(genre_id: @movie.genre.id).where.not(id: @movie.id).order("RAND()").limit(6)
 
 	  if @director = Cast.find_by(director: true, movie_id: @movie.id)
   		@directors = Cast.where(director: true, movie_id: @movie.id).where.not(id: @director.id)
