@@ -2,7 +2,7 @@
 	<div class="container us_user_info">
 		<div class="row">
 			<div class="col-2">
-				<%= attachment_image_tag user, :profile_image, format: 'jpeg', :size => '150x150', fallback: 'no_profile_image.jpg', class: 'profile_image us_profile_image' %>
+				<%= attachment_image_tag user, :profile_image, format: 'jpeg', :size => '150x150', fallback: '/images/no_profile_image.jpg', class: 'profile_image us_profile_image' %>
 				<div class="us_f clearfix">
 					<%= link_to user_follow_path(user) do %>
 						<div class="us_f_box">
