@@ -13,7 +13,7 @@
 		<%= form_for @user do |f| %>
 			<%= f.label :profile_image, 'プロフィール画像' %>
 			<div class="ue_profile_image">
-				<%= attachment_image_tag @user, :profile_image, format: 'jpeg', :size => '90x90', fallback: 'no_profile_image.jpg', class: 'profile_image' %>
+				<%= attachment_image_tag @user, :profile_image, format: 'jpeg', :size => '90x90', fallback: '/images/no_profile_image.jpg', class: 'profile_image' %>
 			</div>
 			<%= f.attachment_field :profile_image %>
 			<div class="form-group ue_form_group">
