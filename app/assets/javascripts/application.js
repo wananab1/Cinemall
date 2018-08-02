@@ -10,11 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
 //= require jquery
 //= require bootstrap-sprockets
-//= require_tree .
+//= require rails-ujs
 //= require nested_form_fields
+//= require_tree .
 
  $(function(){
 	// キャストの表示
