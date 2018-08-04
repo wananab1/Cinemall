@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require nested_form_fields
@@ -99,7 +100,6 @@
 
   $(window).scroll(function () {
     var po = $(window).scrollTop();
-    console.log(po)
     if (po !== 0){
       $('.h_logo_hide').fadeIn();
       $('.top-header').css('background-color', 'rgba(45,45,45,1)');
