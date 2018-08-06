@@ -254,3 +254,93 @@
 	background-image: url("/images/Cinemall-logo.png");
 	background-position: center;
 }
+
+
+
+/*about*/
+.ab_fulid1{
+	background-color: #ff5219;
+}
+.about1{
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.about1 span{
+	color: #ff5219;
+	font-family: 'Trebuchet';
+	letter-spacing: 2px;
+	font-size: 48px;
+}
+.about1 h2{
+	margin-bottom: 50px;
+}
+.about1 p{
+	line-height: 1.5;
+	font-size: 18px;
+	margin-bottom: 40px;
+	font-family: 'TsukuARdGothic-Regular';
+}
+.about2{
+	text-align: center;
+	color: white;
+	padding-top: 50px;
+	background-color: #ff5219;
+	padding-bottom: 100px;
+
+}
+.about2-title{
+	font-size: 32px;
+	padding-bottom: 30px;
+}
+.about2_box{
+	width: 25%;
+	height: 200px;
+	float: left;
+}
+.about2_box i{
+	font-size: 60px;
+}
+.about2_box span{
+	font-size: 24px;
+	display: block;
+	margin: 30px 0;
+}
+.about1{
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+.about3_fulid{
+	margin-bottom: 50px;
+}
+.about3{
+	text-align: center;
+	padding-top: 50px;
+}
+.about3_box{
+	width: 50%;
+	float: left;
+}
+.about3box_pic{
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+.about3box_pic_watch{
+	display: inline-block;
+	background-image: url('/images/watch.png');
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0 2px 5px #ccc;
+}
+.about3box_pic_star{
+	display: inline-block;
+	background-image: url('/images/watch_star.png');
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0 2px 5px #ccc;
+}
+
