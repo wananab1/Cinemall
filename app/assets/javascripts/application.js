@@ -94,9 +94,13 @@
     $('.tm_menu').fadeIn(2000);
   });
 
-
+// toppage title
   $('.tm_menu').fadeIn(1000);
 
+// フッター　pegetop
+  $('.page_top').click(function(){
+    $("html,body").animate({scrollTop:0},"300");
+  });
 
   $(window).scroll(function () {
     var po = $(window).scrollTop();

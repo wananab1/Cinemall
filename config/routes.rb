@@ -36,5 +36,6 @@ Rails.application.routes.draw do
       get 'timeline' => 'users#timeline'
     end
     get '/search' => 'top#search'
+    get '/about' => 'top#about'
    	get '' => 'top#top', as: :top
 end
