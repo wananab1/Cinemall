@@ -101,7 +101,24 @@
   $('.page_top').click(function(){
     $("html,body").animate({scrollTop:0},"300");
   });
+// ハンバーガーメニュー
+  // open
+  $('.h_menu_icon').click(function(){
+    $('.h_menu').fadeIn();
+    $('.h_menu_item').delay(400).slideDown(400);
+  });
+  // close
+  $('.h_menu_close').click(function(){
+    $('.h_menu_item').slideUp(400);
+    $('.h_menu').delay(400).fadeOut();
+  });
+   $('.h_menu_ex').click(function(){
+    $('.h_menu_item').slideUp(400);
+    $('.h_menu').delay(400).fadeOut();
+  });
 
+
+// ヘッダー切り替え
   $(window).scroll(function () {
     var po = $(window).scrollTop();
     if (po !== 0){
