@@ -3,9 +3,9 @@
   <head>
     <title>Cinemall</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
   </head>
   <body>
   	<header class="<%='top-header' if current_page?(top_path) %>">
@@ -73,6 +73,18 @@
   					</div>
   				</div>
   			</div>
+        <!-- ヘッダー　メニュー -->
+        <span class="h_menu_icon"><%= fa_icon("bars") %></span>
+        <div class="h_menu">
+          <div class="h_menu_main">
+            <div class="h_menu_item">
+              <div class="h_menu_title">
+                <span class="h_menu_close">×</span>
+              </div>
+            </div>
+            <div class="h_menu_ex"></div>
+          </div>
+        </div>
   		</div>
   	</header>
     <% flash.each do |name, msg| %>
