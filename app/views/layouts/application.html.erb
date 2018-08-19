@@ -69,7 +69,6 @@
                 <%= f.hidden_field :person_name_cont, :value => '', id: 'hidden_field'  %>
                 <%= button_tag fa_icon("search"), id: 'search_submit', class: "btn-outline-light btn badge-pill search_submit" %>
               <% end %>
-              </div>
   					</div>
   				</div>
   			</div>
@@ -78,8 +77,55 @@
         <div class="h_menu">
           <div class="h_menu_main">
             <div class="h_menu_item">
-              <div class="h_menu_title">
+              <div>
                 <span class="h_menu_close">×</span>
+                <h3 class="h_menu_title">MENU</h3>
+              </div>
+              <div class="h_menu_search">
+                <%= search_form_for @q, html: {class: 'form-inline', id: 'h_movie_search'}, url: search_path  do |f| %>
+                  <div class="form-group">
+                    <%= f.search_field :j_title_or_e_title_cont, id: 'h_search_field', class: 'form-control search_field', placeholder: '作品名・人物名で検索' %>
+                  </div>
+                  <%= f.hidden_field :person_name_cont, :value => '', id: 'h_hidden_field'  %>
+                  <%= button_tag fa_icon("search"), id: 'h_search_submit', class: "btn-outline-light btn badge-pill search_submit" %>
+                <% end %>
+              </div>
+              <div class="h_menu_link">
+                <% if user_signed_in? %>
+                <!-- ログインしていた場合 -->
+                  <%= link_to user_path(current_user) do %>
+                    <div class="h_menu_linkitem">
+                      マイページ
+                    </div>
+                  <% end %>
+                  <%= link_to lists_path do %>
+                    <div class="h_menu_linkitem">
+                      映画を探す
+                    </div>
+                  <% end %>
+                  <%= link_to destroy_admin_session_path, method: :delete do %>
+                    <div class="h_menu_linkitem">
+                      ログアウト
+                    </div>
+                  <% end %>
+                <% else %>
+                <!-- ログインしてない場合 -->
+                  <%= link_to lists_path do %>
+                    <div class="h_menu_linkitem">
+                      映画を探す
+                    </div>
+                  <% end %>
+                  <%= link_to new_user_session_path do %>
+                    <div class="h_menu_linkitem">
+                      ログイン
+                    </div>
+                  <% end %>
+                  <%= link_to new_user_registration_path do %>
+                    <div class="h_menu_linkitem">
+                      新規登録
+                    </div>
+                  <% end %>
+                <% end %>
               </div>
             </div>
             <div class="h_menu_ex"></div>

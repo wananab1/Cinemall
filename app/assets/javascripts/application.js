@@ -61,6 +61,11 @@
     $("#hidden_field").val(inputText);
   });
 
+  $('#h_search_submit').click(function(){
+    var inputText =$('#h_search_field').val();
+    $("#h_hidden_field").val(inputText);
+  });
+
   // 検索ワードチェック
   $('#search_submit').prop('disabled', true);
   $('#search_field').on('keyup', function(){
@@ -70,6 +75,16 @@
         $('#search_submit').prop('disabled', false);
       }
   });
+
+  $('#h_search_submit').prop('disabled', true);
+  $('#h_search_field').on('keyup', function(){
+      if($(this).val() === "" ){
+        $('#h_search_submit').prop('disabled', true);
+      }else{
+        $('#h_search_submit').prop('disabled', false);
+      }
+  });
+
 
   // 検索結果切替
   $('.change_person').click(function(){

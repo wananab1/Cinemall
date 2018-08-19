@@ -165,6 +165,21 @@ body{
 .h_menu_icon{
   display: none;
 }
+.h_menu{
+  display: none;
+}
+.h_menu_search{
+  display: none;
+}
+.h_menu_title{
+  display: none;
+}
+.h_menu_link{
+  display: none;
+}
+.h_menu_close{
+  display: none;
+}
 
 /*footer*/
 footer{
@@ -191,7 +206,7 @@ background-color: #2D2D2D;
 }
 .page_top{
   cursor: pointer;
-  background-color: #13B6F2;
+  background-color: #FF5917;
   width: 130px;
   height: 40px;
   text-align: center;
@@ -456,7 +471,6 @@ background-color: #2D2D2D;
   }
   .h_menu_item{
     background-color: #ff5219;
-    height: 400px;
     width: 100%;
     display: none;
   }
@@ -469,7 +483,42 @@ background-color: #2D2D2D;
     position: absolute;
     top: 10px;
     right: 15px;
+    display: block;
   }
+  .h_menu_title{
+    font-weight: 1;
+    font-family: 'TsukuARdGothic-Regular';
+    padding-top: 24px;
+    text-align: center;
+    display: block;
+  }
+  .h_menu_search{
+    padding: 10px 10px;
+    display: block;
+    text-align: center;
+  }
+  .search_field{
+    width: 235px !important;
+    margin-right: 5px;
+  }
+  .search_submit{
+    padding: 5px 20px;
+    margin-top: -15px;
+  }
+  .h_menu_link{
+    width: 100%;
+    display: block;
+  }
+  .h_menu_linkitem{
+    width: 100%;
+    padding: 15px 0 15px 20px ;
+    font-size: 15px;
+    border-top: 1px dotted white;
+  }
+  .h_menu_link a{
+    color: white;
+  }
+
 }
 
 
