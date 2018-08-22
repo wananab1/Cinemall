@@ -36,27 +36,27 @@
 				<%= form_for(:user, html: {class: 'form-horizontal'}, url: registration_path(:user)) do |f| %>
 			        <div class="form-group row">
 			            <label for="user_user_name" class="user_user_name col-sm-2 col-form-label"><%= fa_icon("user") %></label>
-			            <div class="col-sm-9">
+			            <div class="col-sm-9 tmr_usform">
 			            	<%= f.text_field :user_name, autofocus: true, autocomplete: "off", class: 'form-control top_lg_form', placeholder: 'User name' %>
 			            </div>
 			        </div>
 			        <div class="form-group row">
 			            <label for="user_email_signup" class="col-sm-2 col-form-label"><%= fa_icon("envelope") %></label>
-			            <div class="col-sm-9">
+			            <div class="col-sm-9 tmr_usform">
 			            	<%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control top_lg_form', placeholder: 'Email address', id: "user_email_signup" %>
 			            </div>
 			        </div>
 			        <div class="form-group row">
 			            <label for="user_password_signup" class="col-sm-2 col-form-label"><%= fa_icon("key") %></label>
-			            <div class="col-sm-9">
-			            	<%= f.password_field :password, autocomplete: "off", class: 'form-control top_lg_form', placeholder: 'Password', id: "user_password_signup"%>
+			            <div class="col-sm-9 tmr_usform">
+			            	<%= f.password_field :password, autocomplete: "off", class: 'form-control top_lg_form', placeholder: 'Password (6 or more characters)', id: "user_password_signup"%>
 			            </div>
 			        </div>
 			        <div class="form-group row password_confirmation">
 			           	<label for="user_password_confirmation" class="col-sm-2 col-form-label">
 			           		<%= fa_icon("key") %><%= fa_icon("check") %>
 			       		</label>
-			       		<div class="col-sm-9">
+			       		<div class="col-sm-9 tmr_usform">
 			       			<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control top_lg_form', placeholder: 'Password confirmation' %>
 			       		</div>
 			        </div>

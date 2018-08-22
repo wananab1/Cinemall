@@ -11,7 +11,6 @@
 	display: none;
 }
 .top-main{
-	background-color: red;
 	height: 550px;
 	background-image: url('/images/top.jpg');
 	background-size: cover;
@@ -77,10 +76,6 @@
 	padding-top: 50px;
 	padding-right: 37px;
 }
-.tm-up{
-	margin-right: 40px;
-	padding: 10px 30px !important;
-}
 .tm-in{
 	margin-left: 40px;
 	padding: 10px 30px !important;
@@ -102,7 +97,6 @@
 .top_movie_box{
 	width: 17%;
 	margin: 0 1%;
-	/*display: inline-block;*/
 	float: left;
 	box-shadow: 0 0 1px #C6C5C2;
 	border-radius: 5px;
@@ -167,6 +161,7 @@
 	font-size: 32px;
 	text-align: right;
 }
+
 .password_confirmation i{
 	font-size: 20px;
 }
@@ -180,7 +175,7 @@
 .top_back_btn{
 	text-align: right;
 	padding-right: 40px;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .top_back_btn1{
 	text-align: right;
@@ -197,6 +192,85 @@
 .top_back_span:hover{
 	cursor: pointer;
 }
+
+/*top responsive*/
+@media screen and (max-width: 576px) {
+	.top-main{
+		height: 460px;
+	}
+	.tm-cover{
+		height: 460px;
+	}
+	.tm-h1{
+		font-size: 48px;
+		padding-right: 0px;
+	}
+	.tm-p{
+		padding-top:80px;
+	}
+	.tm-catch{
+		opacity: 0.8;
+		margin-top: 10px;
+		font-size: 16px;
+	}
+	.tm-top{
+		height: 190px;
+	}
+	.tm-link{
+		padding-top: 70px;
+		padding-right: 0px;
+	}
+	.tm-in{
+		margin-left: 0px;
+		padding: 10px 25px !important;
+
+	}
+	.top-signup-form-wrapper{
+		width: 90%;
+		padding-top: 0px;
+		margin-top: -20px;
+	}
+	.tmr_usform{
+		margin-left: 40px;
+	}
+	.top-signup-form-wrapper label{
+		position: relative;
+		top: 48px;
+		left: -10px;
+	}
+	.top-signup-form-wrapper .form-group{
+		height: 55px;
+	}
+	.top-sign-btn{
+		width: auto;
+		margin-left: 40px;
+		margin-top: 48px;
+	}
+	.top_back_btn{
+		text-align: right;
+		margin-top: 15px;
+		padding-right: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*search*/
 .s_top_js{
 	text-align: right;
