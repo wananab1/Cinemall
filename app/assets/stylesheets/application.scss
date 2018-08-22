@@ -192,7 +192,7 @@ background-color: #2D2D2D;
 }
 .footer_item{
   width: 50%;
-  float: left;
+  float: right;
 }
 .footer_left{
   text-align: left;
@@ -280,6 +280,136 @@ background-color: #2D2D2D;
 }
 .devise_bottom{
   text-align: right;
+}
+
+
+
+/*レスポンシブ*/
+@media screen and (max-width: 576px) {
+  /*flash message*/
+  .alert{
+    top: 100px;
+  }
+  /*header*/
+  header{
+    height: 100px;
+  }
+  .h_right{
+    display: none;
+  }
+  .h_logo{
+    font-size: 40px;
+    padding-top: 30px;
+  }
+  .h_menu{
+    display: none;
+  }
+  .h_menu_icon{
+    position: absolute;
+    top: 24px;
+    right: 15px;
+    color: white;
+    opacity: 0.5;
+    font-size: 40px;
+    display: block;
+  }
+  .h_menu_main{
+    background-color: rgba(0,0,0,0.8);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 1px gray;
+    color: white;
+    z-index: 101;
+  }
+  .h_menu_item{
+    background-color: #ff5219;
+    width: 100%;
+    display: none;
+  }
+  .h_menu_ex{
+    width:100%;
+    height: 100%;
+  }
+  .h_menu_close{
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: block;
+  }
+  .h_menu_title{
+    font-weight: 1;
+    font-family: 'TsukuARdGothic-Regular';
+    padding-top: 24px;
+    text-align: center;
+    display: block;
+  }
+  .h_menu_search{
+    padding: 10px 10px;
+    display: block;
+    text-align: center;
+  }
+  .search_field{
+    width: 235px !important;
+    margin-right: 5px;
+  }
+  .search_submit{
+    padding: 5px 20px;
+    margin-top: -15px;
+  }
+  .h_menu_link{
+    width: 100%;
+    display: block;
+  }
+  .h_menu_linkitem{
+    width: 100%;
+    padding: 15px 0 15px 20px ;
+    font-size: 15px;
+    border-top: 1px dotted white;
+  }
+  .h_menu_link a{
+    color: white;
+  }
+
+  /*footer*/
+
+  .footer{
+    height: auto;
+    padding: 30px 0 10px;
+    color: white;
+  }
+  .footer_item{
+    width: 100%;
+    float: none;
+  }
+  .footer_left h1{
+    display: none;
+  }
+  .footer_left{
+    font-size: 14px;
+    text-align: center;
+  }
+  .footer_right{
+    text-align: center;
+  }
+  .page_top{
+    width: 90%;
+    height: 40px;
+  }
+  .footer_link ul{
+    float: none;
+    display: inline-block;
+  }
+  .footer_link li{
+    float: left;
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
 }
 
 /*Movie/show/Star*/
@@ -425,100 +555,6 @@ background-color: #2D2D2D;
 }
 .r_rate5:after {
   width: 125px;
-}
-
-
-
-/*レスポンシブ*/
-@media screen and (max-width: 576px) {
-  /*flash message*/
-  .alert{
-    top: 100px;
-  }
-  /*header*/
-  header{
-    height: 100px;
-  }
-  .h_right{
-    display: none;
-  }
-  .h_logo{
-    font-size: 40px;
-    padding-top: 30px;
-  }
-  .h_menu{
-    display: none;
-  }
-  .h_menu_icon{
-    position: absolute;
-    top: 24px;
-    right: 15px;
-    color: white;
-    opacity: 0.5;
-    font-size: 40px;
-    display: block;
-  }
-  .h_menu_main{
-    background-color: rgba(0,0,0,0.8);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 0 1px gray;
-    color: white;
-    z-index: 101;
-  }
-  .h_menu_item{
-    background-color: #ff5219;
-    width: 100%;
-    display: none;
-  }
-  .h_menu_ex{
-    width:100%;
-    height: 100%;
-  }
-  .h_menu_close{
-    font-size: 40px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    display: block;
-  }
-  .h_menu_title{
-    font-weight: 1;
-    font-family: 'TsukuARdGothic-Regular';
-    padding-top: 24px;
-    text-align: center;
-    display: block;
-  }
-  .h_menu_search{
-    padding: 10px 10px;
-    display: block;
-    text-align: center;
-  }
-  .search_field{
-    width: 235px !important;
-    margin-right: 5px;
-  }
-  .search_submit{
-    padding: 5px 20px;
-    margin-top: -15px;
-  }
-  .h_menu_link{
-    width: 100%;
-    display: block;
-  }
-  .h_menu_linkitem{
-    width: 100%;
-    padding: 15px 0 15px 20px ;
-    font-size: 15px;
-    border-top: 1px dotted white;
-  }
-  .h_menu_link a{
-    color: white;
-  }
-
 }
 
 
