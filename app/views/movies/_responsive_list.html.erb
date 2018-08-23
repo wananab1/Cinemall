@@ -1,0 +1,26 @@
+<div class="res_list">
+	<div class="lind_sidebar">
+		<h4 class="lind_sidebar_title"><%= fa_icon("tags") %> Genre</h4>
+			<% genres.each do |g| %>
+				<%= link_to genre_path(g) do %>
+					<div class="lind_sidebar_item clearfix">
+						<div class="lind_sidebar_item_link">
+							<%= g.genre_name %>
+						</div>
+						<span>(<%= g.movies.count %>)</span>
+					</div>
+				<% end %>
+			<% end %>
+		<h4 class="lind_sidebar_title"><%= fa_icon("globe") %> Country</h4>
+		<% countries.each do |c| %>
+			<%= link_to country_path(c) do %>
+				<div class="lind_sidebar_item clearfix">
+					<div class="lind_sidebar_item_link">
+						<%= c.country_name %>
+					</div>
+					<span>(<%= c.movies.count %>)</span>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>
