@@ -133,6 +133,7 @@
   });
 
 
+
 // ヘッダー切り替え
   $(window).scroll(function () {
     var po = $(window).scrollTop();
@@ -159,8 +160,30 @@
     }
 
   });
-
+  // レスポンシブ
+  // 読み込み時
+  var z = $(window).width();
+  var y = 576;
+  if (z <= y) {
+        $('.col9_responsive').removeClass('col-9');
+    }else{
+        $('.col9_responsive').addClass('col-9');
+    }
  });
+
+ // レスポンシブによるクラスの削除
+ // 画面サイズ変動時
+ $(window).resize(function(){
+    //windowの幅をxに代入
+    var x = $(window).width();
+    //windowの分岐幅をyに代入
+    var y = 576;
+    if (x <= y) {
+        $('.col9_responsive').removeClass('col-9');
+    }else{
+        $('.col9_responsive').addClass('col-9');
+    }
+});
 
 
 
