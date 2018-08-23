@@ -82,7 +82,15 @@
 	text-align: left;
 	font-size: 14px;
 }
-.lind_list_movies{
+
+@media screen and (max-width: 576px) {
+	.sidebar_responsive{
+		display: none;
+	}
+	.col9_responsive{
+		width: 100%;
+		padding: 0 5%;
+	}
 }
 
 

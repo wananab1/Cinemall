@@ -4,7 +4,7 @@
 <div class="container lin_warpper">
 	<div class="row">
 		<%= render 'movies/sidebar', genres: @genres, countries: @countries %>
-		<div class="col-9">
+		<div class="col-9 col9_responsive">
 			<div>
 				<% @genre.movies.each do |movie|  %>
 					<div class="lsh-movie-box clearfix">
