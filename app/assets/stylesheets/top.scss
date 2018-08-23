@@ -239,7 +239,7 @@
 		left: -10px;
 	}
 	.top-signup-form-wrapper .form-group{
-		height: 55px;
+		height: 52px;
 	}
 	.top-sign-btn{
 		width: auto;
@@ -250,6 +250,68 @@
 		text-align: right;
 		margin-top: 15px;
 		padding-right: 0;
+	}
+	.top-login-form{
+		padding-top: 150px;
+		text-align: center;
+	}
+	.top-form-inline{
+		margin-left: 0;
+		display: inline-block !important;
+	}
+	.top_lg_form{
+		margin-right: 0;
+		padding: 8px !important;
+	}
+	.top-email{
+		width: 280px !important;
+	}
+	.top_back_btn1{
+		text-align: right;
+		padding-right: 0;
+		margin-top: 10px;
+		width:280px;
+		display: inline-block;
+	}
+	.top-signup-form-wrapper i{
+		font-size: 28px;
+	}
+	.password_confirmation i{
+		font-size: 16px;
+	}
+	.top_back_span i{
+		font-size: 16px;
+	}
+	.top_movie_box{
+		width: 30%;
+		margin-bottom: 10px;
+	}
+	.top_movie_box img{
+		height: 150%;
+		width: 100%;
+	}
+	.top_icon-boxes{
+		text-align: center;
+	}
+	.top_icon_box{
+		width: 30%;
+		display: inline-block;
+		height: 30px;
+	}
+	.top_icon_box i{
+		font-size: 14px;
+	}
+	.top_icon_box span{
+		font-size: 9px;
+		position: relative;
+		top: -11px;
+		left: 0;
+	}
+	.top_icon_r{
+		margin-top: -5px;
+	}
+	.top_movie_box_j{
+		font-size: 11px;
 	}
 }
 
