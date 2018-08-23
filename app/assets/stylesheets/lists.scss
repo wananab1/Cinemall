@@ -46,8 +46,19 @@
 .lind_sidebar_item:last-child{
 	border-bottom: 0;
 }
+@media screen and (max-width: 576px) {
+	.sidebar_responsive{
+		display: none;
+	}
+	.col9_responsive{
+		width: 100%;
+		padding: 0 5%;
+	}
+}
 
 
+
+/*list/index*/
 .lin-content{
 	text-align: center;
 	padding-bottom: 50px;
@@ -82,14 +93,28 @@
 	text-align: left;
 	font-size: 14px;
 }
+.res_list{
+	display: none;
+}
 
 @media screen and (max-width: 576px) {
-	.sidebar_responsive{
-		display: none;
+	.lin_list_name{
+		font-size: 24px;
 	}
-	.col9_responsive{
-		width: 100%;
-		padding: 0 5%;
+	.lind_movie_box{
+		width: 30%;
+		margin-bottom: 20px;
+	}
+	.lind_movie_box img{
+		height: 120%;
+		width: 80%;
+	}
+	.res_list{
+		display: block;
+		margin-bottom: 30px;
+	}
+	.lin_list_intro{
+		padding: 20px 10px;
 	}
 }
 
