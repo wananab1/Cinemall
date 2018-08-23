@@ -180,110 +180,6 @@ body{
 .h_menu_close{
   display: none;
 }
-
-/*footer*/
-footer{
-background-color: #2D2D2D;
-}
-.footer{
-	height: 130px;
-  padding-top: 30px;
-  color: white;
-}
-.footer_item{
-  width: 50%;
-  float: right;
-}
-.footer_left{
-  text-align: left;
-}
-.footer_right{
-  text-align: right;
-}
-
-.footer_left h1{
-  color: #ff5219;
-}
-.page_top{
-  cursor: pointer;
-  background-color: #FF5917;
-  width: 130px;
-  height: 40px;
-  text-align: center;
-  line-height: 2.5;
-  border-radius: 10px;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-.footer_link ul{
-  float: right;
-}
-.footer_link li{
-  float: left;
-  margin-left: 25px;
-  font-weight: bold;
-}
-.footer_link li a{
-  color: white;
-}
-.footer_link li a:hover{
-  color: #ff5219;
-}
-
-
-
-
-
-
-/*Userログイン*/
-.login-main{
-	width: 50%;
-	margin: 190px auto 100px;
-	border: 1px solid gray;
-	border-radius: 5px;
-}
-.login-title{
-	text-align: center;
-	background-color: #2D2D2D;
-	color: white;
-	padding: 5px 0;
-	border-radius: 3px 3px 0 0;
-	font-weight: 900;
-}
-.login-form{
-	padding: 30px;
-}
-.lf-group1{
-	margin-top: 30px;
-}
-.lf-group2{
-	margin-top: 30px;
-	margin-bottom: 50px;
-}
-.lf-btn{
-	padding: 0 60px;
-	margin-bottom: 40px;
-}
-/*userサインアップ*/
-.signup-main{
-	width: 50%;
-	margin: 150px auto 60px;
-	border: 1px solid gray;
-	border-radius: 5px;
-}
-.sf-btn{
-	padding: 0 60px;
-	margin: 30px 0 10px;
-}
-.signup-form{
-	padding: 30px;
-}
-.devise_bottom{
-  text-align: right;
-}
-
-
-
 /*レスポンシブ*/
 @media screen and (max-width: 576px) {
   /*flash message*/
@@ -373,7 +269,58 @@ background-color: #2D2D2D;
   .h_menu_link a{
     color: white;
   }
+}
 
+/*footer*/
+footer{
+background-color: #2D2D2D;
+}
+.footer{
+	height: 130px;
+  padding-top: 30px;
+  color: white;
+}
+.footer_item{
+  width: 50%;
+  float: right;
+}
+.footer_left{
+  text-align: left;
+}
+.footer_right{
+  text-align: right;
+}
+
+.footer_left h1{
+  color: #ff5219;
+}
+.page_top{
+  cursor: pointer;
+  background-color: #FF5917;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  line-height: 2.5;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.footer_link ul{
+  float: right;
+}
+.footer_link li{
+  float: left;
+  margin-left: 25px;
+  font-weight: bold;
+}
+.footer_link li a{
+  color: white;
+}
+.footer_link li a:hover{
+  color: #ff5219;
+}
+
+@media screen and (max-width: 576px) {
   /*footer*/
 
   .footer{
@@ -411,6 +358,91 @@ background-color: #2D2D2D;
   }
 
 }
+
+/*Userログイン*/
+.login-main{
+	width: 50%;
+	margin: 190px auto 100px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.login-title{
+	text-align: center;
+	background-color: #2D2D2D;
+	color: white;
+	padding: 5px 0;
+	border-radius: 3px 3px 0 0;
+	font-weight: 900;
+}
+.login-form{
+	padding: 30px;
+}
+.lf-group1{
+	margin-top: 30px;
+}
+.lf-group2{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.lf-btn{
+	padding: 0 60px;
+	margin-bottom: 40px;
+}
+/*userサインアップ*/
+.signup-main{
+	width: 50%;
+	margin: 150px auto 60px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+.sf-btn{
+	padding: 0 60px;
+	margin: 30px 0 10px;
+}
+.signup-form{
+	padding: 30px;
+}
+.devise_bottom{
+  text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+  /*user/login*/
+  .login-main{
+    width: 100%;
+    margin: 150px auto 100px;
+  }
+  .lf-btn{
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .login-form{
+    padding: 20px;
+  }
+  .lf-group1, .lf-group2{
+    margin-top: 0px;
+  }
+  /*user/signup*/
+  .signup-main{
+    width: 100%;
+    margin: 150px auto 60px;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+    .signup-form{
+    padding: 20px;
+  }
+  .sf-btn{
+    padding: 0px;
+    margin: 40px 0 10px;
+  }
+  .login-title{
+    font-size: 28px;
+  }
+}
+
+
+
 
 /*Movie/show/Star*/
 
