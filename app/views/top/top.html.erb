@@ -75,7 +75,7 @@
 	<div class="container-fulid top-content">
 		<div class="container top-container clearfix">
 			<h4 class="top_list_name"><%= l.list_name %></h4>
-			<% l.list_items.limit(4).each do |list_item| %>
+			<% l.list_items.limit(5).each do |list_item| %>
 				<% movie = list_item.movie %>
 				<div class="top_movie_box">
 					<%= link_to movie_path(movie) do %>
