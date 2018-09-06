@@ -51,8 +51,9 @@
 		display: none;
 	}
 	.col9_responsive{
-		width: 100%;
+		width: 350px;
 		padding: 0 5%;
+		margin: 0 auto;
 	}
 }
 
@@ -111,7 +112,8 @@
 	}
 	.res_list{
 		display: block;
-		margin-bottom: 30px;
+		margin: 50px auto 30px;
+		width: 285px;
 	}
 	.lin_list_intro{
 		padding: 20px 10px;
@@ -150,6 +152,7 @@
 	padding-top: 10px;
 }
 .lsh-movie-box-title{
+	padding-bottom: 25px;
 }
 .lsh_e_title{
 	margin-bottom: 0px !important;
@@ -196,9 +199,6 @@
 	.lsh-header h2{
 		font-size: 24px;
 	}
-	.lin_row{
-		margin-bottom: 50px;
-	}
 	.lsh-movie-box{
 		border: 5px solid #f2f2f2;
 		border-bottom: 0;
@@ -218,15 +218,35 @@
 		width: 100%;
 		height: 100%;
 		float: none;
-		padding-top: 10px;
+		padding: 20px 10px 10px;
 	}
 	.lsh-movie-box-left img{
-		height: 120%;
-		width: 90%;
+		height: 105%;
+		width: 79%;
+		margin-left: 8%;
+	}
+	.lsh-movie-box-title{
+		padding-bottom: 0px;
+	}
+	.lsh-movie-box-title h4{
+		font-size: 20px;
+	}
+	.lsh_e_title{
+		font-size: 14px;
+		margin-left: 3px;
+		margin-top: -5px;
 	}
 	.lsh_image{
 		width: 50%;
 		float: left;
+	}
+	.lsh_summary{
+		padding: 15px 0 15px;
+		font-size: 14px;
+	}
+	.lsh_star{
+		margin-top: 10px;
+		height: 40px;
 	}
 
 }
