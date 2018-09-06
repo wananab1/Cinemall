@@ -187,3 +187,46 @@
 	padding-right: 20px;
 	padding-top: 20px;
 }
+
+@media screen and (max-width: 576px) {
+	.lsh-header{
+		padding: 30px 5% 10px;
+		margin-top: -10px;
+	}
+	.lsh-header h2{
+		font-size: 24px;
+	}
+	.lin_row{
+		margin-bottom: 50px;
+	}
+	.lsh-movie-box{
+		border: 5px solid #f2f2f2;
+		border-bottom: 0;
+	}
+	.lsh-movie-box:last-child{
+		border-bottom: 5px solid #f2f2f2;
+	}
+	.lin_warpper{
+		margin: 30px 0 50px;
+	}
+	.lsh-movie-box-left{
+		width: 100%;
+		float: none;
+		padding: 0 0 0 10px;
+	}
+	.lsh-movie-box-right{
+		width: 100%;
+		height: 100%;
+		float: none;
+		padding-top: 10px;
+	}
+	.lsh-movie-box-left img{
+		height: 120%;
+		width: 90%;
+	}
+	.lsh_image{
+		width: 50%;
+		float: left;
+	}
+
+}

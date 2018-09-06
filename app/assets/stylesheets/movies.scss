@@ -63,6 +63,20 @@
 	background-color: #FF5917;
 }
 
+/*ms_icon responsive*/
+@media screen and (max-width: 576px) {
+	.ms_icon_box1{
+		margin-top: 15px;
+		margin-right: 0px;
+
+	}
+	.ms_icon_box2{
+		margin-top: 15px;
+		margin-left: 0;
+	}
+
+}
+
 /*関連作品*/
 .movie_side{
 	margin-top: 100px;
