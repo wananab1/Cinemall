@@ -66,8 +66,8 @@
 								<h4><%= movie.j_title %></h4>
 								<p class="lsh_e_title"><%= movie.e_title %></p>
 							</div>
-							<div class="lsh_star">
-								<% unless movie.score_average == 0.0 %>
+							<% unless movie.score_average == 0.0 %>
+								<div class="lsh_star">
 									<% if movie.score_average == 5.0 %>
 										<span class="rate rate5"></span>
 									<% elsif movie.score_average >= 4.5 %>
@@ -90,13 +90,15 @@
 										<span class="rate rate0-5"></span>
 									<% end %>
 									<span class="ms_score"><%= movie.score_average %></span>
-								<% end %>
-							</div>
+								</div>
+							<% end %>
 							<div class="lsh_summary">
 								<h6>あらすじ</h6>
 								<%= movie.summary.truncate(140)%>
 								<% if movie.summary.length > 140 %>
-									<%= link_to '>>続きを読む', movie_path(movie) %>
+									<%= link_to movie_path(movie) do %>
+										<%= fa_icon("angle-double-right")%>続きを読む
+									<% end %>
 								<% end %>
 							</div>
 							<div class="lsh_casts">
@@ -111,7 +113,9 @@
 								</div>
 							</div>
 							<div class="lsh_casts_last">
-								<%= link_to ">>詳細を見る", movie_path(movie) %>
+								<%= link_to movie_path(movie) do %>
+									<%= fa_icon("angle-double-right")%>詳細を見る
+								<% end %>
 							</div>
 						</div>
 					</div>
