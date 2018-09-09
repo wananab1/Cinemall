@@ -261,6 +261,46 @@
 	text-align: center;
 }
 
+
+/*モーダル responsive*/
+@media screen and (max-width: 576px) {
+
+	.ms_modal{
+		top: 14%;
+	    left: 4%;
+	    width: 92%;
+	    height: 475px;
+	}
+	.ms_modal_top{
+		padding-bottom: 5px;
+	}
+	.ms_modal_title{
+		font-size: 16px;
+		padding: 0 10px;
+		height: 40px;
+	}
+	.modal_star{
+		margin: -12px auto 0;
+		width: 70%;
+	}
+	.modal_star img{
+		width: 24px;
+
+	}
+	.modal-score{
+		margin-bottom: 0px;
+	}
+	.ms_review_form textarea{
+		height: 200px;
+		font-size: 13px;
+	}
+	.ms_review_form .form-group{
+		margin-bottom: 0;
+	}
+}
+
+
+
 /*review部分*/
 .ms_bottom{
 	background-color: #F2F2F2;
