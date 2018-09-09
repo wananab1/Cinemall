@@ -2,7 +2,7 @@
 	<div class="ms_top">
 		<div class="row">
 			<div class="col-3 ms_top_1">
-				<div>
+				<div class="clearfix">
 					<div class="ms_image">
 						<%= attachment_image_tag @movie, :movie_image, format: 'jpeg', :size => '257x342' %>
 					</div>
@@ -104,7 +104,7 @@
 					</div>
 				</div>
 				<div class="ms_top_2box">
-					<div>
+					<div class="summary_box">
 						<h5 class="mn_h5">あらすじ</h5>
 						<p class="summary_all"><%= @movie.summary %></p>
 						<p class="summary_limit"><%= @movie.summary.truncate(150) %></p>

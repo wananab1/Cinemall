@@ -63,6 +63,7 @@
 	background-color: #FF5917;
 }
 
+
 /*ms_icon responsive*/
 @media screen and (max-width: 576px) {
 	.ms_icon_box1{
@@ -266,7 +267,7 @@
 @media screen and (max-width: 576px) {
 
 	.ms_modal{
-		top: 14%;
+		top: 12%;
 	    left: 4%;
 	    width: 92%;
 	    height: 475px;
@@ -278,6 +279,7 @@
 		font-size: 16px;
 		padding: 0 10px;
 		height: 40px;
+		margin-top: -10px;
 	}
 	.modal_star{
 		margin: -12px auto 0;
@@ -410,6 +412,91 @@
 
 .uniine i{
 	color: gray;
+}
+
+
+/*movie show responsive*/
+@media screen and (max-width: 576px) {
+	.ms_top{
+		padding: 40px 0 50px;
+	}
+	.ms_top_1{
+		padding: 0 !important;
+		width: 340px !important;
+		max-width: 100% !important;
+		flex: none !important;
+	}
+	.ms_top_2{
+		width: 340px !important;
+		max-width: 100% !important;
+		flex: none !important;
+		margin-top: 20px;
+	}
+	.youtube-container iframe{
+		width: 285px;
+		height: 165px;
+	}
+	.ms_image {
+		width: 145px;
+		float: left;
+	}
+	.ms_image img{
+		width: 80%;
+		height: 108%;
+		margin-left: 30px;
+	}
+	.ms_icons{
+		float: left;
+		width: 145px;
+		padding-left: 20px;
+	}
+	.movie_side{
+		display: none;
+	}
+	.ms_top_2box{
+		padding-left: 0px;
+	}
+	.ms_j_title{
+		font-size: 24px;
+		margin-bottom: 4px;
+	}
+	.ms_e_title{
+		margin-bottom: 5px;
+		margin-left: 2px;
+	}
+	.mn_h5{
+		font-size: 16px;
+	}
+	.summary_box{
+		font-size: 14px;
+	}
+	.ms_bottom_box{
+		padding-top: 20px;
+		flex: none !important;
+		max-width: 100% !important;
+		font-size: 14px;
+	}
+	.ms_info_box{
+		padding-left: 0px;
+	}
+	.ms_info_box td{
+		padding: 1px 0 !important;
+	}
+	.ms_trailer_box{
+		padding-left: 0px;
+		margin-top: 15px;
+	}
+	.youtube-container{
+		margin-top: 10px;
+	}
+	/*review*/
+	.ms_review{
+		width: 320px;
+		margin: 20px auto;
+		box-shadow: 0 1px 1px gray;
+		padding-bottom: 50px;
+
+	}
 }
 
 
