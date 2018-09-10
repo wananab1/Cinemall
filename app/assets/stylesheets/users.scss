@@ -391,43 +391,47 @@
 	}
 	.us_watch_logo{
 		width: 60%;
-		margin-left: 0;
+		margin-left: 10px;
+		margin-top: 8px;
 	}
 	.us_watch_logo i{
-		font-size: 30px;
+		font-size: 25px;
 	}
 	.us_watch_logo p{
 		font-size: 12px;
+		margin-top: -4px;
 	}
 	.us_count{
 		position: relative;
 		top: -48px;
-		font-size: 18px;
-		left: 60px;
+		font-size: 15px;
+		left: 66px;
 		float: none;
-		display: block;
 	}
 	.us_clip_logo{
 		width: 60%;
-		margin-left: 0;
 		padding-top: 2px;
+		margin-left: 10px;
+		margin-top: 8px;
 	}
 	.us_clip_logo i{
-		font-size: 28px;
+		font-size: 22px;
 	}
 	.us_clip_logo p{
 		font-size: 12px;
+		margin-top: -4px;
 	}
 	.us_time_logo{
 		width: 100%;
-		margin-left: 0;
-		padding-top: 3px;
+		margin-left: 2px;
+		margin-top: 6px;
 	}
 	.us_time_logo i{
-		font-size: 28px;
+		font-size: 22px;
 	}
 	.us_time_logo p{
-		font-size: 12px;
+		font-size: 11px;
+		margin-top: -3px;
 	}
 	.us_main_top_box1{
 		height:60px;
@@ -481,6 +485,9 @@
 		left: 95px;
 	}
 	/*review部分*/
+	.us_main_top{
+		margin-bottom: 0px;
+	}
 	.us_review_box{
 		float: none;
 		width: 95%;
@@ -517,7 +524,7 @@
 		margin-top: 28px;
 	}
 	.us_icon_box {
-		margin-left: 5px;
+		margin-left: 1px;
 	}
 	.us_ms_star{
 		height: auto;
@@ -530,7 +537,7 @@
 		padding:10px 10px 20px;
 	}
 	.us_main_bottom{
-		padding-bottom: 20px;
+		padding-bottom: 5px;
 	}
 	.us_review_box_iine{
 		padding: 12px 0 10px 61%;
@@ -539,11 +546,38 @@
 		width: 60%;
 	    font-size: 13px;
 	}
+	.us_no_review_image{
+		margin-right: 0px;
+		width: 286px;
+	}
+	.us_no_review h4{
+		font-size: 18px;
+	}
+	/*clip/index*/
+	.us_clip_movie_image{
+		width: 40%;
+		height: 52%;
+	}
+	.us_clip_movie_box{
+		width: 77%;
+		float: none;
+		margin: 0 auto;
+		padding-top: 10px;
+		margin-top: 5px;
+		border: none;
+		box-shadow: 0 2px 5px #ccc;
+		background-color: whitesmoke;
+	}
+	.us_clip_movie_icons{
+		padding-left: 0px;
+	}
+	.us_clip_movie_title{
+		height: auto;
+		padding: 5px 0;
+		margin-bottom: 0;
+		font-size: 14px;
+	}
 }
-
-
-
-
 
 
 /*follow*/
