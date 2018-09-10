@@ -404,7 +404,7 @@
 	.us_count{
 		position: relative;
 		top: -48px;
-		font-size: 15px;
+		font-size: 12px;
 		left: 66px;
 		float: none;
 	}
@@ -717,4 +717,65 @@
 }
 .fl_mypage a{
 	color: #939393;
+}
+/*timeline res*/
+@media screen and (max-width: 576px) {
+
+	.tl_main{
+		padding: 10px 0;
+		width: 95%;
+	}
+	.tl_rbox_top{
+		padding: 10px;
+	}
+	.tl_rbox_topitem1 img{
+		width: 35px;
+		height: 35px;
+	}
+	.tl_rbox_right img{
+		width: 48px;
+		height: 64px;
+	}
+	.tl_rbox_topitem1{
+		width: 25%;
+	}
+	.tl_rbox_topitem2{
+		width: 75%;
+		padding-top: 0px;
+	}
+	.tl_rbox_topitem2 h6{
+		font-size: 12px;
+		margin: 0;
+	}
+	.review_box_top2_t{
+		font-size: 10px;
+	}
+	.tl_rbox{
+		height: auto;
+	}
+	.tl_rbox_bottom{
+		padding: 0 15px 10px 10px;
+		font-size: 13px;
+	}
+	.tl_rbox_bottom h5{
+		font-size: 14px;
+	}
+	.tl_comment{
+		height: auto;
+		padding-top: 10px;
+		padding-right: 5px;
+		width: 140%;
+	}
+	.tl_m_image{
+		margin-left: -5px;
+		margin-top: 50px;
+	}
+	.tl_rbox_right{
+		padding-top: 5px;
+	}
+	.tl_iine_box{
+		width: 38%;
+		float: right;
+		font-size: 14px;
+	}
 }
