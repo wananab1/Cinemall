@@ -262,9 +262,7 @@
 .us_review_box_title a:hover{
     text-decoration: none;
 }
-.us_icons_box{
 
-}
 .us_icon_box{
 	width: 70px;
 	background-color: #e6d5cf;
@@ -386,11 +384,160 @@
 		height: 70px;
 		padding-top: 25px;
 	}
-
-
-
+	/*logo*/
+	.us_main_box{
+		width: 290px;
+		margin: 0 auto;
+	}
+	.us_watch_logo{
+		width: 60%;
+		margin-left: 0;
+	}
+	.us_watch_logo i{
+		font-size: 30px;
+	}
+	.us_watch_logo p{
+		font-size: 12px;
+	}
+	.us_count{
+		position: relative;
+		top: -48px;
+		font-size: 18px;
+		left: 60px;
+		float: none;
+		display: block;
+	}
+	.us_clip_logo{
+		width: 60%;
+		margin-left: 0;
+		padding-top: 2px;
+	}
+	.us_clip_logo i{
+		font-size: 28px;
+	}
+	.us_clip_logo p{
+		font-size: 12px;
+	}
+	.us_time_logo{
+		width: 100%;
+		margin-left: 0;
+		padding-top: 3px;
+	}
+	.us_time_logo i{
+		font-size: 28px;
+	}
+	.us_time_logo p{
+		font-size: 12px;
+	}
+	.us_main_top_box1{
+		height:60px;
+	}
+	.us_main_top_box1_50{
+		height:60px;
+	}
+	.us_main_top_box2{
+		height:60px;
+	}
+	.us_main_top_box2_50{
+		height:60px;
+	}
+	.us_main_top_box3_2{
+		height:60px;
+	}
+	.us_main_top_box1_2{
+		height:60px;
+	}
+	.us_main_top_box1_2_50{
+		height:60px;
+	}
+	.us_main_top_box2_2{
+		height:60px;
+	}
+	.us_main_top_box2_2_50{
+		height:60px;
+	}
+	.us_main_top_box1_2_50 .us_watch_logo{
+		width: 80%;
+	}
+	.us_main_top_box1_2_50 .us_count{
+		left: 95px;
+	}
+	.us_main_top_box2_2_50 .us_clip_logo{
+		width: 80%;
+	}
+	.us_main_top_box2_2_50 .us_count{
+		left: 95px;
+	}
+	.us_main_top_box1_50 .us_watch_logo{
+		width: 80%;
+	}
+	.us_main_top_box1_50 .us_count{
+		left: 95px;
+	}
+	.us_main_top_box2_50 .us_clip_logo{
+		width: 80%;
+	}
+	.us_main_top_box2_50 .us_count{
+		left: 95px;
+	}
+	/*review部分*/
 	.us_review_box{
-		width: 90%;
+		float: none;
+		width: 95%;
+		height: auto;
+		margin: 10px auto 0;
+		padding-right: 0;
+	}
+	.us_review_box_left{
+		width: 100%;
+		height: auto;
+		float: none;
+	}
+	.us_review_box_left_img{
+		width: 60px;
+		height: 80px;
+		float: left;
+		margin-left: 10px;
+	}
+
+	.us_review_box_right{
+		width: 100%;
+		height: auto;
+		float: none;
+	}
+	.us_review_box_title{
+		height: auto;
+		padding: 10px 10px 5px;
+		color: black;
+	}
+	.us_icons_box{
+		float: left;
+		margin-left: 20px;
+		width: 160px;
+		margin-top: 28px;
+	}
+	.us_icon_box {
+		margin-left: 5px;
+	}
+	.us_ms_star{
+		height: auto;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+	.us_review_box_comment{
+		height: auto;
+		font-size: 13px;
+		padding:10px 10px 20px;
+	}
+	.us_main_bottom{
+		padding-bottom: 20px;
+	}
+	.us_review_box_iine{
+		padding: 12px 0 10px 61%;
+	}
+	.us_bottom_time{
+		width: 58%;
+	    font-size: 14px;
 	}
 }
 
