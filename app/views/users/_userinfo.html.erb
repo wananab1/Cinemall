@@ -23,13 +23,15 @@
 				<p class="us_intro"><%= user.user_intro %></p>
 			</div>
 			<div class="col-2 user_info_res user_info3">
-				<div class="us_right_btn_zone">
-					<% if user_signed_in? && current_user.id == user.id %>
-						<%= link_to 'プロフィール編集', edit_user_path(user), class: "btn btn-secondary" %>
-					<% else %>
-						<%= render 'relationships/followbtn', user: user %>
-					<% end %>
-				</div>
+				<% if user_signed_in? %>
+					<div class="us_right_btn_zone">
+						<% if user_signed_in? && current_user.id == user.id %>
+							<%= link_to 'プロフィール編集', edit_user_path(user), class: "btn btn-secondary" %>
+						<% else %>
+							<%= render 'relationships/followbtn', user: user %>
+						<% end %>
+					</div>
+				<% end %>
 			</div>
 
 		</div>
