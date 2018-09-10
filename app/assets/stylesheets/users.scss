@@ -353,6 +353,49 @@
 	background-color: #FF5917;
 }
 
+@media screen and (max-width: 576px) {
+	/*user_info*/
+	.user_info_res{
+		max-width: 350px !important;
+		flex: none !important;
+	}
+	.us_user_info{
+		padding-top: 40px;
+		width: 320px !important;
+	}
+	.user_info1 img{
+		width: 100px;
+		height: 100px;
+		float: left;
+		margin-right: 20px;
+	}
+	.us_f_box{
+		width: 80px;
+		float: left;
+		margin-top: 38px;
+		margin-right: 5px;
+	}
+	.us_f{
+		float: left;
+	}
+	.us_name{
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+	.us_right_btn_zone{
+		height: 70px;
+		padding-top: 25px;
+	}
+
+
+
+	.us_review_box{
+		width: 90%;
+	}
+}
+
+
+
 
 
 
