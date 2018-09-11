@@ -600,6 +600,8 @@
 	color: #939393;
 	border-bottom: 5px solid  coral;
 	font-family: 'Georgia';
+	margin-bottom: 40px;
+
 }
 .fol_userbox{
 	width: 30%;
@@ -657,8 +659,9 @@
 .fol_rc_box i{
 	font-size: 20px;
 }
-
-
+.fl_main_container{
+	padding-bottom: 100px;
+}
 
 /*timeline*/
 .tl_top{
@@ -725,8 +728,9 @@
 }
 .fl_mypage{
 	position: relative;
-	top: 0;
-	left: 88%;
+	top: -30px;
+	left: 54%;
+	display: inline-block;
 }
 .fl_mypage a{
 	color: #939393;
@@ -791,4 +795,51 @@
 		float: right;
 		font-size: 14px;
 	}
+	/*follow/follower res*/
+	.fl_mypage{
+		left: 55%;
+		top: -12px;
+		font-size: 14px;
+	}
+	.fol_title{
+		margin-bottom: 15px;
+		font-size: 24px;
+		padding-top: 15px;
+	}
+	.fl_main_container{
+		width: 310px !important;
+		padding-bottom: 50px;
+	}
+	.fol_userbox{
+		width: 100%;
+		height: 230px;
+		margin: 5px 5px;
+		box-shadow: 0 2px 5px #ccc;
+		float: left;
+		background-color: white;
+		padding: 10px;
+	}
+	.fol_userbox_item1 img{
+		width: 50px;
+		height: 50px;
+	}
+	.fol_username{
+		width: 80%;
+		padding-top: 0px;
+		padding-left: 10px;
+		font-size: 16px;
+	}
+	.fol_userbox_item2{
+		padding: 0px 15px;
+	}
+	.fol_f_box{
+		height: 55px;
+	}
+	.fol_rc_box{
+		height: 55px;
+	}
+	.fol_userbox_item3{
+		padding-top: 8px;
+	}
+
 }
